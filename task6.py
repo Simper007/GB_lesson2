@@ -23,5 +23,6 @@ for k in range(len(my_list_1)):
         my_list_2.append(my_list_1[k])
     count = 0
 
-print(my_list_2)
+print('Список: ', my_list_1)
+print('Уникальные элементы: ', my_list_2)
 
