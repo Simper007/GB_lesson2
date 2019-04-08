@@ -9,7 +9,7 @@
 # Функция в качестве аргумента будет принимать атакующего и атакуемого.
 # В теле функция должна получить параметр damage атакующего и отнять это количество от health атакуемого. Функция должна сама работать со словарями и изменять их значения.
 
-players = {'player_health':100,'player_damage':50,'enemy_health':150,'enemy_damage':30}
+players = {'player_health':100,'player_damage':50,'player_armor':1.2,'enemy_health':150,'enemy_damage':30,'enemy_armor':1.3}
 player = input('Введите имя игрока: ')
 enemy = input('Введите имя соперника: ')
 
@@ -42,7 +42,7 @@ def attack(player, enemy):
 
    # print(players)
 
-print('На арене',player,'и',enemy)
+print('На арене',players.get('player_name'),'и',players.get('enemy_name'))
 print('Да начнется битва!')
 print(' ')
 
