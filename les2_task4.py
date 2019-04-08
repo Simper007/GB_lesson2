@@ -31,18 +31,18 @@ def attack(player, enemy):
         if players.get('player_name')== player:
             a = players.get('enemy_health') - real_damage(players.get('player_name'))
             print(players.get('player_name'),'наносит удар',players.get('enemy_name'), 'силой', real_damage(players.get('player_name')) )
-            print('У', players.get('enemy_name'), 'осталось ', a, 'здоровья')
+            print('У', players.get('enemy_name'), 'осталось ', round(a,2), 'здоровья')
             players.pop('enemy_health')
-            players.setdefault('enemy_health', a)
+            players.setdefault('enemy_health', round(a,2))
             if a <= 0:
                 print(players.get('player_name'),'победил',players.get('enemy_name'), 'в не равном бою!')
 
         if players.get('player_name')== enemy:
             b = players.get('player_health') - real_damage(players.get('enemy_name'))
             print(players.get('enemy_name'), 'наносит удар', players.get('player_name'), 'силой', real_damage(players.get('enemy_name')))
-            print('У', players.get('player_name'), 'осталось ', b, 'здоровья')
+            print('У', players.get('player_name'), 'осталось ', round(b,2), 'здоровья')
             players.pop('player_health')
-            players.setdefault('player_health', b)
+            players.setdefault('player_health', round(b,2))
             if b <= 0:
                 print(players.get('enemy_name'),'победил',players.get('player_name'), 'в не равном бою!')
 
