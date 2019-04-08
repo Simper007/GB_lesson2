@@ -14,7 +14,13 @@ player = input('Введите имя игрока: ')
 enemy = input('Введите имя соперника: ')
 
 
-print(players)
+#print(players)
+
+def real_damage(player):
+    if players.get('player_name')== player:
+        return round(players.get('player_damage')/players.get('enemy_armor'),2)
+    else:
+        return round(players.get('enemy_damage') / players.get('player_armor'),2)
 
 def attack(player, enemy):
     global players
@@ -23,8 +29,8 @@ def attack(player, enemy):
         players.setdefault('enemy_name', enemy)
     if players.get('player_health') > 0 and players.get('enemy_health') > 0:
         if players.get('player_name')== player:
-            a = players.get('enemy_health') - players.get('player_damage')
-            print(players.get('player_name'),'наносит удар',players.get('enemy_name'), 'силой', players.get('player_damage') )
+            a = players.get('enemy_health') - real_damage(players.get('player_name'))
+            print(players.get('player_name'),'наносит удар',players.get('enemy_name'), 'силой', real_damage(players.get('player_name')) )
             print('У', players.get('enemy_name'), 'осталось ', a, 'здоровья')
             players.pop('enemy_health')
             players.setdefault('enemy_health', a)
@@ -32,8 +38,8 @@ def attack(player, enemy):
                 print(players.get('player_name'),'победил',players.get('enemy_name'), 'в не равном бою!')
 
         if players.get('player_name')== enemy:
-            b = players.get('player_health') - players.get('enemy_damage')
-            print(players.get('enemy_name'), 'наносит удар', players.get('player_name'), 'силой', players.get('enemy_damage'))
+            b = players.get('player_health') - real_damage(players.get('enemy_name'))
+            print(players.get('enemy_name'), 'наносит удар', players.get('player_name'), 'силой', real_damage(players.get('enemy_name')))
             print('У', players.get('player_name'), 'осталось ', b, 'здоровья')
             players.pop('player_health')
             players.setdefault('player_health', b)
@@ -42,7 +48,7 @@ def attack(player, enemy):
 
    # print(players)
 
-print('На арене',players.get('player_name'),'и',players.get('enemy_name'))
+print('На арене',player,'и',enemy)
 print('Да начнется битва!')
 print(' ')
 

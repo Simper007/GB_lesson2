@@ -14,7 +14,7 @@ player = input('Введите имя игрока: ')
 enemy = input('Введите имя соперника: ')
 
 
-print(players)
+#print(players)
 
 def attack(player, enemy):
     global players
