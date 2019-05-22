@@ -92,7 +92,7 @@ if __name__ == '__main__':
 
 #3b. Реализовать сохранение данных в файл формата YAML — например, в файл file.yaml. При этом обеспечить стилизацию файла с помощью параметра default_flow_style,
 #а также установить возможность работы с юникодом: allow_unicode = True;
-    
+
     with open('file.yaml', 'w',encoding='utf-8') as file_yaml:
         yaml.dump(data_for_yaml,file_yaml,default_flow_style=False,allow_unicode = True)
         print('Данные записаны в файл: file.yaml')
@@ -104,4 +104,3 @@ if __name__ == '__main__':
         date_from_yaml_file = yaml.load(file_yaml,Loader=yaml.SafeLoader)
         if date_from_yaml_file == data_for_yaml:
             print('Данные совпадают!')
-
