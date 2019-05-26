@@ -25,3 +25,13 @@ NOT_FOUND = 404 #(not found) — пользователь/чат отсутст�
 CONFLICT = 409 #(conflict) — уже имеется подключение с указанным логином;
 GONE = 410 #(gone) — адресат существует, но недоступен (offline).
 INTERNAL_ERROR = 500 # ошибка сервера.
+UNKNOWN_ERROR = 999 #Нестандартная ошибка
+
+StandartServerCodes = BASIC_NOTICE, OK, ACCEPTED, WRONG_REQUEST, SERVER_ERROR, IMPORTANT_NOTICE, CREATED, NO_AUTH, WRONG_PASSW, BANNED, NOT_FOUND, GONE, INTERNAL_ERROR
+
+class UnknownCode(Exception):
+    def __init__(self, code):
+        self.code = code
+
+    def __str__(self):
+        return f'Неизвестный код ответа {self.code}'

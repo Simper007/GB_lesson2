@@ -25,13 +25,16 @@ import sys, json, time
 from socket import *
 from config import *
 
-def create_presence_meassage(account_name='Guest'):
+def create_presence_meassage(account_name='Guest', Action=PRESENCE):
 
     if len(account_name)> 25:
+        raise ValueError
+
+    if not isinstance(account_name, str):
         raise TypeError
 
     message = {
-        ACTION: PRESENCE,
+        ACTION: Action,
         TIME: time.time(),
         USER: {
             ACCOUNT_NAME: account_name
@@ -39,14 +42,19 @@ def create_presence_meassage(account_name='Guest'):
     }
     return message
 
-def start_client():
+def start_client(serv_addr=server_address, serv_port=server_port,action=PRESENCE):
     s = socket(AF_INET,SOCK_STREAM)
+
+    if not isinstance(serv_addr,str) or not isinstance(serv_port,int):
+        s.close()
+        raise ValueError
+
     if server_address != '0.0.0.0':
-        s.connect((server_address,server_port))
+        s.connect((serv_addr,serv_port))
     else:
-        s.connect(('localhost', server_port))
+        s.connect(('localhost', serv_port))
     #message = 'Хэй, хэй!'
-    message = create_presence_meassage()
+    message = create_presence_meassage('SuperUser',action)
     if isinstance(message, dict):
         message = json.dumps(message)
     print(f'Отправляю сообщение "{message}" на сервер', end= ' ')
@@ -54,7 +62,10 @@ def start_client():
     print('и жду ответа')
     server_response = json.loads(s.recv(1024).decode('utf-8'))
     print('Ответ:',server_response)
-    if server_response.get('response') == 200:
+    if server_response.get('response') not in StandartServerCodes:
+        s.close()
+        raise UnknownCode(server_response.get('response'))
+    if server_response.get('response') == OK:
         print('Сервер нас понимает!')
     else:
         print('Что-то пошло не так..')

@@ -25,7 +25,9 @@ from config import *
 from socket import *
 
 def check_correct_presence_and_response(presence_message):
-    if ACTION in presence_message and \
+    if ACTION in presence_message and presence_message[ACTION] == 'Unknown':
+        return {RESPONSE: UNKNOWN_ERROR}
+    elif ACTION in presence_message and \
                     presence_message[ACTION] == PRESENCE and \
                     TIME in presence_message and \
             isinstance(presence_message[TIME], float):
@@ -35,9 +37,14 @@ def check_correct_presence_and_response(presence_message):
         # Иначе шлем код ошибки
         return {RESPONSE: WRONG_REQUEST, ERROR: 'Не верный запрос'}
 
-def start_server():
+def start_server(serv_addr=server_address, serv_port=server_port):
     s = socket(AF_INET,SOCK_STREAM)
-    s.bind((server_address,server_port))
+
+    if not isinstance(serv_addr,str) or not isinstance(serv_port,int):
+        s.close()
+        raise ValueError
+
+    s.bind((serv_addr,serv_port))
     s.listen(1)
     print('Готов к приему клиентов! \n')
     #answer = 'Сервер сообщение получил! Привет клиент!'
