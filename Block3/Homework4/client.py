@@ -49,10 +49,16 @@ def start_client(serv_addr=server_address, serv_port=server_port,action=PRESENCE
         s.close()
         raise ValueError
 
-    if server_address != '0.0.0.0':
-        s.connect((serv_addr,serv_port))
-    else:
-        s.connect(('localhost', serv_port))
+    try:
+        if server_address != '0.0.0.0':
+            s.connect((serv_addr,serv_port))
+        else:
+            s.connect(('localhost', serv_port))
+    except Exception as e:
+        print('Ошибка подключения:', e)
+        s.close()
+        raise Exception
+
     #message = 'Хэй, хэй!'
     message = create_presence_meassage('SuperUser',action)
     if isinstance(message, dict):
@@ -70,7 +76,7 @@ def start_client(serv_addr=server_address, serv_port=server_port,action=PRESENCE
     else:
         print('Что-то пошло не так..')
     s.close()
-
+    return 0
 
 
 if __name__ == "__main__":

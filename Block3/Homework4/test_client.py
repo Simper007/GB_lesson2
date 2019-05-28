@@ -1,6 +1,8 @@
-import unittest, time
+import unittest, time, sys
 from client import create_presence_meassage,start_client
+from server import start_server
 from config import *
+from multiprocessing import Process
 
 class TestCreate_Presence_Meassage(unittest.TestCase):
 
@@ -21,11 +23,16 @@ class TestStartClient(unittest.TestCase):
         with self.assertRaises(ValueError):
             start_client(156,'asa')
 
+    def testConnectError(self):
+        with self.assertRaises(Exception):
+            start_client('132.0.0.0', 21)
+
     def testUnknownResponseCode(self):
-        PRESENCE = 'Unknown'
+        serverProcess = Process(target=start_server)
+        serverProcess.start()
         with self.assertRaises(UnknownCode):
             start_client('127.0.0.1', server_port, 'Unknown')
-
+        serverProcess.terminate()
 
 if __name__ == "__main__":
     unittest.main()

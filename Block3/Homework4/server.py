@@ -38,6 +38,7 @@ def check_correct_presence_and_response(presence_message):
         return {RESPONSE: WRONG_REQUEST, ERROR: 'Не верный запрос'}
 
 def start_server(serv_addr=server_address, serv_port=server_port):
+    alive = True
     s = socket(AF_INET,SOCK_STREAM)
 
     if not isinstance(serv_addr,str) or not isinstance(serv_port,int):
@@ -49,7 +50,7 @@ def start_server(serv_addr=server_address, serv_port=server_port):
     print('Готов к приему клиентов! \n')
     #answer = 'Сервер сообщение получил! Привет клиент!'
 
-    while True:
+    while alive:
         client, address = s.accept()
         client_message = json.loads(client.recv(1024).decode("utf-8"))
         print(f'Принято сообщение от клиента: {client_message}')
