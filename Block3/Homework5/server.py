@@ -20,11 +20,14 @@ b. сервер отвечает соответствующим кодом ре�
 -p <port> — TCP-порт для работы (по умолчанию использует 7777);
 -a <addr> — IP-адрес для прослушивания (по умолчанию слушает все доступные адреса).
 '''
-import sys, json, time
+import sys, json, time, logging, logs.config.server_config_log
 from config import *
 from socket import *
 
+log = logging.getLogger('Server_log')
+
 def check_correct_presence_and_response(presence_message):
+    log.info('Запуск ф-ии проверки корректности запроса')
     if ACTION in presence_message and presence_message[ACTION] == 'Unknown':
         return {RESPONSE: UNKNOWN_ERROR}
     elif ACTION in presence_message and \
@@ -32,9 +35,11 @@ def check_correct_presence_and_response(presence_message):
                     TIME in presence_message and \
             isinstance(presence_message[TIME], float):
         # Если всё хорошо шлем ОК
+        log.info(f'Проверка успешна, ответ: {RESPONSE}: {OK}')
         return {RESPONSE: OK}
     else:
         # Иначе шлем код ошибки
+        log.warning(f'{RESPONSE}: {WRONG_REQUEST}, {ERROR}: "Не верный запрос"')
         return {RESPONSE: WRONG_REQUEST, ERROR: 'Не верный запрос'}
 
 def start_server(serv_addr=server_address, serv_port=server_port):
@@ -42,21 +47,26 @@ def start_server(serv_addr=server_address, serv_port=server_port):
     s = socket(AF_INET,SOCK_STREAM)
 
     if not isinstance(serv_addr,str) or not isinstance(serv_port,int):
+        log.error('Полученный адрес сервера или порт не является строкой или числом!')
         s.close()
         raise ValueError
 
     s.bind((serv_addr,serv_port))
     s.listen(1)
-    print('Готов к приему клиентов! \n')
+    #print('Готов к приему клиентов! \n')
+    log.info('Запуск сервера! Готов к приему клиентов! \n')
     #answer = 'Сервер сообщение получил! Привет клиент!'
 
     while alive:
         client, address = s.accept()
         client_message = json.loads(client.recv(1024).decode("utf-8"))
-        print(f'Принято сообщение от клиента: {client_message}')
+        #print(f'Принято сообщение от клиента: {client_message}')
+        log.info(f'Принято сообщение от клиента: {client_message}')
         answer = check_correct_presence_and_response(client_message)
-        print(f"Приветствуем пользователя {client_message.get('user').get('account_name')}!")
-        print('Отправка ответа клиенту:',answer)
+        #print(f"Приветствуем пользователя {client_message.get('user').get('account_name')}!")
+        #print('Отправка ответа клиенту:',answer)
+        log.info(f"Приветствуем пользователя {client_message.get('user').get('account_name')}!")
+        log.info(f'Отправка ответа клиенту: {answer}')
         client.send(json.dumps(answer).encode('utf-8'))
         client.close
 
@@ -68,5 +78,10 @@ if __name__ == "__main__":
             if sys.argv[i] == '-a' and i+1 < len(sys.argv):
                 server_address = sys.argv[i+1]
 
-#    print(server_address,server_port)
+    #Показывать лог в консоль при запуске сервера напрямую
+    server_stream_handler = logging.StreamHandler(sys.stdout)
+    server_stream_handler.setLevel(logging.INFO)
+    server_stream_handler.setFormatter(logs.config.server_config_log.log_format)
+    log.addHandler(server_stream_handler)
+
     start_server()
