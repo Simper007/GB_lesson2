@@ -1,0 +1,153 @@
+2019-06-02 15:57:13,667 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-02 15:57:22,313 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559473042.3131502, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 15:57:22,314 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 15:57:22,314 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 15:57:22,314 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 15:57:22,314 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 15:59:52,424 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559473192.4240687, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 15:59:52,425 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 15:59:52,425 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 15:59:52,425 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 15:59:52,425 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:01:43,311 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-02 16:02:05,317 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559473325.3176625, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:02:05,317 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:02:05,318 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:02:05,318 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:02:05,318 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:02:59,991 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559473379.991784, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:02:59,991 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:02:59,991 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:02:59,992 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:02:59,992 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:05:31,579 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559473531.5782645, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:05:31,579 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:05:31,579 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:05:31,579 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:05:31,579 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:15:01,060 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559474101.0590382, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:15:01,060 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:15:01,061 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:15:01,061 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:15:01,061 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:17:03,231 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559474223.2300925, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:17:03,231 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:17:03,231 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:17:03,231 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:17:03,231 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:19:02,069 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559474342.069238, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:19:02,069 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:19:02,069 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:19:02,069 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:19:02,069 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:20:25,678 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559474425.6778953, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:20:25,678 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:20:25,678 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:20:25,678 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:20:25,678 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:20:53,628 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559474453.627757, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:20:53,628 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:20:53,628 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:20:53,628 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:20:53,628 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:41:09,285 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559475669.285269, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:41:09,285 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:41:09,286 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:41:09,303 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:41:09,303 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:41:43,585 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559475703.5850513, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:41:43,585 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:41:43,586 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:41:43,586 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:41:43,586 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:44:51,556 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559475891.5565894, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:44:51,557 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:44:51,557 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:44:51,557 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:44:51,557 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:47:37,643 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559476057.6432836, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:47:37,643 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:47:37,643 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:47:37,644 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:47:37,644 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:47:50,848 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559476070.8489656, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:47:50,848 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:47:50,849 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:47:50,849 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:47:50,849 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:48:08,097 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559476088.097326, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:48:08,098 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:48:08,098 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:48:08,098 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:48:08,098 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:50:22,056 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559476222.0565257, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:50:22,057 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:50:22,057 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:50:22,057 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:50:22,057 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 16:51:03,074 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559476263.0741124, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 16:51:03,074 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 16:51:03,074 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 16:51:03,074 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 16:51:03,075 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 17:07:17,659 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559477237.6590636, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 17:07:17,660 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 17:07:17,660 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 17:07:17,660 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 17:07:17,660 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 17:07:33,646 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559477253.645837, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 17:07:33,646 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 17:07:33,646 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 17:07:33,646 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 17:07:33,647 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 17:07:55,454 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559477275.454705, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 17:07:55,454 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 17:07:55,454 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 17:07:55,454 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 17:07:55,454 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 17:08:20,442 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559477300.442539, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 17:08:20,443 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 17:08:20,443 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 17:08:20,443 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 17:08:20,443 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 17:08:42,584 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559477322.5842948, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 17:08:42,585 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 17:08:42,585 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 17:08:42,585 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 17:08:42,585 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 17:10:04,247 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559477404.246595, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 17:10:04,247 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 17:10:04,247 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 17:10:04,247 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 17:10:04,248 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 17:11:01,695 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559477461.6948092, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 17:11:01,695 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 17:11:01,695 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 17:11:01,695 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 17:11:01,695 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 17:11:16,582 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559477476.5819414, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 17:11:16,582 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 17:11:16,582 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 17:11:16,582 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 17:11:16,582 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 17:15:34,786 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559477734.786515, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 17:15:34,787 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 17:15:34,787 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 17:15:34,787 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 17:15:34,787 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 17:19:39,623 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559477979.6235383, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 17:19:39,623 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 17:19:39,623 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 17:19:39,623 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 17:19:39,623 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-02 17:20:39,273 - INFO - decorators: deco_log_call - Sun Jun  2 17:20:39 2019 Вызван декоратор log для start_server с параметрами (() {}) 
+2019-06-02 17:20:39,274 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-02 17:20:57,860 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559478057.8609555, 'user': {'account_name': 'SuperUser'}} 
+2019-06-02 17:20:57,860 - INFO - decorators: deco_log_call - Sun Jun  2 17:20:57 2019 Вызван декоратор log для check_correct_presence_and_response с параметрами (({'action': 'presence', 'time': 1559478057.8609555, 'user': {'account_name': 'SuperUser'}},) {}) 
+2019-06-02 17:20:57,861 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-02 17:20:57,861 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-02 17:20:57,861 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-02 17:20:57,861 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
