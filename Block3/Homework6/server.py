@@ -25,8 +25,9 @@ from config import *
 from socket import *
 
 log = logging.getLogger('Server_log')
+logger = decorators.Log(log)
 
-@decorators.log
+@logger
 def check_correct_presence_and_response(presence_message):
     log.info('Запуск ф-ии проверки корректности запроса')
     if ACTION in presence_message and presence_message[ACTION] == 'Unknown':
@@ -43,7 +44,7 @@ def check_correct_presence_and_response(presence_message):
         log.warning(f'{RESPONSE}: {WRONG_REQUEST}, {ERROR}: "Не верный запрос"')
         return {RESPONSE: WRONG_REQUEST, ERROR: 'Не верный запрос'}
 
-@decorators.log
+@logger
 def start_server(serv_addr=server_address, serv_port=server_port):
     alive = True
     s = socket(AF_INET,SOCK_STREAM)

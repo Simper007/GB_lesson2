@@ -10,21 +10,26 @@ def main():
 ...в логе должна быть отражена информация:
 "<дата-время> Функция func_z() вызвана из функции main"
 '''
-import time
+import time, traceback
 from functools import wraps
-from functools import wraps
-from logs.config.client_config_log import *
-from logs.config.server_config_log import *
 
-def log(func):
-    @wraps(func)
-    def deco_log_call(*args,**kwargs):
-        if func.__name__ == 'create_presence_meassage' or func.__name__ == 'start_client':
-            client_log.info(f'{time.asctime()} Вызван декоратор {log.__name__} для {func.__name__} с параметрами ({args} {kwargs})')
-        elif func.__name__ == 'check_correct_presence_and_response' or func.__name__ == 'start_server':
-            server_log.info(f'{time.asctime()} Вызван декоратор {log.__name__} для {func.__name__} с параметрами ({args} {kwargs})')
+class Log:
+    def __init__(self,logger):
+        self.logger = logger
 
-        print(f'{time.asctime()} Вызван декоратор {log.__name__} для {func.__name__} с параметрами ({args} {kwargs})')
-        res = func(*args,**kwargs)
-        return res
-    return deco_log_call
+    def __call__(self,func):
+        @wraps(func)
+        def deco_log_call(*args,**kwargs):
+            res = func(*args, **kwargs)
+            message = f'{time.asctime()} Вызван декоратор {Log.__name__} для {func.__name__}'
+            if args or kwargs:
+                message += ' с параметрами'
+            if args:
+                message += f' {args}'
+            if kwargs:
+                message += f' {kwargs}'
+            message += f' из функции {traceback.format_stack()[0].strip().split()[-1]}'
+            print(message)
+            self.logger.info(message)
+            return res
+        return deco_log_call

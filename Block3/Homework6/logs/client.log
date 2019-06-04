@@ -254,3 +254,118 @@
 2019-06-02 17:20:57,860 - INFO - client: start_client - и жду ответа 
 2019-06-02 17:20:57,861 - INFO - client: start_client - Ответ: {'response': 200} 
 2019-06-02 17:20:57,861 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:11:00,992 - INFO - decorators: deco_log_call - Tue Jun  4 20:11:00 2019 Вызван декоратор log для start_client с параметрами (() {}) 
+2019-06-04 20:11:01,010 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:11:01,015 - INFO - decorators: deco_log_call - Tue Jun  4 20:11:01 2019 Вызван декоратор log для create_presence_meassage с параметрами (('SuperUser', 'presence') {}) 
+2019-06-04 20:11:01,016 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:11:01,016 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559661061.0160868, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:11:01,016 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:11:01,018 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:11:01,018 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:12:19,500 - INFO - decorators: deco_log_call - Tue Jun  4 20:12:19 2019 Вызван декоратор log для start_client с параметрами (() {}) из функции  start_client() 
+2019-06-04 20:12:19,501 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:12:19,506 - INFO - decorators: deco_log_call - Tue Jun  4 20:12:19 2019 Вызван декоратор log для create_presence_meassage с параметрами (('SuperUser', 'presence') {}) из функции  start_client() 
+2019-06-04 20:12:19,507 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:12:19,507 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559661139.5074475, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:12:19,507 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:12:19,509 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:12:19,509 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:13:33,321 - INFO - decorators: deco_log_call - Tue Jun  4 20:13:33 2019 Вызван декоратор log для start_client с параметрами (() {}) из функции  start_client() 
+2019-06-04 20:13:33,322 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:13:33,327 - INFO - decorators: deco_log_call - Tue Jun  4 20:13:33 2019 Вызван декоратор log для create_presence_meassage с параметрами (('SuperUser', 'presence') {}) из функции  start_client() 
+2019-06-04 20:13:33,328 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:13:33,328 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559661213.3285391, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:13:33,328 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:13:33,330 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:13:33,330 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:14:48,682 - INFO - decorators: deco_log_call - Tue Jun  4 20:14:48 2019 Вызван декоратор log для start_client с параметрами (() {}) из функции  start_client() 
+2019-06-04 20:14:48,682 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:14:48,694 - INFO - decorators: deco_log_call - Tue Jun  4 20:14:48 2019 Вызван декоратор log для create_presence_meassage с параметрами (('SuperUser', 'presence') {}) из функции  start_client() 
+2019-06-04 20:14:48,695 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:14:48,695 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559661288.6958725, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:14:48,695 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:14:48,697 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:14:48,697 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:15:12,302 - INFO - decorators: deco_log_call - Tue Jun  4 20:15:12 2019 Вызван декоратор log для start_client с параметрами (() {}) из функции  start_client() 
+2019-06-04 20:15:12,303 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:15:12,307 - INFO - decorators: deco_log_call - Tue Jun  4 20:15:12 2019 Вызван декоратор log для create_presence_meassage с параметрами (('SuperUser', 'presence') {}) из функции  start_client() 
+2019-06-04 20:15:12,308 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:15:12,308 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559661312.3088045, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:15:12,308 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:15:12,310 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:15:12,310 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:28:37,470 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:28:37,476 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:28:37,477 - INFO - decorators: deco_log_call - Tue Jun  4 20:28:37 2019 Вызван декоратор create_presence_meassage для create_presence_meassage с параметрами (('SuperUser', 'presence') {}) из функции  start_client() 
+2019-06-04 20:28:37,477 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559662117.4764464, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:28:37,477 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:28:37,479 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:28:37,479 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:28:37,480 - INFO - decorators: deco_log_call - Tue Jun  4 20:28:37 2019 Вызван декоратор start_client для start_client с параметрами (() {}) из функции  start_client() 
+2019-06-04 20:29:16,765 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:29:16,770 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:29:16,772 - INFO - decorators: deco_log_call - Tue Jun  4 20:29:16 2019 Вызван декоратор create_presence_meassage для create_presence_meassage с параметрами (('SuperUser', 'presence') {}) из функции  start_client() 
+2019-06-04 20:29:16,772 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559662156.7712436, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:29:16,772 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:29:16,774 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:29:16,774 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:29:16,774 - INFO - decorators: deco_log_call - Tue Jun  4 20:29:16 2019 Вызван декоратор start_client для start_client с параметрами (() {}) из функции  start_client() 
+2019-06-04 20:29:18,606 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:29:18,611 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:29:18,612 - INFO - decorators: deco_log_call - Tue Jun  4 20:29:18 2019 Вызван декоратор create_presence_meassage для create_presence_meassage с параметрами (('SuperUser', 'presence') {}) из функции  start_client() 
+2019-06-04 20:29:18,612 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559662158.611674, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:29:18,612 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:29:18,614 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:29:18,614 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:29:18,614 - INFO - decorators: deco_log_call - Tue Jun  4 20:29:18 2019 Вызван декоратор start_client для start_client с параметрами (() {}) из функции  start_client() 
+2019-06-04 20:30:42,072 - INFO - client_config_log: <module> - Запуск лога! 
+2019-06-04 20:30:42,073 - WARNING - client_config_log: <module> - Ахтунг! 
+2019-06-04 20:30:42,073 - ERROR - client_config_log: <module> - Типа ожыбка! 
+2019-06-04 20:30:47,358 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:30:47,363 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:30:47,364 - INFO - decorators: deco_log_call - Tue Jun  4 20:30:47 2019 Вызван декоратор Log для create_presence_meassage с параметрами (('SuperUser', 'presence') {}) из функции  start_client() 
+2019-06-04 20:30:47,364 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559662247.3635056, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:30:47,364 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:30:47,366 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:30:47,366 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:30:47,366 - INFO - decorators: deco_log_call - Tue Jun  4 20:30:47 2019 Вызван декоратор Log для start_client с параметрами (() {}) из функции  start_client() 
+2019-06-04 20:34:49,923 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:34:49,928 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:34:49,929 - INFO - decorators: deco_log_call - Tue Jun  4 20:34:49 2019 Вызван декоратор Log для create_presence_meassage с параметрами ('SuperUser', 'presence') из функции  start_client() 
+2019-06-04 20:34:49,929 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559662489.9281805, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:34:49,929 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:34:49,931 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:34:49,931 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:34:49,931 - INFO - decorators: deco_log_call - Tue Jun  4 20:34:49 2019 Вызван декоратор Log для start_client из функции  start_client() 
+2019-06-04 20:36:19,837 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:36:19,842 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:36:19,843 - INFO - decorators: deco_log_call - Tue Jun  4 20:36:19 2019 Вызван декоратор Log для create_presence_meassage с параметрами ('SuperUser', 'presence') из функции start_client() 
+2019-06-04 20:36:19,844 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559662579.8438084, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:36:19,844 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:36:19,845 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:36:19,846 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:36:19,846 - INFO - decorators: deco_log_call - Tue Jun  4 20:36:19 2019 Вызван декоратор Log для start_client из функции start_client() 
+2019-06-04 20:40:00,117 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:40:00,124 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:40:00,125 - INFO - decorators: deco_log_call - Tue Jun  4 20:40:00 2019 Вызван декоратор Log для create_presence_meassage с параметрами ('SuperUser', 'presence') из функции start_client() 
+2019-06-04 20:40:00,125 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559662800.1245136, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:40:00,125 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:40:00,127 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:40:00,127 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:40:00,128 - INFO - decorators: deco_log_call - Tue Jun  4 20:40:00 2019 Вызван декоратор Log для start_client из функции start_client() 
+2019-06-04 20:43:16,615 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:43:16,620 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:43:16,621 - INFO - decorators: deco_log_call - Tue Jun  4 20:43:16 2019 Вызван декоратор Log для create_presence_meassage с параметрами ('SuperUser', 'presence') из функции start_client() 
+2019-06-04 20:43:16,621 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559662996.6207018, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:43:16,622 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:43:16,623 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:43:16,623 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:43:16,624 - INFO - decorators: deco_log_call - Tue Jun  4 20:43:16 2019 Вызван декоратор Log для start_client из функции start_client() 
+2019-06-04 20:43:37,867 - INFO - client: start_client - Запуск клиента 
+2019-06-04 20:43:37,872 - INFO - client: create_presence_meassage - Формирование сообщения 
+2019-06-04 20:43:37,873 - INFO - decorators: deco_log_call - Tue Jun  4 20:43:37 2019 Вызван декоратор Log для create_presence_meassage с параметрами ('SuperUser', 'presence') из функции start_client() 
+2019-06-04 20:43:37,873 - INFO - client: start_client - Отправляю сообщение "{"action": "presence", "time": 1559663017.8729093, "user": {"account_name": "SuperUser"}}" на сервер 
+2019-06-04 20:43:37,873 - INFO - client: start_client - и жду ответа 
+2019-06-04 20:43:37,875 - INFO - client: start_client - Ответ: {'response': 200} 
+2019-06-04 20:43:37,875 - INFO - client: start_client - Сервер нас понимает! 
+2019-06-04 20:43:37,876 - INFO - decorators: deco_log_call - Tue Jun  4 20:43:37 2019 Вызван декоратор Log для start_client из функции start_client() 

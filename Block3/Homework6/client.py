@@ -26,8 +26,9 @@ from socket import *
 from config import *
 
 log = logging.getLogger('Client_log')
+logger = decorators.Log(log)
 
-@decorators.log
+@logger
 def create_presence_meassage(account_name='Guest', Action=PRESENCE):
     log.info('Формирование сообщения')
     if len(account_name)> 25:
@@ -48,7 +49,7 @@ def create_presence_meassage(account_name='Guest', Action=PRESENCE):
     return message
 
 
-@decorators.log
+@logger
 def start_client(serv_addr=server_address, serv_port=server_port,action=PRESENCE):
     log.info('Запуск клиента')
 
