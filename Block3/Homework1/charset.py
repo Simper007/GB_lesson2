@@ -115,6 +115,9 @@ sub_ping = subprocess.Popen (args, stdout=subprocess.PIPE)
 for line in sub_ping.stdout:
     print(line.decode('cp866'))
 
+sub_ping.kill()
+
+
 #6. Создать текстовый файл test_file.txt, заполнить его тремя строками: «сетевое программирование», «сокет», «декоратор».
 print('')
 print('6 задание:')

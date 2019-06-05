@@ -16,6 +16,10 @@ class TestCheckMessages(unittest.TestCase):
     def testAccountIsPresence(self):
         self.assertEqual(check_correct_presence_and_response({'action': 'goodbye', 'time': 1558902800.913287, 'user': {'account_name': 'SuperUser'}}),{'response': 400, 'error': 'Не верный запрос'})
 
+    def testShutdownCommand(self):
+        self.assertEqual(check_correct_presence_and_response({'action': 'Stop server', 'time': 1558902800.913287, 'user': {'account_name': 'Admin'}}),{'response': 0})
+        #self.assertEqual(start_server()["alive"],False)
+
 class TestStartServer(unittest.TestCase):
 
     def testUnknownServerReq(self):

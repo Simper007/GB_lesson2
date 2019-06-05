@@ -2,7 +2,7 @@ import logging, logging.handlers, os
 
 #Создаем экземпляр логгера
 server_log = logging.getLogger('Server_log')
-server_log.setLevel(logging.INFO)
+server_log.setLevel(logging.DEBUG)
 
 #Создаем обработчик
 SERVER_LOG_CONFIG_FOLDER_PATH = os.path.split(os.path.dirname(os.path.abspath(__file__)))[0]

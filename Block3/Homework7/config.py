@@ -1,5 +1,7 @@
 server_address = '0.0.0.0'
 server_port = 7777
+mode = 'f'
+account='Guest'
 
 
 ACTION = 'action'
@@ -10,6 +12,10 @@ ACCOUNT_NAME = 'account_name'
 RESPONSE = 'response'
 ERROR = 'error'
 PRESENCE = 'presence'
+MSG = 'msg'
+TO = 'to'
+FROM = 'from'
+MESSAGE = 'message'
 
 BASIC_NOTICE = 100
 OK = 200
@@ -25,9 +31,10 @@ NOT_FOUND = 404 #(not found) — пользователь/чат отсутст�
 CONFLICT = 409 #(conflict) — уже имеется подключение с указанным логином;
 GONE = 410 #(gone) — адресат существует, но недоступен (offline).
 INTERNAL_ERROR = 500 # ошибка сервера.
+SHUTDOWN = 0 #Выключение сервера
 UNKNOWN_ERROR = 999 #Нестандартная ошибка
 
-StandartServerCodes = BASIC_NOTICE, OK, ACCEPTED, WRONG_REQUEST, SERVER_ERROR, IMPORTANT_NOTICE, CREATED, NO_AUTH, WRONG_PASSW, BANNED, NOT_FOUND, GONE, INTERNAL_ERROR
+StandartServerCodes = BASIC_NOTICE, OK, ACCEPTED, WRONG_REQUEST, SERVER_ERROR, IMPORTANT_NOTICE, CREATED, NO_AUTH, WRONG_PASSW, BANNED, NOT_FOUND, GONE, INTERNAL_ERROR, SHUTDOWN
 
 class UnknownCode(Exception):
     def __init__(self, code):

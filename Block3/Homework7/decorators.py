@@ -14,6 +14,7 @@ import time, traceback
 from functools import wraps
 
 class Log:
+    __slots__ = ('logger')
     def __init__(self,logger):
         self.logger = logger
 
@@ -25,11 +26,12 @@ class Log:
             if args or kwargs:
                 message += ' с параметрами'
             if args:
-                message += f' {args}'
+                message += f' {str(args)}'
             if kwargs:
-                message += f' {kwargs}'
+                message += f' {str(kwargs)}'
+
             message += f' из функции {traceback.format_stack()[0].strip().split()[-1]}'
-            print(message)
-            self.logger.info(message)
+            #print(message)
+            self.logger.debug(message)
             return res
         return deco_log_call
