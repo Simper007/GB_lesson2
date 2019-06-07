@@ -17,6 +17,7 @@ TO = 'to'
 FROM = 'from'
 MESSAGE = 'message'
 MAIN_CHANNEL = '#all'
+SERVER = 'server'
 
 BASIC_NOTICE = 100
 OK = 200
