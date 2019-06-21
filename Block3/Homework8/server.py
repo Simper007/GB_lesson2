@@ -5,15 +5,18 @@ from socket import *
 log = logging.getLogger('Server_log')
 logger = decorators.Log(log)
 
+# Функция чтения сообщений с сокетов клиентов
 def read_messages(from_clients,client_list):
     #log.debug('Запуск функции получения сообщений от клиентов')
     global names
+    # список всех полученных сообщений
     message_list = []
     for connection in from_clients:
         try:
             client_message = json.loads(connection.recv(1024).decode("utf-8"))
             log.info(f'Принято сообщение от клиента: {client_message[FROM]}')
             log.debug(f'{client_message}')
+            # Если спец сообщение от Admin, то вырубаем сервер
             if ACTION in client_message and \
                  client_message[ACTION] == 'Stop server' and \
                  client_message[FROM] == 'Admin':
@@ -26,14 +29,17 @@ def read_messages(from_clients,client_list):
             client_list.remove(connection)
     return message_list
 
-
+# Функция записи сообщений в сокеты клиентов
 def write_messages(messages,to_clients, client_list):
     global names
     #log.debug('Запуск функции отправки сообщений клиентам')
+
     for message, sender in messages:
+        # Если приватный канал, то отправка только одному получателю
         if message[ACTION] == MSG and message[TO] != MAIN_CHANNEL and message[TO] != message[FROM]:
-            # получаем кому отправить сообщение
+            # получаем пользователя, которому отправляем сообщение
             to = message[TO]
+            # обработка сервером команды who
             if message[MESSAGE] != 'who':
                 message[MESSAGE] = f'(private){message[FROM]}:> {message[MESSAGE]}'
             try:
@@ -44,31 +50,34 @@ def write_messages(messages,to_clients, client_list):
                     message[TO] = message[FROM]
                     client_names = [key for key in names.keys()]
                     message[MESSAGE] = f'<:SERVER:> Список клиентов в онлайн: {client_names}'
+                    log.debug(f'Пользователем {message[FROM]} запрошен список пользователей онлайн: {message[MESSAGE]}')
                 else:
                     message[TO] = message[FROM]
                     message[FROM] = SERVER
                     message[MESSAGE] = f'<:SERVER:> Клиент {to} не подключен. Отправка сообщения не возможна!'
-                    log.error(message)
+                    log.warning(message)
+            # отправка сообщения
             try:
                 connection.send(json.dumps(message).encode('utf-8'))
             except:
-                log.info(f'Сокет клиента {connection.fileno()} {connection.getpeername()} недоступен для отправки. Вероятно он отключился')
+                log.warning(f'Сокет клиента {connection.fileno()} {connection.getpeername()} недоступен для отправки. Вероятно он отключился')
                 names = {key: val for key, val in names.items() if val != connection}
                 connection.close()
                 client_list.remove(connection)
+        # если общий канал, то отправка сообщения всем клиентам
         elif message[ACTION] == MSG and message[TO] == MAIN_CHANNEL:
             message[MESSAGE] = f'{message[FROM]}:> {message[MESSAGE]}'
-            #print('MSG:', message)
             for connection in to_clients:
+                # отправка сообщения
                 try:
                     connection.send(json.dumps(message).encode('utf-8'))
                 except:
-                    log.info(f'Сокет клиента {connection.fileno()} {connection.getpeername()} недоступен для отправки. Вероятно он отключился')
+                    log.warning(f'Сокет клиента {connection.fileno()} {connection.getpeername()} недоступен для отправки. Вероятно он отключился')
                     names = {key: val for key, val in names.items() if val != connection}
                     connection.close()
                     client_list.remove(connection)
 
-
+# Функция проверки корректности приветственного сообщения и формирования ответа
 @logger
 def check_correct_presence_and_response(presence_message):
     log.debug('Запуск ф-ии проверки корректности запроса')
@@ -91,6 +100,7 @@ def start_server(serv_addr=server_address, serv_port=server_port):
     alive = True
     global clients, names
 
+    # создаем сокет для работы с клиентами
     with socket(AF_INET,SOCK_STREAM) as s:
         if not isinstance(serv_addr,str) or not isinstance(serv_port,int):
             log.error('Полученный адрес сервера или порт не является строкой или числом!')
@@ -100,13 +110,11 @@ def start_server(serv_addr=server_address, serv_port=server_port):
         s.listen(1)
         s.settimeout(0.1)
 
-        #clients = []
-        #names = {}
-
         log.info('Запуск сервера! Готов к приему клиентов! \n')
 
         while alive:
             try:
+                # Прием запросов на подключение, проверка приветственного сообщения и ответ
                 client, address = s.accept()
                 client_message = json.loads(client.recv(1024).decode("utf-8"))
                 log.info(f'Принято сообщение от клиента: {client_message}')
@@ -115,7 +123,6 @@ def start_server(serv_addr=server_address, serv_port=server_port):
                 log.info(f"Приветствуем пользователя {client_name}!")
                 log.info(f'Отправка ответа клиенту: {answer}')
                 client.send(json.dumps(answer).encode('utf-8'))
-                #client.close
             except OSError as e:
                 #за время socket timeout не было подключений
                 pass
@@ -129,7 +136,7 @@ def start_server(serv_addr=server_address, serv_port=server_port):
                 e = []
                 select_timeout = 0
             try:
-                r, w, e = select.select(clients, clients, [], select_timeout)
+                r, w, e = select.select(clients, clients, e, select_timeout)
             except:
                 #исключение в случае дисконнекта любого из клиентов
                 pass
@@ -143,6 +150,7 @@ def start_server(serv_addr=server_address, serv_port=server_port):
 
 
 if __name__ == "__main__":
+    # Проверка аргументов при запуске из консоли
     if len(sys.argv) > 1:
         for i in range(1,len(sys.argv)):
             if sys.argv[i] == '-p' and i+1 < len(sys.argv):
@@ -156,6 +164,8 @@ if __name__ == "__main__":
     server_stream_handler.setFormatter(logs.config.server_config_log.log_format)
     log.addHandler(server_stream_handler)
 
+    # Общие переменные для всех функций
+    # Список сокетов клиентов и словарь аккаунтов клиентов с информацией о сокете
     clients = []
     names = {}
 

@@ -13,13 +13,13 @@ while True:
                                   creationflags=CREATE_NEW_CONSOLE))
         time.sleep(2)
         #только чтение
-        for user in user_lists[:4]:
+        for user in user_lists[:2]:
             process_list.append(Popen(f'python -i client.py localhost 7777 {user} r',
                                  creationflags=CREATE_NEW_CONSOLE))
             #process_list[-1].communicate('pause')
 
         #только запись
-        for user in user_lists[4:]:
+        for user in user_lists[2:4]:
             process_list.append(Popen(f'python -i client.py localhost 7777 {user} w',
                                  creationflags=CREATE_NEW_CONSOLE))
             #process_list[-1].communicate('pause')
@@ -28,7 +28,7 @@ while True:
         #    process_list.append(Popen(f'python -i client.py localhost 7777 {user}',
         #                              creationflags=CREATE_NEW_CONSOLE))
 
-        print(' Запущено 8 клиентов и сервер')
+        print(' Запущено 2 клиента на чтение, 2 на запись и сервер')
     elif user_command == 'x':
         for p in process_list:
             p.kill()
