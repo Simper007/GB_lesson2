@@ -1,0 +1,196 @@
+2019-06-17 23:37:41,575 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-17 23:37:43,613 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796663.6043203, 'user': {'account_name': 'Vanila'}} 
+2019-06-17 23:37:43,614 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:37:43,614 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:37:43,615 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:37:43 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796663.6043203, 'user': {'account_name': 'Vanila'}},) из функции start_server() 
+2019-06-17 23:37:43,616 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-17 23:37:43,616 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:37:43,617 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62480) 
+2019-06-17 23:37:52,066 - DEBUG - server: read_messages - Клиент 632 ('127.0.0.1', 62480) отключился до передачи сообщения по таймауту  
+2019-06-17 23:37:52,274 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796672.2732046, 'user': {'account_name': 'Coder'}} 
+2019-06-17 23:37:52,275 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:37:52,276 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:37:52,277 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:37:52 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796672.2732046, 'user': {'account_name': 'Coder'}},) из функции start_server() 
+2019-06-17 23:37:52,277 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-17 23:37:52,278 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:37:52,278 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62482) 
+2019-06-17 23:37:53,484 - DEBUG - server: read_messages - Клиент 640 ('127.0.0.1', 62482) отключился до передачи сообщения по таймауту  
+2019-06-17 23:37:53,655 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796673.6541598, 'user': {'account_name': 'Freeman'}} 
+2019-06-17 23:37:53,656 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:37:53,657 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:37:53,657 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:37:53 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796673.6541598, 'user': {'account_name': 'Freeman'}},) из функции start_server() 
+2019-06-17 23:37:53,658 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-17 23:37:53,658 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:37:53,659 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62483) 
+2019-06-17 23:37:54,363 - DEBUG - server: read_messages - Клиент 644 ('127.0.0.1', 62483) отключился до передачи сообщения по таймауту  
+2019-06-17 23:37:54,549 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796674.548078, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-17 23:37:54,549 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:37:54,550 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:37:54,551 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:37:54 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796674.548078, 'user': {'account_name': 'xxNAGIBATORxx'}},) из функции start_server() 
+2019-06-17 23:37:54,551 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-17 23:37:54,552 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:37:54,552 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62484) 
+2019-06-17 23:37:55,963 - DEBUG - server: read_messages - Клиент 692 ('127.0.0.1', 62484) отключился до передачи сообщения по таймауту  
+2019-06-17 23:37:56,075 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796676.0740056, 'user': {'account_name': 'Skywalker'}} 
+2019-06-17 23:37:56,076 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:37:56,077 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:37:56,079 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:37:56 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796676.0740056, 'user': {'account_name': 'Skywalker'}},) из функции start_server() 
+2019-06-17 23:37:56,079 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-17 23:37:56,080 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:37:56,080 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62486) 
+2019-06-17 23:37:57,186 - DEBUG - server: read_messages - Клиент 632 ('127.0.0.1', 62486) отключился до передачи сообщения по таймауту  
+2019-06-17 23:37:57,320 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796677.3191688, 'user': {'account_name': 'Admin'}} 
+2019-06-17 23:37:57,321 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:37:57,322 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:37:57,323 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:37:57 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796677.3191688, 'user': {'account_name': 'Admin'}},) из функции start_server() 
+2019-06-17 23:37:57,323 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-17 23:37:57,324 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:37:57,324 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62487) 
+2019-06-17 23:37:58,431 - DEBUG - server: read_messages - Клиент 692 ('127.0.0.1', 62487) отключился до передачи сообщения по таймауту  
+2019-06-17 23:37:58,628 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796678.6260116, 'user': {'account_name': 'Snegurka'}} 
+2019-06-17 23:37:58,628 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:37:58,629 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:37:58,630 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:37:58 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796678.6260116, 'user': {'account_name': 'Snegurka'}},) из функции start_server() 
+2019-06-17 23:37:58,630 - INFO - server: start_server - Приветствуем пользователя Snegurka! 
+2019-06-17 23:37:58,631 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:37:58,631 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62488) 
+2019-06-17 23:37:59,938 - DEBUG - server: read_messages - Клиент 632 ('127.0.0.1', 62488) отключился до передачи сообщения по таймауту  
+2019-06-17 23:38:00,157 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796680.1568956, 'user': {'account_name': 'LikeABOSS'}} 
+2019-06-17 23:38:00,158 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:38:00,159 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:38:00,161 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:38:00 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796680.1568956, 'user': {'account_name': 'LikeABOSS'}},) из функции start_server() 
+2019-06-17 23:38:00,161 - INFO - server: start_server - Приветствуем пользователя LikeABOSS! 
+2019-06-17 23:38:00,161 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:38:00,162 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62489) 
+2019-06-17 23:38:01,169 - DEBUG - server: read_messages - Клиент 640 ('127.0.0.1', 62489) отключился до передачи сообщения по таймауту  
+2019-06-17 23:38:31,375 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-17 23:38:33,521 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796713.519116, 'user': {'account_name': 'Vanila'}} 
+2019-06-17 23:38:33,522 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:38:33,524 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:38:33,525 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:38:33 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796713.519116, 'user': {'account_name': 'Vanila'}},) из функции start_server() 
+2019-06-17 23:38:33,527 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-17 23:38:33,528 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:38:33,528 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62492) 
+2019-06-17 23:38:33,586 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796713.5850947, 'user': {'account_name': 'Coder'}} 
+2019-06-17 23:38:33,588 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:38:33,590 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:38:33,596 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:38:33 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796713.5850947, 'user': {'account_name': 'Coder'}},) из функции start_server() 
+2019-06-17 23:38:33,601 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-17 23:38:33,603 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:38:33,604 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62493) 
+2019-06-17 23:38:33,605 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796713.6020892, 'user': {'account_name': 'Freeman'}} 
+2019-06-17 23:38:33,606 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:38:33,607 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:38:33,608 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:38:33 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796713.6020892, 'user': {'account_name': 'Freeman'}},) из функции start_server() 
+2019-06-17 23:38:33,609 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-17 23:38:33,610 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:38:33,611 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62494) 
+2019-06-17 23:38:33,642 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796713.6400764, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-17 23:38:33,642 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:38:33,644 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:38:33,645 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:38:33 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796713.6400764, 'user': {'account_name': 'xxNAGIBATORxx'}},) из функции start_server() 
+2019-06-17 23:38:33,645 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-17 23:38:33,645 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:38:33,646 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62495) 
+2019-06-17 23:38:33,675 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796713.6740665, 'user': {'account_name': 'Skywalker'}} 
+2019-06-17 23:38:33,676 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:38:33,677 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:38:33,678 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:38:33 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796713.6740665, 'user': {'account_name': 'Skywalker'}},) из функции start_server() 
+2019-06-17 23:38:33,678 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-17 23:38:33,679 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:38:33,679 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62496) 
+2019-06-17 23:38:33,706 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796713.705055, 'user': {'account_name': 'Admin'}} 
+2019-06-17 23:38:33,707 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:38:33,707 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:38:33,708 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:38:33 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796713.705055, 'user': {'account_name': 'Admin'}},) из функции start_server() 
+2019-06-17 23:38:33,709 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-17 23:38:33,709 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:38:33,709 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62497) 
+2019-06-17 23:38:33,714 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796713.7130525, 'user': {'account_name': 'Snegurka'}} 
+2019-06-17 23:38:33,714 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:38:33,715 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:38:33,715 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:38:33 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796713.7130525, 'user': {'account_name': 'Snegurka'}},) из функции start_server() 
+2019-06-17 23:38:33,716 - INFO - server: start_server - Приветствуем пользователя Snegurka! 
+2019-06-17 23:38:33,717 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:38:33,717 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62498) 
+2019-06-17 23:38:33,723 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796713.7220492, 'user': {'account_name': 'LikeABOSS'}} 
+2019-06-17 23:38:33,724 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:38:33,724 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:38:33,725 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:38:33 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796713.7220492, 'user': {'account_name': 'LikeABOSS'}},) из функции start_server() 
+2019-06-17 23:38:33,725 - INFO - server: start_server - Приветствуем пользователя LikeABOSS! 
+2019-06-17 23:38:33,725 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:38:33,725 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62499) 
+2019-06-17 23:38:39,766 - INFO - server: read_messages - Принято сообщение от клиента: Snegurka 
+2019-06-17 23:38:39,766 - DEBUG - server: read_messages - {'action': 'msg', 'time': 1560796719.759043, 'to': '#all', 'from': 'Snegurka', 'message': 'sadasd'} 
+2019-06-17 23:38:41,881 - INFO - server: read_messages - Принято сообщение от клиента: LikeABOSS 
+2019-06-17 23:38:41,881 - DEBUG - server: read_messages - {'action': 'msg', 'time': 1560796721.843189, 'to': '#all', 'from': 'LikeABOSS', 'message': 'adad'} 
+2019-06-17 23:38:51,136 - DEBUG - server: read_messages - Клиент 668 ('127.0.0.1', 62495) отключился до передачи сообщения по таймауту  
+2019-06-17 23:38:51,740 - DEBUG - server: read_messages - Клиент 672 ('127.0.0.1', 62497) отключился до передачи сообщения по таймауту  
+2019-06-17 23:38:52,242 - DEBUG - server: read_messages - Клиент 652 ('127.0.0.1', 62496) отключился до передачи сообщения по таймауту  
+2019-06-17 23:38:53,249 - DEBUG - server: read_messages - Клиент 232 ('127.0.0.1', 62494) отключился до передачи сообщения по таймауту  
+2019-06-17 23:38:53,954 - DEBUG - server: read_messages - Клиент 648 ('127.0.0.1', 62493) отключился до передачи сообщения по таймауту  
+2019-06-17 23:38:54,458 - DEBUG - server: read_messages - Клиент 620 ('127.0.0.1', 62492) отключился до передачи сообщения по таймауту  
+2019-06-17 23:38:55,563 - DEBUG - server: read_messages - Клиент 676 ('127.0.0.1', 62498) отключился до передачи сообщения по таймауту  
+2019-06-17 23:38:56,265 - DEBUG - server: read_messages - Клиент 660 ('127.0.0.1', 62499) отключился до передачи сообщения по таймауту  
+2019-06-17 23:40:14,052 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-17 23:40:16,223 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796816.2221248, 'user': {'account_name': 'Vanila'}} 
+2019-06-17 23:40:16,224 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:40:16,224 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:40:16,226 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:40:16 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796816.2221248, 'user': {'account_name': 'Vanila'}},) из функции start_server() 
+2019-06-17 23:40:16,227 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-17 23:40:16,227 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:40:16,228 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62512) 
+2019-06-17 23:40:16,252 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796816.250115, 'user': {'account_name': 'Coder'}} 
+2019-06-17 23:40:16,252 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:40:16,254 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:40:16,257 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:40:16 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796816.250115, 'user': {'account_name': 'Coder'}},) из функции start_server() 
+2019-06-17 23:40:16,263 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-17 23:40:16,267 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:40:16,270 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62513) 
+2019-06-17 23:40:16,331 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796816.3290887, 'user': {'account_name': 'Freeman'}} 
+2019-06-17 23:40:16,331 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:40:16,333 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:40:16,334 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:40:16 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796816.3290887, 'user': {'account_name': 'Freeman'}},) из функции start_server() 
+2019-06-17 23:40:16,334 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-17 23:40:16,335 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:40:16,336 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62514) 
+2019-06-17 23:40:16,352 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796816.347083, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-17 23:40:16,352 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:40:16,353 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:40:16,355 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:40:16 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796816.347083, 'user': {'account_name': 'xxNAGIBATORxx'}},) из функции start_server() 
+2019-06-17 23:40:16,355 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-17 23:40:16,355 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:40:16,356 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62515) 
+2019-06-17 23:40:16,390 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796816.389069, 'user': {'account_name': 'Skywalker'}} 
+2019-06-17 23:40:16,391 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:40:16,392 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:40:16,393 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:40:16 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796816.389069, 'user': {'account_name': 'Skywalker'}},) из функции start_server() 
+2019-06-17 23:40:16,393 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-17 23:40:16,394 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:40:16,394 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62516) 
+2019-06-17 23:40:16,405 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796816.4040647, 'user': {'account_name': 'Admin'}} 
+2019-06-17 23:40:16,405 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:40:16,406 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:40:16,406 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:40:16 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796816.4040647, 'user': {'account_name': 'Admin'}},) из функции start_server() 
+2019-06-17 23:40:16,407 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-17 23:40:16,407 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:40:16,407 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62517) 
+2019-06-17 23:40:16,427 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796816.4260583, 'user': {'account_name': 'LikeABOSS'}} 
+2019-06-17 23:40:16,427 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:40:16,428 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:40:16,429 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:40:16 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796816.4260583, 'user': {'account_name': 'LikeABOSS'}},) из функции start_server() 
+2019-06-17 23:40:16,429 - INFO - server: start_server - Приветствуем пользователя LikeABOSS! 
+2019-06-17 23:40:16,429 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:40:16,430 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62518) 
+2019-06-17 23:40:16,430 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1560796816.4290571, 'user': {'account_name': 'Snegurka'}} 
+2019-06-17 23:40:16,430 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-17 23:40:16,431 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-17 23:40:16,431 - DEBUG - decorators: deco_log_call - Mon Jun 17 23:40:16 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1560796816.4290571, 'user': {'account_name': 'Snegurka'}},) из функции start_server() 
+2019-06-17 23:40:16,431 - INFO - server: start_server - Приветствуем пользователя Snegurka! 
+2019-06-17 23:40:16,432 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-17 23:40:16,432 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 62519) 
+2019-06-17 23:40:18,342 - INFO - server: read_messages - Принято сообщение от клиента: LikeABOSS 
+2019-06-17 23:40:18,342 - DEBUG - server: read_messages - {'action': 'msg', 'time': 1560796818.3392434, 'to': '#all', 'from': 'LikeABOSS', 'message': 's'} 
