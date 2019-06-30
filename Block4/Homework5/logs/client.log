@@ -4251,3 +4251,198 @@
 2019-06-27 00:38:32,500 - INFO - client: start_client -  Попытка подключения к localhost 7777 
 2019-06-27 00:38:32,568 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
 2019-06-27 00:38:35,456 - INFO - client: client_writer - Вывод истории сообщений 
+2019-06-27 00:41:00,816 - INFO - client: start_client - Запуск клиента 
+2019-06-27 00:41:00,817 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-27 00:41:00,905 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-27 00:41:05,153 - INFO - client: client_writer - Отправлено сообщение на сервер: {'action': 'msg', 'time': 1561578065.153811, 'to': '#all', 'from': 'Simper', 'message': '!sfd'} 
+2019-06-27 00:41:05,245 - INFO - client: client_reader - Получено сообщение с сервера: {'action': 'msg', 'time': 1561578065.153811, 'to': '#all', 'from': 'Simper', 'message': 'Simper:> !sfd'} 
+2019-06-27 00:41:09,014 - INFO - client: client_writer - Вывод истории сообщений 
+2019-06-30 17:50:12,783 - INFO - client: start_client - Запуск клиента 
+2019-06-30 17:50:12,784 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 17:50:14,791 - ERROR - client: start_client - Ошибка подключения: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 
+2019-06-30 17:52:05,844 - INFO - client: start_client - Запуск клиента 
+2019-06-30 17:52:05,845 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 17:52:07,855 - ERROR - client: start_client - Ошибка подключения: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 
+2019-06-30 19:27:48,500 - INFO - client: start_client - Запуск клиента 
+2019-06-30 19:27:48,501 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 19:27:50,508 - ERROR - client: start_client - Ошибка подключения: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 
+2019-06-30 21:29:56,524 - INFO - client: start_client - Запуск клиента 
+2019-06-30 21:31:16,808 - INFO - client: start_client - Запуск клиента 
+2019-06-30 21:34:13,949 - INFO - client: start_client - Запуск клиента 
+2019-06-30 21:36:10,200 - INFO - client: start_client - Запуск клиента 
+2019-06-30 21:36:10,201 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 21:36:10,314 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 21:36:19,637 - INFO - client: client_writer - Отправлено сообщение на сервер: {'action': 'msg', 'time': 1561912579.6366222, 'to': '#all', 'from': 'Simper', 'message': 'hi all'} 
+2019-06-30 21:36:19,676 - INFO - client: client_reader - Получено сообщение с сервера: {'action': 'msg', 'time': 1561912579.6366222, 'to': '#all', 'from': 'Simper', 'message': 'Simper:> hi all'} 
+2019-06-30 21:36:43,315 - INFO - client: client_writer - Отправлено сообщение на сервер: {'action': 'msg', 'time': 1561912603.3152246, 'to': '#all', 'from': 'Simper', 'message': 'exit'} 
+2019-06-30 21:36:43,401 - INFO - client: client_reader - Получено сообщение с сервера: {'action': 'msg', 'time': 1561912603.3152246, 'to': '#all', 'from': 'Simper', 'message': 'Simper:> exit'} 
+2019-06-30 21:36:49,982 - INFO - client: client_writer - Пользователь вызвал закрытие клиента - exit 
+2019-06-30 21:43:49,254 - INFO - client: start_client - Запуск клиента 
+2019-06-30 21:43:49,255 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 21:43:49,327 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 21:44:06,813 - INFO - client: client_writer - Пользователь вызвал закрытие клиента - exit 
+2019-06-30 22:05:27,090 - INFO - client: start_client - Запуск клиента 
+2019-06-30 22:05:27,092 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 22:05:27,154 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 22:05:34,748 - INFO - client: client_writer - Пользователь вызвал закрытие клиента - exit 
+2019-06-30 22:05:42,441 - INFO - client: start_client - Запуск клиента 
+2019-06-30 22:06:03,110 - INFO - client: start_client - Запуск клиента 
+2019-06-30 22:06:32,409 - INFO - client: start_client - Запуск клиента 
+2019-06-30 22:07:10,306 - INFO - client: start_client - Запуск клиента 
+2019-06-30 22:14:42,638 - INFO - client: start_client - Запуск клиента 
+2019-06-30 22:14:42,640 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 22:14:42,711 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 22:15:40,237 - INFO - client: start_client - Запуск клиента 
+2019-06-30 22:15:40,238 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 22:15:40,288 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 23:17:48,712 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:17:48,713 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 23:17:48,797 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 23:18:07,878 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:18:07,879 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 23:18:07,947 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 23:32:59,922 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:33:48,173 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:38:27,420 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:38:27,421 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 23:38:27,492 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 23:41:40,204 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:41:40,205 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 23:41:40,277 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 23:42:43,395 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:42:43,396 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 23:42:43,476 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 23:43:14,412 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:43:14,413 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-30 23:43:14,500 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 23:46:10,002 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:46:10,004 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-06-30 23:46:10,080 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 23:46:59,908 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:46:59,909 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-06-30 23:46:59,978 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 23:47:09,707 - INFO - client: client_writer - Пользователь вызвал закрытие клиента - exit 
+2019-06-30 23:47:21,932 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:47:21,933 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-06-30 23:47:21,942 - WARNING - client: start_client - Пароль неверен! Попробуйте переподключиться с другим паролем! 
+2019-06-30 23:47:21,943 - ERROR - client: start_client - Что-то пошло не так.. 
+2019-06-30 23:48:54,237 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:48:54,238 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-06-30 23:48:54,246 - WARNING - client: start_client - Пароль неверен! Попробуйте переподключиться с другим паролем! 
+2019-06-30 23:48:54,247 - ERROR - client: start_client - Что-то пошло не так.. 
+2019-06-30 23:51:13,555 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:52:05,305 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:52:06,882 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:52:10,013 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:52:10,474 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:52:10,735 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:52:11,751 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:52:12,422 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:52:15,140 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:52:15,141 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-06-30 23:52:15,206 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 23:54:08,629 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:54:08,630 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-06-30 23:54:08,640 - WARNING - client: start_client - Пароль неверен! Попробуйте переподключиться с другим паролем! 
+2019-06-30 23:54:14,349 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:54:14,349 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-06-30 23:54:14,418 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 23:54:46,793 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:54:49,960 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:54:49,961 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-06-30 23:54:50,035 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-30 23:59:15,866 - INFO - client: start_client - Запуск клиента 
+2019-06-30 23:59:15,867 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-06-30 23:59:15,951 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 00:41:09,512 - INFO - client: start_client - Запуск клиента 
+2019-07-01 00:41:09,513 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 00:41:09,588 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 00:41:14,192 - INFO - client: client_writer - Пользователь вызвал закрытие клиента - exit 
+2019-07-01 00:51:27,753 - INFO - client: start_client - Запуск клиента 
+2019-07-01 00:51:27,754 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 00:51:27,827 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 00:51:51,571 - INFO - client: start_client - Запуск клиента 
+2019-07-01 00:51:51,573 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 00:51:51,643 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 00:53:11,738 - INFO - client: start_client - Запуск клиента 
+2019-07-01 00:53:11,739 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 00:53:11,808 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:00:43,728 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:00:43,729 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:00:43,783 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:00:49,724 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:00:49,725 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:00:49,809 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:02:24,942 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:02:24,943 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:02:24,997 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:03:05,958 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:03:05,959 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:03:06,017 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:03:16,103 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:03:16,104 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:03:16,174 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:03:27,176 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:03:27,177 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:03:27,262 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:09:03,789 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:09:03,790 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:09:03,867 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:09:23,378 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:09:23,379 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:09:23,446 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:10:04,634 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:10:04,635 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:10:04,689 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:10:22,654 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:10:22,655 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:10:22,665 - WARNING - client: start_client - Пароль неверен! Попробуйте переподключиться с другим паролем! 
+2019-07-01 01:13:29,762 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:13:29,763 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:13:29,836 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:16:27,306 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:16:27,307 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:16:27,390 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:17:19,169 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:17:19,171 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:17:19,266 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:17:40,505 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:17:40,507 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:17:40,601 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:18:28,005 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:18:28,007 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:18:28,066 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:20:45,815 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:20:45,816 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:20:45,898 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:21:19,882 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:21:19,883 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:21:19,944 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:29:41,282 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:29:41,283 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:29:41,342 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:29:48,288 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:29:48,290 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:29:48,349 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:29:55,221 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:29:58,792 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:29:58,793 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:29:58,852 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:30:07,841 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:30:07,842 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:30:07,892 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:32:56,661 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:32:56,662 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:32:56,725 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:33:08,404 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:33:08,405 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:33:08,474 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:33:45,358 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:33:45,359 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:33:45,419 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:35:18,809 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:35:18,810 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:35:18,881 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-07-01 01:36:28,080 - INFO - client: start_client - Запуск клиента 
+2019-07-01 01:36:28,081 - INFO - client: start_client - Попытка подключения к localhost 7777 
+2019-07-01 01:36:28,162 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 

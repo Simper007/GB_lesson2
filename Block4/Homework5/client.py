@@ -4,6 +4,8 @@ from config import *
 from meta import *
 from threading import Thread
 from client_database import *
+from PyQt5 import QtWidgets, QtCore, QtGui
+from connect_window import Ui_Form
 
 # Инициализация логирования клиента
 log = logging.getLogger('Client_log')
@@ -11,8 +13,7 @@ logger = decorators.Log(log)
 
 #Основная функция клиента
 class Client(metaclass=ClientVerifier):
-    global log, logger
-        #, PRESENCE, MAIN_CHANNEL, ACTIONS, MSG, TIME,TO,FROM,MESSAGE, SERVER, ACTION, ACCOUNT_NAME, USER, RESPONSE, StandartServerCodes, UnknownCode
+    global log, logger, conn_window
 
     def __init__(self,serv_addr=server_address, serv_port=server_port, mode='f', acc='Guest', passw=''):
         self.serv_addr = serv_addr
@@ -68,7 +69,7 @@ class Client(metaclass=ClientVerifier):
             return
 
     # функция создания сообщения в чате
-    logger
+    @logger
     def create_message(self, message_to, text, account_name='Guest'):
         return {ACTION: MSG, TIME: time.time(), TO: message_to, FROM: account_name, MESSAGE: text}
 
@@ -291,7 +292,10 @@ class Client(metaclass=ClientVerifier):
                 self.account='Guest'
 
         #Если пароль аккаунта не передан, то спросим
-        if len(sys.argv) < 4 and self.passw == '':
+        if len(sys.argv) < 4 and self.passw == '' and self.mode=='gui':
+            conn_window.ui.StatusLabel.setText('Пароль не задан. Введите пароль')
+            return app.exec()
+        elif len(sys.argv) < 4 and self.passw == '' and mode=='con':
             self.passw = input('Пароль не задан. Введите пароль: ')
 
         print(f'Здравствуйте {self.account}!')
@@ -306,7 +310,8 @@ class Client(metaclass=ClientVerifier):
             try:
                 if self.serv_addr == '0.0.0.0':
                     self.serv_addr = 'localhost'
-                log.info(f' Попытка подключения к {self.serv_addr} {self.serv_port}')
+                log.info(f'Попытка подключения к {self.serv_addr} {self.serv_port}')
+                conn_window.ui.StatusLabel.setText(f'Попытка подключения к {self.serv_addr} {self.serv_port}')
                 #print(f' Попытка подключения к {self.serv_addr} {self.serv_port}')
                 s.connect((self.serv_addr,self.serv_port))
             except Exception as e:
@@ -320,6 +325,8 @@ class Client(metaclass=ClientVerifier):
             if isinstance(message, dict):
                 message = json.dumps(message)
             log.debug(f'Отправляю приветственное сообщение "{message}" на сервер')
+            conn_window.ui.StatusLabel.setText(f'Авторизация..')
+            conn_window.update()
             s.send(message.encode('utf-8'))
             log.debug('и жду ответа')
             server_response = json.loads(s.recv(1024).decode('utf-8'))
@@ -332,11 +339,17 @@ class Client(metaclass=ClientVerifier):
             if server_response.get('response') == WRONG_PASSW:
                 print(f'Пароль неверен! Попробуйте переподключиться с другим паролем!')
                 log.warning(f'Пароль неверен! Попробуйте переподключиться с другим паролем!')
+                conn_window.ui.StatusLabel.setText(f'Пароль неверен!')
+                conn_window.update()
                 self.alive = False
+                return app.exec()
             #Если все хорошо, то переключаем режим клиента в переданный в параметре или оставляем по-умолчанию - полный
             if server_response.get('response') == OK:
                 print('Соединение установлено!')
                 log.info('Авторизация успешна. Соединение установлено!')
+                conn_window.ui.StatusLabel.setText('Статус: Подключено')
+                conn_window.update()
+                conn_window.close()
                 if self.mode == 'r':
                     print('Клиент в режиме чтения')
                     log.debug('Клиент в режиме чтения')
@@ -345,7 +358,7 @@ class Client(metaclass=ClientVerifier):
                     print('Клиент в режиме записи')
                     log.debug('Клиент в режиме записи')
                     self.client_writer(s, self.account)
-                elif self.mode == 'f':
+                elif self.mode == 'f' or self.mode == 'gui':
                     log.debug('Клиент в полнофункциональном режиме')
                     print(f'Отправка сообщений всем пользователям в канал {MAIN_CHANNEL}')
                     print('Для получения помощи наберите help')
@@ -373,6 +386,70 @@ class Client(metaclass=ClientVerifier):
         s.close()
         exit(0)
 
+class c_window(QtWidgets.QWidget):
+    global server_address, server_port
+    def __init__(self):
+        super(c_window, self).__init__()
+        self.ui = Ui_Form()
+        self.ui.setupUi(self)
+        self.initUI()
+        self.show()
+
+    def initUI(self):
+        self.ui.ExitButton.clicked.connect(QtWidgets.qApp.quit)
+        self.ui.ConnectButton.clicked.connect(self.connectPressed)
+        self.db_engine = create_engine('sqlite:///client_db.sqlite3')
+        self.db_connection = self.db_engine.connect()
+        self.Session = sessionmaker(bind=self.db_engine)
+        self.session = self.Session()
+        try:
+            q = self.session.query(Last_user).first()
+            self.ui.LoginLine.setText(q.login)
+            if q.save_pwd == 1:
+                self.ui.PwdLine.setText(q.pwd)
+                self.ui.PwdSaveCheckBox.toggle()
+            self.ui.ServAddrLine.setText(q.server_addr)
+            self.ui.ServAddrPort.setText(q.server_port)
+        except:
+            pass
+
+
+
+
+
+    def connectPressed(self):
+        if not self.ui.PwdSaveCheckBox.isChecked():
+            try:
+                self.session.query(Last_user.save_pwd).update({"save_pwd": 0})
+                self.session.commit()
+            except:
+                self.ui.StatusLabel.setText('Ошибка изменения флага сохранения пароля в БД')
+                self.repaint()
+                time.sleep(10)
+        elif self.ui.PwdSaveCheckBox.isChecked():
+            try:
+                self.ui.StatusLabel.setText('Сохранение пароля в БД')
+                self.repaint()
+                q = self.session.query(Last_user).first()
+                q.save_pwd = 1
+                q.pwd = self.ui.PwdLine.text()
+                self.session.commit()
+            except:
+                self.ui.StatusLabel.setText('Ошибка сохранения пароля в БД')
+                self.repaint()
+                time.sleep(10)
+
+        self.db_connection.close()
+        self.ui.StatusLabel.setText('Подключение...')
+        self.account = self.ui.LoginLine.text()
+        self.pwd = self.ui.PwdLine.text()
+        server_address = self.ui.ServAddrLine.text()
+        server_port = self.ui.ServAddrPort.text()
+        # запуск основного кода клиента
+        c = Client(acc=self.account, passw=self.pwd, mode='gui')
+        c.start_client()
+        #self.close()
+        #QtWidgets.qApp.
 
 if __name__ == "__main__":
     #Проверка аргументов при запуске через консоль
@@ -388,16 +465,23 @@ if __name__ == "__main__":
             account = sys.argv[3]
         except IndexError:
             pass
-        try: #режим запуска, r - только чтение, w - только отправка, f - полноценный клиент
-            mode = sys.argv[4]
+        try: #пароль
+            pwd = sys.argv[4]
         except IndexError:
             pass
-        try: #пароль
-            pwd = sys.argv[5]
+        try: #режим запуска, r - только чтение, w - только отправка, f - полноценный клиент
+            mode = sys.argv[5]
         except IndexError:
             pass
 
-    #запуск основного кода клиента
-    c = Client(acc='Simper',mode=mode, passw='123')
-    c.start_client()
+    if len(sys.argv) < 3:
+        app = QtWidgets.QApplication(sys.argv)
+        conn_window = c_window()
+        app.exec()
+        # запуск основного кода клиента
+        #c = Client(acc=conn_window.account, mode=mode, passw=conn_window.pwd)
+        #c.start_client()
+    else:
+        c = Client(acc=account,mode=mode, passw=pwd)
+        c.start_client()
     #sys.exit(0)

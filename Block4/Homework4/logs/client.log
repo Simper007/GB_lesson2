@@ -4251,3 +4251,9 @@
 2019-06-27 00:38:32,500 - INFO - client: start_client -  Попытка подключения к localhost 7777 
 2019-06-27 00:38:32,568 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
 2019-06-27 00:38:35,456 - INFO - client: client_writer - Вывод истории сообщений 
+2019-06-27 00:41:00,816 - INFO - client: start_client - Запуск клиента 
+2019-06-27 00:41:00,817 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-27 00:41:00,905 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-27 00:41:05,153 - INFO - client: client_writer - Отправлено сообщение на сервер: {'action': 'msg', 'time': 1561578065.153811, 'to': '#all', 'from': 'Simper', 'message': '!sfd'} 
+2019-06-27 00:41:05,245 - INFO - client: client_reader - Получено сообщение с сервера: {'action': 'msg', 'time': 1561578065.153811, 'to': '#all', 'from': 'Simper', 'message': 'Simper:> !sfd'} 
+2019-06-27 00:41:09,014 - INFO - client: client_writer - Вывод истории сообщений 

@@ -3500,3 +3500,22 @@
 2019-06-22 00:56:24,315 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
 2019-06-22 00:56:32,437 - INFO - client: client_writer - Отправлено сообщение на сервер: {'action': 'msg', 'time': 1561146992.437424, 'to': '#all', 'from': 'Admin', 'message': 'asdasd'} 
 2019-06-22 00:56:32,480 - INFO - client: client_reader - Получено сообщение с сервера: {'action': 'msg', 'time': 1561146992.437424, 'to': '#all', 'from': 'Admin', 'message': 'Admin:> asdasd'} 
+2019-06-26 00:21:53,417 - INFO - client: start_client - Запуск клиента 
+2019-06-26 00:21:53,444 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-26 00:23:33,249 - INFO - client: start_client - Запуск клиента 
+2019-06-26 00:23:33,250 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-26 00:23:33,257 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-26 00:25:42,335 - ERROR - client: client_reader - Reader: Сервер разорвал соединение или получен некорректный ответ! 
+2019-06-26 00:26:06,942 - INFO - client: start_client - Запуск клиента 
+2019-06-26 00:26:06,942 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-26 00:26:39,412 - INFO - client: start_client - Запуск клиента 
+2019-06-26 00:26:39,413 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-26 00:26:39,420 - INFO - client: start_client - Авторизация успешна. Соединение установлено! 
+2019-06-26 00:26:42,125 - INFO - client: client_writer - Отправлено сообщение на сервер: {'action': 'msg', 'time': 1561490802.124969, 'to': '#all', 'from': 'Admin', 'message': 'lj'} 
+2019-06-26 00:26:42,138 - INFO - client: client_reader - Получено сообщение с сервера: {'action': 'msg', 'time': 1561490802.124969, 'to': '#all', 'from': 'Admin', 'message': 'Admin:> lj'} 
+2019-06-26 00:28:13,780 - ERROR - client: client_reader - Reader: Сервер разорвал соединение или получен некорректный ответ! 
+2019-06-26 00:28:59,728 - INFO - client: start_client - Запуск клиента 
+2019-06-26 00:28:59,729 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-26 00:29:21,172 - INFO - client: start_client - Запуск клиента 
+2019-06-26 00:29:21,173 - INFO - client: start_client -  Попытка подключения к localhost 7777 
+2019-06-26 00:29:23,180 - ERROR - client: start_client - Ошибка подключения: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 

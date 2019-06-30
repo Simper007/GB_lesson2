@@ -135,6 +135,7 @@ class Server(metaclass=ServerVerifier):
             try:
                 # Прием запросов на подключение, проверка приветственного сообщения и ответ
                 client, address = s.accept()
+                log.info(f'Получен запрос на соединение от {address[0]}:{address[1]}')
                 #print(client, address)
                 client_message = json.loads(client.recv(1024).decode("utf-8"))
                 log.info(f'Принято сообщение от клиента: {client_message}')
@@ -147,7 +148,6 @@ class Server(metaclass=ServerVerifier):
                 # за время socket timeout не было подключений
                 pass
             else:
-                log.info(f'Получен запрос на соединение от {str(address)}')
                 self.names[client_name] = client
                 self.clients.append(client)
             finally:

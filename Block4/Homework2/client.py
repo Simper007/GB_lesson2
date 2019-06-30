@@ -138,7 +138,8 @@ class Client(metaclass=ClientVerifier):
             ACTION: Action,
             TIME: time.time(),
             USER: {
-                ACCOUNT_NAME: account_name
+                ACCOUNT_NAME: account_name,
+                'account_password': 123
             }
         }
         return message
@@ -244,6 +245,6 @@ if __name__ == "__main__":
         except IndexError:
             pass
     #запуск основного кода клиента
-    c = Client(acc='Admin',mode=mode)
+    c = Client(acc='Simper',mode=mode)
     c.start_client()
     #sys.exit(0)

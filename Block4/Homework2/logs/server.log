@@ -1,2 +1,22 @@
-2019-06-24 00:10:19,951 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+2019-06-26 00:23:18,510 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
  
+2019-06-26 00:23:33,255 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561490613.2548597, 'user': {'account_name': 'Admin'}} 
+2019-06-26 00:23:33,255 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-26 00:23:33,255 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-26 00:23:33,256 - DEBUG - decorators: deco_log_call - Wed Jun 26 00:23:33 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x0324E6D0>, {'action': 'presence', 'time': 1561490613.2548597, 'user': {'account_name': 'Admin'}}) из функции my_server.start_server() 
+2019-06-26 00:23:33,257 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-26 00:23:33,257 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-26 00:23:33,257 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 52614) 
+2019-06-26 00:25:42,929 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-26 00:26:36,165 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-26 00:26:39,418 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:52655 
+2019-06-26 00:26:39,419 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561490799.4182007, 'user': {'account_name': 'Admin'}} 
+2019-06-26 00:26:39,419 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-26 00:26:39,419 - DEBUG - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-26 00:26:39,420 - DEBUG - decorators: deco_log_call - Wed Jun 26 00:26:39 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x0307F6D0>, {'action': 'presence', 'time': 1561490799.4182007, 'user': {'account_name': 'Admin'}}) из функции my_server.start_server() 
+2019-06-26 00:26:39,420 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-26 00:26:39,420 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-26 00:26:42,138 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-26 00:26:42,138 - DEBUG - server: read_messages - {'action': 'msg', 'time': 1561490802.124969, 'to': '#all', 'from': 'Admin', 'message': 'lj'} 
