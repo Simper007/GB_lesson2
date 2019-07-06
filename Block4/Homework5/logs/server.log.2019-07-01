@@ -1,0 +1,404 @@
+2019-06-30 21:29:37,241 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-30 21:36:10,206 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:54519 
+2019-06-30 21:36:10,207 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561912570.2057507, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 21:36:10,207 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 21:36:10,312 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 21:36:10,313 - DEBUG - decorators: deco_log_call - Sun Jun 30 21:36:10 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561912570.2057507, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 21:36:10,313 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 21:36:10,314 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 21:36:19,676 - DEBUG - server: read_messages - {'action': 'msg', 'time': 1561912579.6366222, 'to': '#all', 'from': 'Simper', 'message': 'hi all'} 
+2019-06-30 21:36:43,401 - DEBUG - server: read_messages - {'action': 'msg', 'time': 1561912603.3152246, 'to': '#all', 'from': 'Simper', 'message': 'exit'} 
+2019-06-30 21:36:50,340 - DEBUG - server: read_messages - Клиент 536 ('127.0.0.1', 54519) отключился до передачи сообщения по таймауту  
+2019-06-30 21:43:49,260 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:54556 
+2019-06-30 21:43:49,261 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561913029.2599766, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 21:43:49,261 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 21:43:49,326 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 21:43:49,326 - DEBUG - decorators: deco_log_call - Sun Jun 30 21:43:49 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561913029.2599766, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 21:43:49,327 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 21:43:49,327 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 21:44:07,375 - DEBUG - server: read_messages - Клиент 872 ('127.0.0.1', 54556) отключился до передачи сообщения по таймауту  
+2019-06-30 22:05:27,096 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:54700 
+2019-06-30 22:05:27,099 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561914327.096302, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 22:05:27,099 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 22:05:27,153 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 22:05:27,154 - DEBUG - decorators: deco_log_call - Sun Jun 30 22:05:27 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561914327.096302, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 22:05:27,154 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 22:05:27,154 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 22:05:35,231 - DEBUG - server: read_messages - Клиент 876 ('127.0.0.1', 54700) отключился до передачи сообщения по таймауту  
+2019-06-30 22:14:42,645 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:54788 
+2019-06-30 22:14:42,646 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561914882.6448014, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 22:14:42,646 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 22:14:42,710 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 22:14:42,711 - DEBUG - decorators: deco_log_call - Sun Jun 30 22:14:42 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561914882.6448014, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 22:14:42,711 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 22:14:42,711 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 22:15:31,975 - DEBUG - server: read_messages - Клиент 872 ('127.0.0.1', 54788) отключился до передачи сообщения по таймауту  
+2019-06-30 22:15:40,243 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:54793 
+2019-06-30 22:15:40,244 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561914940.2434237, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 22:15:40,244 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 22:15:40,286 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 22:15:40,287 - DEBUG - decorators: deco_log_call - Sun Jun 30 22:15:40 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561914940.2434237, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 22:15:40,287 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 22:15:40,287 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:17:38,502 - DEBUG - server: read_messages - Клиент 876 ('127.0.0.1', 54793) отключился до передачи сообщения по таймауту  
+2019-06-30 23:17:48,718 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:56624 
+2019-06-30 23:17:48,719 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561918668.7188904, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 23:17:48,719 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:17:48,796 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 23:17:48,796 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:17:48 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561918668.7188904, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 23:17:48,797 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:17:48,797 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:18:00,438 - DEBUG - server: read_messages - Клиент 836 ('127.0.0.1', 56624) отключился до передачи сообщения по таймауту  
+2019-06-30 23:18:07,883 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:56626 
+2019-06-30 23:18:07,884 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561918687.88311, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 23:18:07,885 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:18:07,945 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 23:18:07,946 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:18:07 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561918687.88311, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 23:18:07,946 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:18:07,946 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:32:53,935 - DEBUG - server: read_messages - Клиент 876 ('127.0.0.1', 56626) отключился до передачи сообщения по таймауту  
+2019-06-30 23:38:27,425 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57036 
+2019-06-30 23:38:27,426 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561919907.4252162, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 23:38:27,427 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:38:27,490 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 23:38:27,491 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:38:27 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561919907.4252162, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 23:38:27,491 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:38:27,491 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:38:40,380 - DEBUG - server: read_messages - Клиент 884 ('127.0.0.1', 57036) отключился до передачи сообщения по таймауту  
+2019-06-30 23:41:40,209 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57048 
+2019-06-30 23:41:40,210 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561920100.2098885, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 23:41:40,211 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:41:40,276 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 23:41:40,277 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:41:40 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561920100.2098885, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 23:41:40,277 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:41:40,277 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:41:40,378 - DEBUG - server: read_messages - Клиент 888 ('127.0.0.1', 57048) отключился до передачи сообщения по таймауту  
+2019-06-30 23:42:43,401 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57061 
+2019-06-30 23:42:43,402 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561920163.4018974, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 23:42:43,403 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:42:43,475 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 23:42:43,476 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:42:43 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561920163.4018974, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 23:42:43,476 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:42:43,476 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:42:54,141 - DEBUG - server: read_messages - Клиент 840 ('127.0.0.1', 57061) отключился до передачи сообщения по таймауту  
+2019-06-30 23:43:14,417 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57065 
+2019-06-30 23:43:14,418 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561920194.4172592, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 23:43:14,418 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:43:14,499 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 23:43:14,499 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:43:14 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561920194.4172592, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 23:43:14,499 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:43:14,500 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:46:03,131 - DEBUG - server: read_messages - Клиент 896 ('127.0.0.1', 57065) отключился до передачи сообщения по таймауту  
+2019-06-30 23:46:10,010 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57081 
+2019-06-30 23:46:10,012 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561920370.0108013, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 23:46:10,012 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:46:10,078 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 23:46:10,079 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:46:10 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561920370.0108013, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 23:46:10,079 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:46:10,079 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:46:53,560 - DEBUG - server: read_messages - Клиент 876 ('127.0.0.1', 57081) отключился до передачи сообщения по таймауту  
+2019-06-30 23:46:59,914 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57091 
+2019-06-30 23:46:59,915 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561920419.9145796, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 23:46:59,915 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:46:59,977 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 23:46:59,977 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:46:59 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561920419.9145796, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 23:46:59,977 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:46:59,978 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:47:10,054 - DEBUG - server: read_messages - Клиент 836 ('127.0.0.1', 57091) отключился до передачи сообщения по таймауту  
+2019-06-30 23:47:21,938 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57095 
+2019-06-30 23:47:21,939 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561920441.937346, 'user': {'account_name': 'Simper', 'account_password': '321'}} 
+2019-06-30 23:47:21,939 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:47:21,941 - WARNING - server: check_correct_presence_and_response - response: 402, error: Не верный пароль. Ввели 321, сохраненный пароль 123 
+2019-06-30 23:47:21,942 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:47:21 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561920441.937346, 'user': {'account_name': 'Simper', 'account_password': '321'}}) из функции my_server.start_server() 
+2019-06-30 23:47:21,942 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:47:21,942 - INFO - server: start_server - Отправка ответа клиенту: {'response': 402, 'error': 'Не верный пароль!'} 
+2019-06-30 23:47:22,043 - DEBUG - server: read_messages - Клиент 888 ('127.0.0.1', 57095) отключился до передачи сообщения по таймауту  
+2019-06-30 23:48:54,242 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57101 
+2019-06-30 23:48:54,243 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561920534.242111, 'user': {'account_name': 'Simper', 'account_password': '321'}} 
+2019-06-30 23:48:54,244 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:48:54,245 - WARNING - server: check_correct_presence_and_response - response: 402, error: Не верный пароль. Ввели 321, сохраненный пароль 123 
+2019-06-30 23:48:54,246 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:48:54 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561920534.242111, 'user': {'account_name': 'Simper', 'account_password': '321'}}) из функции my_server.start_server() 
+2019-06-30 23:48:54,246 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:48:54,246 - INFO - server: start_server - Отправка ответа клиенту: {'response': 402, 'error': 'Не верный пароль!'} 
+2019-06-30 23:48:54,347 - DEBUG - server: read_messages - Клиент 772 ('127.0.0.1', 57101) отключился до передачи сообщения по таймауту  
+2019-06-30 23:52:15,145 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57122 
+2019-06-30 23:52:15,146 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561920735.1450467, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 23:52:15,146 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:52:15,204 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 23:52:15,205 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:52:15 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561920735.1450467, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 23:52:15,205 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:52:15,205 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:53:55,568 - DEBUG - server: read_messages - Клиент 896 ('127.0.0.1', 57122) отключился до передачи сообщения по таймауту  
+2019-06-30 23:54:08,635 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57130 
+2019-06-30 23:54:08,636 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561920848.6340244, 'user': {'account_name': 'Simper', 'account_password': '321'}} 
+2019-06-30 23:54:08,636 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:54:08,639 - WARNING - server: check_correct_presence_and_response - response: 402, error: Не верный пароль. Ввели 321, сохраненный пароль 123 
+2019-06-30 23:54:08,639 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:54:08 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561920848.6340244, 'user': {'account_name': 'Simper', 'account_password': '321'}}) из функции my_server.start_server() 
+2019-06-30 23:54:08,640 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:54:08,640 - INFO - server: start_server - Отправка ответа клиенту: {'response': 402, 'error': 'Не верный пароль!'} 
+2019-06-30 23:54:08,740 - DEBUG - server: read_messages - Клиент 732 ('127.0.0.1', 57130) отключился до передачи сообщения по таймауту  
+2019-06-30 23:54:14,350 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57131 
+2019-06-30 23:54:14,350 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561920854.3502374, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 23:54:14,350 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:54:14,417 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 23:54:14,417 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:54:14 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561920854.3502374, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 23:54:14,417 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:54:14,418 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:54:37,385 - DEBUG - server: read_messages - Клиент 840 ('127.0.0.1', 57131) отключился до передачи сообщения по таймауту  
+2019-06-30 23:54:49,965 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57132 
+2019-06-30 23:54:49,965 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561920889.9651043, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 23:54:49,966 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:54:50,033 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 23:54:50,034 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:54:50 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561920889.9651043, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 23:54:50,034 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:54:50,034 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:59:08,817 - DEBUG - server: read_messages - Клиент 900 ('127.0.0.1', 57132) отключился до передачи сообщения по таймауту  
+2019-06-30 23:59:15,871 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57162 
+2019-06-30 23:59:15,873 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561921155.871201, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-06-30 23:59:15,873 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-30 23:59:15,949 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-06-30 23:59:15,950 - DEBUG - decorators: deco_log_call - Sun Jun 30 23:59:15 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561921155.871201, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-06-30 23:59:15,950 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-06-30 23:59:15,951 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-30 23:59:23,807 - DEBUG - server: read_messages - Клиент 840 ('127.0.0.1', 57162) отключился до передачи сообщения по таймауту  
+2019-07-01 00:41:09,518 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57514 
+2019-07-01 00:41:09,519 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561923669.517696, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 00:41:09,519 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 00:41:09,586 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 00:41:09,587 - DEBUG - decorators: deco_log_call - Mon Jul  1 00:41:09 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561923669.517696, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 00:41:09,587 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 00:41:09,587 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 00:41:14,629 - DEBUG - server: read_messages - Клиент 904 ('127.0.0.1', 57514) отключился до передачи сообщения по таймауту  
+2019-07-01 00:51:27,759 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57668 
+2019-07-01 00:51:27,760 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561924287.7594433, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 00:51:27,760 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 00:51:27,825 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 00:51:27,826 - DEBUG - decorators: deco_log_call - Mon Jul  1 00:51:27 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561924287.7594433, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 00:51:27,826 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 00:51:27,826 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 00:51:32,867 - DEBUG - server: read_messages - Клиент 888 ('127.0.0.1', 57668) отключился до передачи сообщения по таймауту  
+2019-07-01 00:51:51,583 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57672 
+2019-07-01 00:51:51,585 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561924311.5821488, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 00:51:51,586 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 00:51:51,642 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 00:51:51,642 - DEBUG - decorators: deco_log_call - Mon Jul  1 00:51:51 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561924311.5821488, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 00:51:51,643 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 00:51:51,643 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 00:53:04,101 - DEBUG - server: read_messages - Клиент 764 ('127.0.0.1', 57672) отключился до передачи сообщения по таймауту  
+2019-07-01 00:53:11,743 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57708 
+2019-07-01 00:53:11,744 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561924391.7435975, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 00:53:11,745 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 00:53:11,806 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 00:53:11,807 - DEBUG - decorators: deco_log_call - Mon Jul  1 00:53:11 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561924391.7435975, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 00:53:11,807 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 00:53:11,807 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 00:53:49,834 - DEBUG - server: read_messages - Клиент 900 ('127.0.0.1', 57708) отключился до передачи сообщения по таймауту  
+2019-07-01 01:00:43,734 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57823 
+2019-07-01 01:00:43,735 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561924843.7343783, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:00:43,735 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:00:43,782 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:00:43,782 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:00:43 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561924843.7343783, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:00:43,782 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:00:43,783 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:00:46,809 - DEBUG - server: read_messages - Клиент 904 ('127.0.0.1', 57823) отключился до передачи сообщения по таймауту  
+2019-07-01 01:00:49,730 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57824 
+2019-07-01 01:00:49,731 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561924849.7306926, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:00:49,731 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:00:49,807 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:00:49,808 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:00:49 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561924849.7306926, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:00:49,808 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:00:49,808 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:02:11,866 - DEBUG - server: read_messages - Клиент 908 ('127.0.0.1', 57824) отключился до передачи сообщения по таймауту  
+2019-07-01 01:02:24,948 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57837 
+2019-07-01 01:02:24,949 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561924944.9483397, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:02:24,949 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:02:24,996 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:02:24,997 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:02:24 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561924944.9483397, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:02:24,997 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:02:24,997 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:02:54,202 - DEBUG - server: read_messages - Клиент 620 ('127.0.0.1', 57837) отключился до передачи сообщения по таймауту  
+2019-07-01 01:03:05,963 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57840 
+2019-07-01 01:03:05,964 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561924985.9636834, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:03:05,964 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:03:06,016 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:03:06,016 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:03:06 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561924985.9636834, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:03:06,016 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:03:06,016 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:03:08,743 - DEBUG - server: read_messages - Клиент 876 ('127.0.0.1', 57840) отключился до передачи сообщения по таймауту  
+2019-07-01 01:03:16,108 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57841 
+2019-07-01 01:03:16,110 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561924996.108402, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:03:16,110 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:03:16,173 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:03:16,173 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:03:16 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561924996.108402, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:03:16,173 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:03:16,173 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:03:19,898 - DEBUG - server: read_messages - Клиент 904 ('127.0.0.1', 57841) отключился до передачи сообщения по таймауту  
+2019-07-01 01:03:27,182 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57842 
+2019-07-01 01:03:27,183 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561925007.1811943, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:03:27,183 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:03:27,261 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:03:27,261 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:03:27 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561925007.1811943, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:03:27,261 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:03:27,261 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:03:31,692 - DEBUG - server: read_messages - Клиент 876 ('127.0.0.1', 57842) отключился до передачи сообщения по таймауту  
+2019-07-01 01:09:03,795 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57862 
+2019-07-01 01:09:03,796 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561925343.7955387, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:09:03,796 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:09:03,866 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:09:03,866 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:09:03 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561925343.7955387, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:09:03,866 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:09:03,867 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:09:08,310 - DEBUG - server: read_messages - Клиент 908 ('127.0.0.1', 57862) отключился до передачи сообщения по таймауту  
+2019-07-01 01:09:23,383 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57865 
+2019-07-01 01:09:23,384 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561925363.3831964, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:09:23,384 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:09:23,445 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:09:23,446 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:09:23 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561925363.3831964, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:09:23,446 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:09:23,446 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:09:58,598 - DEBUG - server: read_messages - Клиент 916 ('127.0.0.1', 57865) отключился до передачи сообщения по таймауту  
+2019-07-01 01:10:04,640 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57867 
+2019-07-01 01:10:04,641 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561925404.6391766, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:10:04,641 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:10:04,688 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:10:04,689 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:10:04 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561925404.6391766, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:10:04,689 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:10:04,689 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:10:12,462 - DEBUG - server: read_messages - Клиент 876 ('127.0.0.1', 57867) отключился до передачи сообщения по таймауту  
+2019-07-01 01:10:22,659 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57868 
+2019-07-01 01:10:22,661 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561925422.6590466, 'user': {'account_name': 'Simper', 'account_password': '<built-in method tex'}} 
+2019-07-01 01:10:22,661 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:10:22,664 - WARNING - server: check_correct_presence_and_response - response: 402, error: Не верный пароль. Ввели <built-in method tex, сохраненный пароль 123 
+2019-07-01 01:10:22,664 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:10:22 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561925422.6590466, 'user': {'account_name': 'Simper', 'account_password': '<built-in method tex'}}) из функции my_server.start_server() 
+2019-07-01 01:10:22,665 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:10:22,665 - INFO - server: start_server - Отправка ответа клиенту: {'response': 402, 'error': 'Не верный пароль!'} 
+2019-07-01 01:10:22,765 - DEBUG - server: read_messages - Клиент 900 ('127.0.0.1', 57868) отключился до передачи сообщения по таймауту  
+2019-07-01 01:13:29,767 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:57886 
+2019-07-01 01:13:29,768 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561925609.7675738, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:13:29,769 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:13:29,835 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:13:29,836 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:13:29 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561925609.7675738, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:13:29,836 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:13:29,836 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:16:10,783 - DEBUG - server: read_messages - Клиент 904 ('127.0.0.1', 57886) отключился до передачи сообщения по таймауту  
+2019-07-01 01:16:27,311 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58017 
+2019-07-01 01:16:27,312 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561925787.3113284, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:16:27,312 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:16:27,389 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:16:27,390 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:16:27 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561925787.3113284, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:16:27,390 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:16:27,390 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:17:04,117 - DEBUG - server: read_messages - Клиент 776 ('127.0.0.1', 58017) отключился до передачи сообщения по таймауту  
+2019-07-01 01:17:19,180 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58024 
+2019-07-01 01:17:19,183 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561925839.1805332, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:17:19,183 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:17:19,263 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:17:19,265 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:17:19 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561925839.1805332, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:17:19,265 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:17:19,265 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:17:24,721 - DEBUG - server: read_messages - Клиент 916 ('127.0.0.1', 58024) отключился до передачи сообщения по таймауту  
+2019-07-01 01:17:40,515 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58026 
+2019-07-01 01:17:40,518 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561925860.5152087, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:17:40,518 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:17:40,600 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:17:40,600 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:17:40 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561925860.5152087, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:17:40,601 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:17:40,601 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:18:12,110 - DEBUG - server: read_messages - Клиент 876 ('127.0.0.1', 58026) отключился до передачи сообщения по таймауту  
+2019-07-01 01:18:28,011 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58029 
+2019-07-01 01:18:28,012 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561925908.0118554, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:18:28,012 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:18:28,065 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:18:28,066 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:18:28 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561925908.0118554, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:18:28,066 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:18:28,066 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:18:56,496 - DEBUG - server: read_messages - Клиент 620 ('127.0.0.1', 58029) отключился до передачи сообщения по таймауту  
+2019-07-01 01:20:45,820 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58043 
+2019-07-01 01:20:45,821 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561926045.8205068, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:20:45,822 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:20:45,897 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:20:45,897 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:20:45 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561926045.8205068, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:20:45,898 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:20:45,898 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:21:04,674 - DEBUG - server: read_messages - Клиент 876 ('127.0.0.1', 58043) отключился до передачи сообщения по таймауту  
+2019-07-01 01:21:19,887 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58056 
+2019-07-01 01:21:19,888 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561926079.8875, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:21:19,889 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:21:19,943 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:21:19,943 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:21:19 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561926079.8875, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:21:19,943 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:21:19,943 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:29:32,348 - DEBUG - server: read_messages - Клиент 620 ('127.0.0.1', 58056) отключился до передачи сообщения по таймауту  
+2019-07-01 01:29:41,288 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58321 
+2019-07-01 01:29:41,289 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561926581.288601, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:29:41,289 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:29:41,340 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:29:41,341 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:29:41 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561926581.288601, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:29:41,341 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:29:41,341 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:29:44,166 - DEBUG - server: read_messages - Клиент 768 ('127.0.0.1', 58321) отключился до передачи сообщения по таймауту  
+2019-07-01 01:29:48,294 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58322 
+2019-07-01 01:29:48,295 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561926588.2947614, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:29:48,295 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:29:48,347 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:29:48,348 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:29:48 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561926588.2947614, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:29:48,348 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:29:48,348 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:29:49,857 - DEBUG - server: read_messages - Клиент 900 ('127.0.0.1', 58322) отключился до передачи сообщения по таймауту  
+2019-07-01 01:29:58,798 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58323 
+2019-07-01 01:29:58,798 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561926598.797311, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:29:58,798 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:29:58,851 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:29:58,852 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:29:58 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561926598.797311, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:29:58,852 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:29:58,852 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:30:00,366 - DEBUG - server: read_messages - Клиент 876 ('127.0.0.1', 58323) отключился до передачи сообщения по таймауту  
+2019-07-01 01:30:07,846 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58324 
+2019-07-01 01:30:07,847 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561926607.8469555, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:30:07,848 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:30:07,891 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:30:07,891 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:30:07 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561926607.8469555, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:30:07,891 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:30:07,892 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:30:09,301 - DEBUG - server: read_messages - Клиент 924 ('127.0.0.1', 58324) отключился до передачи сообщения по таймауту  
+2019-07-01 01:32:56,667 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58341 
+2019-07-01 01:32:56,668 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561926776.666576, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:32:56,668 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:32:56,724 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:32:56,724 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:32:56 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561926776.666576, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:32:56,724 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:32:56,724 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:32:59,648 - DEBUG - server: read_messages - Клиент 876 ('127.0.0.1', 58341) отключился до передачи сообщения по таймауту  
+2019-07-01 01:33:08,410 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58345 
+2019-07-01 01:33:08,411 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561926788.410387, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:33:08,411 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:33:08,473 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:33:08,474 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:33:08 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561926788.410387, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:33:08,474 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:33:08,474 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:33:39,711 - DEBUG - server: read_messages - Клиент 924 ('127.0.0.1', 58345) отключился до передачи сообщения по таймауту  
+2019-07-01 01:33:45,363 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58347 
+2019-07-01 01:33:45,365 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561926825.363893, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:33:45,365 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:33:45,418 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:33:45,418 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:33:45 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561926825.363893, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:33:45,419 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:33:45,419 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:33:46,530 - DEBUG - server: read_messages - Клиент 932 ('127.0.0.1', 58347) отключился до передачи сообщения по таймауту  
+2019-07-01 01:35:18,815 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58352 
+2019-07-01 01:35:18,816 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561926918.8147473, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:35:18,817 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:35:18,880 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:35:18,881 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:35:18 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561926918.8147473, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:35:18,881 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:35:18,881 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:36:18,571 - DEBUG - server: read_messages - Клиент 664 ('127.0.0.1', 58352) отключился до передачи сообщения по таймауту  
+2019-07-01 01:36:28,085 - INFO - server: start_server - Получен запрос на соединение от 127.0.0.1:58359 
+2019-07-01 01:36:28,086 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1561926988.0851376, 'user': {'account_name': 'Simper', 'account_password': '123'}} 
+2019-07-01 01:36:28,086 - DEBUG - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-07-01 01:36:28,161 - DEBUG - server: check_correct_presence_and_response - Проверка пароля успешна, ответ: response: 200 
+2019-07-01 01:36:28,162 - DEBUG - decorators: deco_log_call - Mon Jul  1 01:36:28 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами (<__main__.Server object at 0x039CE5B0>, {'action': 'presence', 'time': 1561926988.0851376, 'user': {'account_name': 'Simper', 'account_password': '123'}}) из функции my_server.start_server() 
+2019-07-01 01:36:28,162 - INFO - server: start_server - Приветствуем пользователя Simper! 
+2019-07-01 01:36:28,162 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-07-01 01:36:30,989 - DEBUG - server: read_messages - Клиент 692 ('127.0.0.1', 58359) отключился до передачи сообщения по таймауту  
