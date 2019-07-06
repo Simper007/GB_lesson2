@@ -6,7 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from config import *
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -102,4 +102,21 @@ class Ui_Form(object):
         self.ExitButton.setText(_translate("Form", "Exit"))
         self.ConnectButton.setText(_translate("Form", "Connect"))
 
+class AddContactDialog(QtWidgets.QDialog):
+    def __init__(self):
+        super(AddContactDialog, self).__init__()
+        self.ui = uic.loadUi('add_contact.ui', self)
+        self.initUI()
+
+    def initUI(self):
+        self.ui.buttonBox.rejected.connect(self.close)
+
+class DelContactDialog(QtWidgets.QDialog):
+    def __init__(self):
+        super(DelContactDialog, self).__init__()
+        self.ui = uic.loadUi('del_contact.ui', self)
+        self.initUI()
+
+    def initUI(self):
+        self.ui.del_form_buttonBox.rejected.connect(self.close)
 

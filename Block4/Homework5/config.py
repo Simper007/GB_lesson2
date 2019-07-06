@@ -26,6 +26,8 @@ FROM = 'from'
 MESSAGE = 'message'
 MAIN_CHANNEL = '#all'
 SERVER = 'server'
+EXIT = 'exit'
+INT_CMD = 'internal command'
 
 BASIC_NOTICE = 100
 OK = 200

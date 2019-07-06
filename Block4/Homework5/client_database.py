@@ -13,15 +13,18 @@ class Chat_histories(Base):
     message = Column(String)
     message_date = Column(DateTime,default=datetime.datetime.now())
     channel = Column(String)
+    direction = Column(String)
 
-    def __init__(self, user_login, msg_from, msg_to, msg):
+    def __init__(self, user_login, msg_from, msg_to, msg, direction, date=datetime.datetime.now()):
         self.history_owner = user_login
         self.message_owner = msg_from
         self.message = msg
         self.channel = msg_to
+        self.message_date = date
+        self.direction = direction
 
     def __repr__(self):
-        return "'%s', '%s', '%s', '%s', '%s', '%s'" % (self.msg_id, self.history_owner, self.message_owner, self.channel, self.message, self.message_date)
+        return "'%s', '%s', '%s', '%s', '%s', '%s', '%s'" % (self.msg_id, self.history_owner, self.message_owner, self.channel, self.message, self.message_date.replace(microsecond=0), self.direction)
 
 class User_contact_list(Base):
     __tablename__ = 'user_contact_list'
@@ -67,6 +70,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=db_engine)
     session = Session()
 
+    '''
     if not session.query(exists().where(Chat_histories.history_owner == 'Snegurka')).scalar():
         u = Chat_histories('Snegurka','Snegurka', 'Admin','Привет, Админ!')
         u.__table__.create(db_engine)
@@ -77,6 +81,13 @@ if __name__ == "__main__":
         session.add(u)
         session.add(ucl)
         session.commit()
+    '''
+
+    u = Chat_histories('Simper', 'Admin', '#all', 'Чуваки превед!', 'in')
+    #u.__table__.create(db_engine)
+    #u.__table__.drop(db_engine)
+    #session.add(u)
+    #session.commit()
 
     if not session.query(exists().where(Last_user.login == 'Simper')).scalar():
         u = Last_user('Simper','123',1)
@@ -86,7 +97,7 @@ if __name__ == "__main__":
         session.commit()
 
     if session.query(exists().where(Chat_histories.history_owner == 'Snegurka')).scalar():
-            res1 = session.query(Chat_histories).filter_by(history_owner='Snegurka').all()
+            res1 = session.query(Chat_histories).filter_by(history_owner='Simper').filter_by(channel='#all').all()
             print(res1)
 
     if bool(session.query(User_contact_list).count()):
@@ -98,6 +109,12 @@ if __name__ == "__main__":
         res4 = session.query(Last_user).all()
         print(res4)
 
+    uz = [contact[0] for contact in session.query(User_contact_list.in_list_login).filter_by(owner_login='Simper').all()]
+    print(sorted(uz))
+    #print(sorted(session.query(Chat_histories).filter_by(history_owner='Simper').filter_by(channel='#all').all(),key=lambda item: item[5]))
+    usd = [msg for msg in session.query(Chat_histories.message_owner,Chat_histories.channel,Chat_histories.message,Chat_histories.message_date,Chat_histories.direction).filter_by(history_owner='Simper').filter_by(channel='#all').all()]
+    print(sorted(usd,key=lambda item: item[3])
+       )
 
     #u1 = User('Admin','qwerty123')
     #u1.__table__.drop(db_engine)
