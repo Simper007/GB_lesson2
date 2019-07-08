@@ -1,10 +1,15 @@
 import sys
+import os
 import json
 import time
 import logging
 import logs.config.server_config_log
-import decorators
+from decorators import Log, login_required
 import select
+import hmac
+from binascii import hexlify
+import hashlib
+from Cryptodome.Cipher import AES
 from config import *
 from socket import *
 from descriptors import *
@@ -15,7 +20,7 @@ from PyQt5 import QtWidgets, uic, QtGui
 from PyQt5.QtCore import QTimer
 
 log = logging.getLogger('Server_log')
-logger = decorators.Log(log)
+logger = Log(log)
 db_engine = create_engine('sqlite:///db.sqlite3')
 db_connection = db_engine.connect()
 Session = sessionmaker(bind=db_engine)
@@ -90,6 +95,7 @@ class Server(metaclass=ServerVerifier):
         return message_list
 
     # Функция записи сообщений в сокеты клиентов
+    @login_required
     def write_messages(self, messages, to_clients, client_list):
         for message, sender in messages:
             if self.alive.isSet():
@@ -114,6 +120,8 @@ class Server(metaclass=ServerVerifier):
                     print(msg)
                     try:
                         connection.send(json.dumps(msg).encode('utf-8'))
+                        main_window.add_log(
+                            f'{message[USER_LOGIN]} запросил список контактов: {msg}')
                     except BaseException:
                         log.error(
                             'Ошибка ответа на изменение списка контактов')
@@ -133,6 +141,8 @@ class Server(metaclass=ServerVerifier):
                                     message[USER_LOGIN], message[USER_ID])
                                 self.session.add(contact)
                                 self.session.commit()
+                                main_window.add_log(
+                                    f'{message[USER_LOGIN]} добавил в список контактов {message[USER_ID]}')
                                 msg = {RESPONSE: ACCEPTED}
                             except BaseException:
                                 log.error('Не удалось добавить контакт в БД')
@@ -164,10 +174,14 @@ class Server(metaclass=ServerVerifier):
                             msg = {RESPONSE: SERVER_ERROR}
                         else:
                             log.info('Удаление контакта из списка успешно')
+                            main_window.add_log(
+                                f'{message[USER_LOGIN]} удалил из списка контактов {message[USER_ID]}')
                             msg = {RESPONSE: ACCEPTED}
                     else:
-                        log.error(
+                        log.warning(
                             'Контакт для удаления не находится в списке контактов')
+                        main_window.add_log(
+                            f'{message[USER_LOGIN]} попытался удалить из списка контактов {message[USER_ID]}. Такого контакта нет в списке')
                         msg = {RESPONSE: CONFLICT}
                     try:
                         connection.send(json.dumps(msg).encode('utf-8'))
@@ -175,12 +189,29 @@ class Server(metaclass=ServerVerifier):
                         log.error(
                             'Ошибка ответа на изменение списка контактов')
 
+                # При закрытии клиент посылает выход, обрабатываем его
+                elif ACTION in message and message[ACTION] == EXIT:
+                    log.info(f'Клиент {message[USER_LOGIN]} вышел из чата')
+                    main_window.add_log(
+                        f'Клиент {message[USER_LOGIN]} вышел из чата')
+                    connection = self.names[message[USER_LOGIN]]
+                    for k, v in self.names.items():
+                        if v == connection:
+                            self.session.query(Users_online).filter_by(
+                                login=k).delete()
+                            self.session.commit()
+                    self.names = {
+                        key: val for key,
+                        val in self.names.items() if val != connection}
+                    connection.close()
+                    client_list.remove(connection)
+
                 # Если приватный канал, то отправка только одному получателю
                 if ACTION in message and message[ACTION] == MSG and message[
-                        TO] != MAIN_CHANNEL and message[TO] != message[FROM]:
+                        TO] != MAIN_CHANNEL and message[TO] != message[FROM] and message[TO] != SERVER:
                     # получаем пользователя, которому отправляем сообщение
                     to = message[TO]
-                    # обработка сервером команды who
+                    # обработка сервером приватных сообщений
                     if message[MESSAGE] != '!who':
                         message[MESSAGE] = f'(private){message[FROM]}:> {message[MESSAGE]}'
                     try:
@@ -203,6 +234,7 @@ class Server(metaclass=ServerVerifier):
                             log.warning(message)
                             main_window.add_log(
                                 f'{message[MESSAGE]}')
+
                     # отправка сообщения
                     try:
                         connection.send(json.dumps(message).encode('utf-8'))
@@ -216,7 +248,6 @@ class Server(metaclass=ServerVerifier):
                         client_list.remove(connection)
                 # если общий канал, то отправка сообщения всем клиентам
                 elif message[ACTION] == MSG and message[TO] == MAIN_CHANNEL:
-                    #message[MESSAGE] = f'{message[FROM]}:> {message[MESSAGE]}'
                     for connection in to_clients:
                         # отправка сообщения
                         try:
@@ -227,7 +258,7 @@ class Server(metaclass=ServerVerifier):
                                 f'Сокет клиента {connection.fileno()} {connection.getpeername()} недоступен для отправки. Вероятно он отключился')
                             for k, v in self.names.items():
                                 if v == connection:
-                                    self.session.query(User_online).filter_by(
+                                    self.session.query(Users_online).filter_by(
                                         login=k).delete()
                                     self.session.commit()
                             self.names = {
@@ -248,13 +279,20 @@ class Server(metaclass=ServerVerifier):
                 TIME in presence_message and \
                 isinstance(presence_message[TIME], float):
 
+            psw_hash = hashlib.pbkdf2_hmac(
+                'sha256',
+                presence_message[USER][ACCOUNT_PASSWORD].encode('utf-8'),
+                presence_message[USER][ACCOUNT_NAME].encode('utf-8'),
+                1000)
+            # print(hexlify(psw_hash).decode('utf-8'))
+
             if not self.session.query(
                 exists().where(
                     User.login == presence_message[USER][ACCOUNT_NAME])).scalar():
                 # Новый клиент, добавляем логин в базу
                 u = User(
                     presence_message[USER][ACCOUNT_NAME],
-                    presence_message[USER][ACCOUNT_PASSWORD])
+                    hexlify(psw_hash).decode('utf-8'))
                 self.session.add(u)
                 # Добавляем дату сессии
                 ses = User_sessions(
@@ -271,8 +309,8 @@ class Server(metaclass=ServerVerifier):
                 # проверка пароля
                 chk = self.session.query(User).filter_by(
                     login=presence_message['user'][ACCOUNT_NAME]).first()
-                if chk.password == presence_message['user'][
-                        ACCOUNT_PASSWORD] or presence_message['user'][ACCOUNT_NAME] == account:
+                if chk.password == hexlify(psw_hash).decode(
+                        'utf-8') or presence_message['user'][ACCOUNT_NAME] == account:
                     # если пароль совпал, добавляем дату сессии
                     ses = User_sessions(
                         presence_message['user'][ACCOUNT_NAME],
@@ -281,27 +319,66 @@ class Server(metaclass=ServerVerifier):
                     self.session.commit()
                     # Если всё хорошо шлем ОК
                     log.debug(
-                        f'Проверка пароля успешна, ответ: {RESPONSE}: {OK}')
+                        f'Проверка пароля успешна')
                     main_window.add_log(
-                        f'Проверка пароля успешна, ответ: {RESPONSE}: {OK}')
+                        f'Проверка пароля успешна')
                     return {RESPONSE: OK}
                 else:
                     log.warning(
-                        f'{RESPONSE}: {WRONG_PASSW}, {ERROR}: Не верный пароль. Ввели {presence_message["user"][ACCOUNT_PASSWORD]}, сохраненный пароль {chk.password}')
+                        f'{RESPONSE}: {WRONG_PASSW}, {ERROR}: Не верный пароль. Ввели {hexlify(psw_hash).decode("utf-8")}, сохраненный пароль {chk.password}')
                     main_window.add_log(
-                        f'{RESPONSE}: {WRONG_PASSW}, {ERROR}: Не верный пароль. Ввели {presence_message["user"][ACCOUNT_PASSWORD]}, сохраненный пароль {chk.password}')
+                        f'{RESPONSE}: {WRONG_PASSW}, {ERROR}: Не верный пароль. Ввели {hexlify(psw_hash).decode("utf-8")}, сохраненный пароль {chk.password}')
                     return {RESPONSE: WRONG_PASSW, ERROR: 'Не верный пароль!'}
         else:
             # Иначе шлем код ошибки
             log.warning(
                 f'{RESPONSE}: {WRONG_REQUEST}, {ERROR}: "Не верный запрос"')
+            main_window.add_log(
+                f'{RESPONSE}: {WRONG_REQUEST}, {ERROR}: "Не верный запрос"')
             return {RESPONSE: WRONG_REQUEST, ERROR: 'Не верный запрос'}
+
+    def client_auth(self, client, secret_key):
+        '''
+        Аутентификация клиента.
+        '''
+        log.info(
+            f'Аутентификация входящего соединения {client}')
+        main_window.add_log(
+            f'Аутентификация входящего соединения {client}')
+
+        auth = False
+        message = os.urandom(32)
+        try:
+            client.send(message)
+        except BaseException:
+            log.error('Ошибка отправки запроса аутентификации клиенту')
+            auth = False
+
+        hash = hmac.new(secret_key, message)
+        digest = hash.digest()
+
+        try:
+            response = client.recv(len(digest))
+            hmac.compare_digest(digest, response)
+        except BaseException:
+            log.error('Ошибка получения ответа аутентификации клиента')
+            auth = False
+        else:
+            auth = True
+
+        if not auth:
+            client.close()
+            return ERROR
+        else:
+            return OK
 
     @logger
     def start_server(self):
 
         # создаем сокет для работы с клиентами
         s = ServerSocket(self.serv_addr, self.serv_port)
+        s.settimeout(0.5)
+        s.listen(20)
 
         # print(self.serv_addr,self.serv_port)
         log.info('Запуск сервера! Готов к приему клиентов! \n')
@@ -316,6 +393,18 @@ class Server(metaclass=ServerVerifier):
                     f'Получен запрос на соединение от {self.address[0]}:{self.address[1]}')
                 main_window.add_log(
                     f'Получен запрос на соединение от {self.address[0]}:{self.address[1]}')
+
+                # аутентификация клиента
+                secret_key = b'Quick IM the BEST!'
+                auth_state = self.client_auth(client, secret_key)
+                if auth_state == ERROR:
+                    main_window.add_log(
+                        f'Ошибка аутентификации клиента {client}')
+                    continue
+                else:
+                    log.info('Аутентификация успешна')
+                    main_window.add_log(f'Аутентификация успешна')
+
                 #print(client, address)
                 client_message = json.loads(client.recv(1024).decode("utf-8"))
                 log.info(f'Принято сообщение от клиента: {client_message}')
@@ -324,11 +413,10 @@ class Server(metaclass=ServerVerifier):
                 answer = self.check_correct_presence_and_response(
                     client_message)
                 client_name = client_message.get('user').get('account_name')
-                log.info(f"Приветствуем пользователя {client_name}!")
+                log.info(
+                    f"Приветствуем пользователя {client_name}! Отправка ответа клиенту: {answer}")
                 main_window.add_log(
-                    f"Приветствуем пользователя {client_name}!")
-                log.info(f'Отправка ответа клиенту: {answer}')
-                main_window.add_log(f'Отправка ответа клиенту: {answer}')
+                    f"Приветствуем пользователя {client_name}! Отправка ответа клиенту: {answer}")
                 client.send(json.dumps(answer).encode('utf-8'))
             except OSError as err:
                 # за время socket timeout не было подключений
@@ -385,6 +473,12 @@ class ServerManager(QtWidgets.QMainWindow):
         self.log_list = QtGui.QStandardItemModel()
         self.log_list.setHorizontalHeaderLabels(['Лог работы сервера:'])
         self.ui.RefreshButton.clicked.connect(self.refresh_user_list)
+        # Таймер, обновляющий список клиентов 1 раз в секунду
+        self.timer = QTimer()
+        self.timer.timeout.connect(self.refresh_user_list)
+        self.timer.start(1000)
+        if len(sys.argv) > 1:
+            self.startserver()
 
         # self.ui.LogView.setModel(self.gui_add_log_item('test'))
         # self.ui.LogView.columnResized(541,50,10)
@@ -400,19 +494,21 @@ class ServerManager(QtWidgets.QMainWindow):
         self.UserList.setHorizontalHeaderLabels(['Список пользователей:'])
         i = 0
         for contact in session.query(Users_online).all():
-            #print(contact.login)
+            # print(contact.login)
             self.ui.UserList.setItem(
                 0, i, QtWidgets.QTableWidgetItem(
-                    contact.login))
+                    f'{contact.login} [{contact.ip}]'))
             i = i + 1
         self.ui.UserList.setRowCount(i)
         self.ui.OnlineUserslabel.setText(f'Users online: {i}')
-        #self.ui.UserList.setW
-        #self.ui.UserList.resizeColumnsToContents()
-        #self.ui.UserList.resizeRowsToContents()
+        # self.ui.UserList.setW
+        # self.ui.UserList.resizeColumnsToContents()
+        # self.ui.UserList.resizeRowsToContents()
         self.ui.UserList.horizontalHeader().setStretchLastSection(True)
-        self.ui.UserList.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
-        self.ui.UserList.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.ui.UserList.setSelectionMode(
+            QtWidgets.QAbstractItemView.NoSelection)
+        self.ui.UserList.setEditTriggers(
+            QtWidgets.QAbstractItemView.NoEditTriggers)
         self.repaint()
 
     def closeapp(self):
@@ -433,11 +529,13 @@ class ServerManager(QtWidgets.QMainWindow):
 
     def add_log(self, log_text):
         self.ui.LogView.setModel(main_window.gui_add_log_item(log_text))
-        #self.ui.LogView.resizeColumnsToContents()
+        # self.ui.LogView.resizeColumnsToContents()
         self.ui.LogView.resizeRowsToContents()
         self.ui.LogView.horizontalHeader().setStretchLastSection(True)
-        self.ui.LogView.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.ui.LogView.setEditTriggers(
+            QtWidgets.QAbstractItemView.NoEditTriggers)
         self.ui.LogView.scrollToBottom()
+        self.update()
 
     def gui_add_log_item(self, log_text):
         log_item = QtGui.QStandardItem(log_text)
@@ -451,7 +549,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         for i in range(1, len(sys.argv)):
             if sys.argv[i] == '-p' and i + 1 < len(sys.argv):
-                server_port = sys.argv[i + 1]
+                server_port = int(sys.argv[i + 1])
             if sys.argv[i] == '-a' and i + 1 < len(sys.argv):
                 server_address = sys.argv[i + 1]
 
@@ -464,10 +562,6 @@ if __name__ == "__main__":
 
     serv_app = QtWidgets.QApplication(sys.argv)
     main_window = ServerManager()
-    # Таймер, обновляющий список клиентов 1 раз в секунду
-    timer = QTimer()
-    timer.timeout.connect(main_window.refresh_user_list)
-    timer.start(1000)
     ec = serv_app.exec_()
     #my_server = Server(server_address,server_port)
     # my_server.start_server()

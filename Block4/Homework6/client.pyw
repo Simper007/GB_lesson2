@@ -455,6 +455,33 @@ class Client(Thread, QObject):
         }
         return message
 
+    def server_auth(self, secret_key):
+        '''
+        Аутентификация клиента на удаленном сервисе.
+        secret_key - ключ шифрования, известный клиенту и серверу
+        '''
+        main_window.conn_window.ui.StatusLabel.setText(f'Аутентификация..')
+        main_window.conn_window.repaint()
+        time.sleep(0.1)
+        try:
+            # принимаем случайное послание от сервера
+            with socket_lock:
+                message = self.sock.recv(32)
+            # вычисляем HMAC-функцию
+                hash = hmac.new(secret_key, message)
+                digest = hash.digest()
+            # отправляем ответ серверу
+                self.sock.send(digest)
+        except BaseException:
+            log.error('Ошибка аутентификации сервера')
+            main_window.conn_window.ui.StatusLabel.setText(
+                f'Ошибка аутентификации сервера')
+            main_window.conn_window.repaint()
+            time.sleep(0.5)
+            return ERROR
+        else:
+            return OK
+
     def create_socket(self):
         # Создаем сокет для общения с сервером
         self.sock = socket(AF_INET, SOCK_STREAM)
@@ -487,6 +514,16 @@ class Client(Thread, QObject):
             main_window.conn_window.repaint()
             return ERROR
             #raise ('Не удалось подключиться к серверу')
+
+        # аутентификация сервера
+        secret_key = b'Quick IM the BEST!'
+        auth = self.server_auth(secret_key)
+        if auth == ERROR:
+            return ERROR
+        main_window.conn_window.ui.StatusLabel.setText(
+            f'Аутентификация успешна')
+        main_window.conn_window.repaint()
+        time.sleep(0.1)
 
         # создание приветственного сообщения для сервера
         message = self.create_presence_meassage(

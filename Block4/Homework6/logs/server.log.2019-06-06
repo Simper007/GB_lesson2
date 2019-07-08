@@ -1,0 +1,1361 @@
+2019-06-04 23:20:58,949 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-04 23:21:02,252 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559672462.2513368, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:21:02,252 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:21:02,252 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:21:02,253 - INFO - decorators: deco_log_call - Tue Jun  4 23:21:02 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1559672462.2513368, 'user': {'account_name': 'SuperUser'}},) из функции start_server() 
+2019-06-04 23:21:02,254 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:21:02,254 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-04 23:21:05,712 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559672465.711229, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:21:05,712 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:21:05,713 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:21:05,713 - INFO - decorators: deco_log_call - Tue Jun  4 23:21:05 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1559672465.711229, 'user': {'account_name': 'SuperUser'}},) из функции start_server() 
+2019-06-04 23:21:05,713 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:21:05,713 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-04 23:22:10,683 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-04 23:22:10,998 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'Unknown', 'time': 1559672530.9931989, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:22:10,998 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:22:11,022 - INFO - decorators: deco_log_call - Tue Jun  4 23:22:10 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'Unknown', 'time': 1559672530.9931989, 'user': {'account_name': 'SuperUser'}},) из функции <module> 
+2019-06-04 23:22:11,022 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:22:11,022 - INFO - server: start_server - Отправка ответа клиенту: {'response': 999} 
+2019-06-04 23:22:11,027 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:22:11,028 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:22:11,031 - INFO - decorators: deco_log_call - Tue Jun  4 23:22:11 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'goodbye', 'time': 1558902800.913287, 'user': {'account_name': 'SuperUser'}},) из функции JB_DISABLE_BUFFERING) 
+2019-06-04 23:22:11,032 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:22:11,033 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:22:11,036 - INFO - decorators: deco_log_call - Tue Jun  4 23:22:11 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1558902800.913287, 'user': {'account_name': 'SuperUser'}},) из функции JB_DISABLE_BUFFERING) 
+2019-06-04 23:22:11,037 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:22:11,037 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:22:11,040 - INFO - decorators: deco_log_call - Tue Jun  4 23:22:11 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'time': 1558902800.913287, 'user': {'account_name': 'SuperUser'}},) из функции JB_DISABLE_BUFFERING) 
+2019-06-04 23:22:11,041 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:22:11,041 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:22:11,044 - INFO - decorators: deco_log_call - Tue Jun  4 23:22:11 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 15589028, 'user': {'account_name': 'SuperUser'}},) из функции JB_DISABLE_BUFFERING) 
+2019-06-04 23:22:11,046 - ERROR - server: start_server - Полученный адрес сервера или порт не является строкой или числом! 
+2019-06-04 23:22:40,545 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-04 23:22:40,859 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'Unknown', 'time': 1559672560.8573987, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:22:40,859 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:22:40,861 - INFO - decorators: deco_log_call - Tue Jun  4 23:22:40 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'Unknown', 'time': 1559672560.8573987, 'user': {'account_name': 'SuperUser'}},) из функции <module> 
+2019-06-04 23:22:40,861 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:22:40,861 - INFO - server: start_server - Отправка ответа клиенту: {'response': 999} 
+2019-06-04 23:22:40,864 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:22:40,864 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:22:40,866 - INFO - decorators: deco_log_call - Tue Jun  4 23:22:40 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'goodbye', 'time': 1558902800.913287, 'user': {'account_name': 'SuperUser'}},) из функции JB_DISABLE_BUFFERING) 
+2019-06-04 23:22:40,866 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:22:40,866 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:22:40,868 - INFO - decorators: deco_log_call - Tue Jun  4 23:22:40 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1558902800.913287, 'user': {'account_name': 'SuperUser'}},) из функции JB_DISABLE_BUFFERING) 
+2019-06-04 23:22:40,868 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:22:40,868 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:22:40,869 - INFO - decorators: deco_log_call - Tue Jun  4 23:22:40 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'time': 1558902800.913287, 'user': {'account_name': 'SuperUser'}},) из функции JB_DISABLE_BUFFERING) 
+2019-06-04 23:22:40,870 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:22:40,870 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:22:40,871 - INFO - decorators: deco_log_call - Tue Jun  4 23:22:40 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 15589028, 'user': {'account_name': 'SuperUser'}},) из функции JB_DISABLE_BUFFERING) 
+2019-06-04 23:22:40,872 - ERROR - server: start_server - Полученный адрес сервера или порт не является строкой или числом! 
+2019-06-04 23:35:14,247 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-04 23:35:20,267 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559673320.2669015, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:35:20,267 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:35:20,267 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:35:20,268 - INFO - decorators: deco_log_call - Tue Jun  4 23:35:20 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1559673320.2669015, 'user': {'account_name': 'SuperUser'}},) из функции start_server() 
+2019-06-04 23:35:20,268 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:35:20,268 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-04 23:35:22,475 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559673322.4741218, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:35:22,476 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:35:22,476 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:35:22,476 - INFO - decorators: deco_log_call - Tue Jun  4 23:35:22 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1559673322.4741218, 'user': {'account_name': 'SuperUser'}},) из функции start_server() 
+2019-06-04 23:35:22,476 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:35:22,477 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-04 23:36:03,673 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'Stop server', 'time': 1559673363.6725032, 'user': {'account_name': 'Admin'}} 
+2019-06-04 23:36:03,674 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:36:03,674 - INFO - server: check_correct_presence_and_response - Получена команда выключения сервера, ответ: response: 0 
+2019-06-04 23:36:03,674 - INFO - decorators: deco_log_call - Tue Jun  4 23:36:03 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'Stop server', 'time': 1559673363.6725032, 'user': {'account_name': 'Admin'}},) из функции start_server() 
+2019-06-04 23:36:03,674 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-04 23:36:03,674 - INFO - server: start_server - Отправка ответа клиенту: {'response': 0} 
+2019-06-04 23:36:03,675 - INFO - server: start_server - Завершение работы сервера по команде от клиента 
+2019-06-04 23:36:03,675 - INFO - decorators: deco_log_call - Tue Jun  4 23:36:03 2019 Вызван декоратор Log для start_server из функции start_server() 
+2019-06-04 23:37:13,989 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-04 23:37:18,408 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'Stop server', 'time': 1559673438.4061592, 'user': {'account_name': 'Admin'}} 
+2019-06-04 23:37:18,408 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:37:18,408 - INFO - server: check_correct_presence_and_response - Получена команда выключения сервера, ответ: response: 0 
+2019-06-04 23:37:18,409 - INFO - decorators: deco_log_call - Tue Jun  4 23:37:18 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'Stop server', 'time': 1559673438.4061592, 'user': {'account_name': 'Admin'}},) из функции start_server() 
+2019-06-04 23:37:18,409 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-04 23:37:18,409 - INFO - server: start_server - Отправка ответа клиенту: {'response': 0} 
+2019-06-04 23:37:18,409 - INFO - server: start_server - Завершение работы сервера по команде от клиента 
+2019-06-04 23:37:18,410 - INFO - decorators: deco_log_call - Tue Jun  4 23:37:18 2019 Вызван декоратор Log для start_server из функции start_server() 
+2019-06-04 23:38:01,722 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-04 23:38:04,569 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559673484.5682428, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:38:04,569 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:38:04,569 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:38:04,570 - INFO - decorators: deco_log_call - Tue Jun  4 23:38:04 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1559673484.5682428, 'user': {'account_name': 'SuperUser'}},) из функции start_server() 
+2019-06-04 23:38:04,570 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:38:04,571 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-04 23:38:05,773 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559673485.7724473, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:38:05,774 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:38:05,774 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:38:05,774 - INFO - decorators: deco_log_call - Tue Jun  4 23:38:05 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1559673485.7724473, 'user': {'account_name': 'SuperUser'}},) из функции start_server() 
+2019-06-04 23:38:05,774 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:38:05,774 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-04 23:42:57,813 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559673777.8123498, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:42:57,814 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:42:57,814 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:42:57,815 - INFO - decorators: deco_log_call - Tue Jun  4 23:42:57 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1559673777.8123498, 'user': {'account_name': 'SuperUser'}},) из функции start_server() 
+2019-06-04 23:42:57,815 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:42:57,815 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-04 23:43:26,898 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559673806.8971894, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:43:26,898 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:43:26,898 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:43:26,899 - INFO - decorators: deco_log_call - Tue Jun  4 23:43:26 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1559673806.8971894, 'user': {'account_name': 'SuperUser'}},) из функции start_server() 
+2019-06-04 23:43:26,899 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:43:26,899 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-04 23:43:38,459 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559673818.4580045, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:43:38,460 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:43:38,460 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:43:38,460 - INFO - decorators: deco_log_call - Tue Jun  4 23:43:38 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'presence', 'time': 1559673818.4580045, 'user': {'account_name': 'SuperUser'}},) из функции start_server() 
+2019-06-04 23:43:38,460 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:43:38,461 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-04 23:44:12,439 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'Unknown', 'time': 1559673852.4363873, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:44:12,439 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:44:12,440 - INFO - decorators: deco_log_call - Tue Jun  4 23:44:12 2019 Вызван декоратор Log для check_correct_presence_and_response с параметрами ({'action': 'Unknown', 'time': 1559673852.4363873, 'user': {'account_name': 'SuperUser'}},) из функции start_server() 
+2019-06-04 23:44:12,440 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:44:12,440 - INFO - server: start_server - Отправка ответа клиенту: {'response': 999} 
+2019-06-04 23:44:12,443 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:44:12,443 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:44:12,446 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:44:12,446 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:44:12,448 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:44:12,448 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:44:12,450 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:44:12,450 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:44:12,452 - ERROR - server: start_server - Полученный адрес сервера или порт не является строкой или числом! 
+2019-06-04 23:44:29,561 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-04 23:44:29,883 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'Unknown', 'time': 1559673869.8797321, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:44:29,884 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:44:29,888 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:44:29,888 - INFO - server: start_server - Отправка ответа клиенту: {'response': 999} 
+2019-06-04 23:44:29,894 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:44:29,894 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:44:29,898 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:44:29,898 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:44:29,902 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:44:29,902 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:44:29,905 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:44:29,905 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:44:29,909 - ERROR - server: start_server - Полученный адрес сервера или порт не является строкой или числом! 
+2019-06-04 23:48:28,286 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-04 23:48:28,600 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'Unknown', 'time': 1559674108.5965145, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:48:28,601 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:48:28,605 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:48:28,605 - INFO - server: start_server - Отправка ответа клиенту: {'response': 999} 
+2019-06-04 23:48:28,610 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:48:28,610 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:48:28,616 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:48:28,617 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:48:28,622 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:48:28,622 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:48:28,627 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:48:28,627 - INFO - server: check_correct_presence_and_response - Получена команда выключения сервера, ответ: response: 0 
+2019-06-04 23:48:28,631 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-04 23:48:54,932 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-04 23:48:55,249 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'Unknown', 'time': 1559674135.2458453, 'user': {'account_name': 'SuperUser'}} 
+2019-06-04 23:48:55,250 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:48:55,254 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-04 23:48:55,254 - INFO - server: start_server - Отправка ответа клиенту: {'response': 999} 
+2019-06-04 23:48:55,259 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:48:55,259 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:48:55,264 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:48:55,264 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-04 23:48:55,267 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:48:55,267 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:48:55,271 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:48:55,271 - INFO - server: check_correct_presence_and_response - Получена команда выключения сервера, ответ: response: 0 
+2019-06-04 23:48:55,274 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-04 23:48:55,274 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-04 23:48:55,278 - ERROR - server: start_server - Полученный адрес сервера или порт не является строкой или числом! 
+2019-06-05 00:02:19,252 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 00:02:23,967 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559674943.9665563, 'user': {'account_name': 'SuperUser'}} 
+2019-06-05 00:02:23,968 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:02:23,968 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:02:23,969 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-05 00:02:23,969 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:09:50,009 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 00:09:52,787 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559675392.7865734, 'user': {'account_name': 'SuperUser'}} 
+2019-06-05 00:09:52,788 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:09:52,788 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:09:52,789 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-05 00:09:52,789 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:18:37,707 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 00:18:42,967 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559675922.9660878, 'user': {'account_name': 'SuperUser'}} 
+2019-06-05 00:18:42,967 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:18:42,967 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:18:42,968 - INFO - server: start_server - Приветствуем пользователя SuperUser! 
+2019-06-05 00:18:42,968 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:21:41,677 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 00:22:12,127 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559676132.1262224, 'user': {'account_name': 'Guest'}} 
+2019-06-05 00:22:12,127 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:22:12,127 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:22:12,128 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 00:22:12,128 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:30:03,238 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 00:32:45,493 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559676765.492434, 'user': {'account_name': 'Guest'}} 
+2019-06-05 00:32:45,493 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:32:45,493 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:32:45,494 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 00:32:45,494 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:46:23,313 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677583.312794, 'user': {'account_name': 'Guest'}} 
+2019-06-05 00:46:23,314 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:46:23,314 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:46:23,315 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 00:46:23,315 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:46:34,825 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677594.8249857, 'user': {'account_name': 'Guest'}} 
+2019-06-05 00:46:34,825 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:46:34,825 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:46:34,826 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 00:46:34,826 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:48:33,300 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677713.2991116, 'user': {'account_name': 'Guest'}} 
+2019-06-05 00:48:33,300 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:48:33,300 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:48:33,301 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 00:48:33,301 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:49:25,703 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677765.7027977, 'user': {'account_name': 'Guest'}} 
+2019-06-05 00:49:25,703 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:49:25,703 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:49:25,704 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 00:49:25,704 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:49:50,633 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677790.6320329, 'user': {'account_name': 'Guest'}} 
+2019-06-05 00:49:50,634 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:49:50,634 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:49:50,634 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 00:49:50,635 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:50:07,106 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677807.1045537, 'user': {'account_name': 'Guest'}} 
+2019-06-05 00:50:07,106 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:50:07,106 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:50:07,107 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 00:50:07,107 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:50:24,678 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677824.676646, 'user': {'account_name': 'Vanila'}} 
+2019-06-05 00:50:24,679 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:50:24,679 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:50:24,679 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-05 00:50:24,679 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:50:38,943 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677838.941619, 'user': {'account_name': 'Coder'}} 
+2019-06-05 00:50:38,943 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:50:38,943 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:50:38,944 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-05 00:50:38,944 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:50:40,704 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677840.7038565, 'user': {'account_name': 'Freeman'}} 
+2019-06-05 00:50:40,705 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:50:40,705 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:50:40,705 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-05 00:50:40,705 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:50:41,612 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677841.610805, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-05 00:50:41,612 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:50:41,612 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:50:41,613 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-05 00:50:41,613 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:50:42,764 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677842.7625241, 'user': {'account_name': 'Admin'}} 
+2019-06-05 00:50:42,764 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:50:42,765 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:50:42,765 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-05 00:50:42,765 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:50:58,425 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677858.4231129, 'user': {'account_name': 'Vanila'}} 
+2019-06-05 00:50:58,425 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:50:58,425 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:50:58,425 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-05 00:50:58,425 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:51:05,812 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677865.8104253, 'user': {'account_name': 'Coder'}} 
+2019-06-05 00:51:05,813 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:51:05,813 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:51:05,813 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-05 00:51:05,813 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:51:07,261 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677867.259251, 'user': {'account_name': 'Freeman'}} 
+2019-06-05 00:51:07,262 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:51:07,262 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:51:07,262 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-05 00:51:07,262 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:51:10,054 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677870.052602, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-05 00:51:10,054 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:51:10,054 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:51:10,055 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-05 00:51:10,055 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:51:11,813 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677871.811342, 'user': {'account_name': 'Admin'}} 
+2019-06-05 00:51:11,813 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:51:11,813 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:51:11,814 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-05 00:51:11,814 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:53:15,749 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677995.7468123, 'user': {'account_name': 'Vanila'}} 
+2019-06-05 00:53:15,749 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:53:15,749 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:53:15,749 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-05 00:53:15,749 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:53:15,798 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677995.796796, 'user': {'account_name': 'Coder'}} 
+2019-06-05 00:53:15,798 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:53:15,798 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:53:15,799 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-05 00:53:15,799 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:53:15,821 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677995.8197885, 'user': {'account_name': 'Freeman'}} 
+2019-06-05 00:53:15,821 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:53:15,821 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:53:15,822 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-05 00:53:15,822 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:53:15,845 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677995.8437812, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-05 00:53:15,845 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:53:15,845 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:53:15,846 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-05 00:53:15,846 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:53:15,846 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559677995.8437812, 'user': {'account_name': 'Admin'}} 
+2019-06-05 00:53:15,846 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:53:15,847 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:53:15,847 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-05 00:53:15,847 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:54:05,546 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 00:54:13,508 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559678053.5022862, 'user': {'account_name': 'Vanila'}} 
+2019-06-05 00:54:13,508 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:54:13,508 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:54:13,510 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-05 00:54:13,510 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:54:13,571 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559678053.5692644, 'user': {'account_name': 'Coder'}} 
+2019-06-05 00:54:13,571 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:54:13,571 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:54:13,572 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-05 00:54:13,572 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:54:13,603 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559678053.600254, 'user': {'account_name': 'Freeman'}} 
+2019-06-05 00:54:13,603 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:54:13,603 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:54:13,603 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-05 00:54:13,603 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:54:13,625 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559678053.6232462, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-05 00:54:13,625 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:54:13,625 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:54:13,626 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-05 00:54:13,626 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:54:13,637 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559678053.6352425, 'user': {'account_name': 'Skywalker'}} 
+2019-06-05 00:54:13,637 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:54:13,637 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:54:13,638 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-05 00:54:13,638 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 00:54:13,644 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559678053.6422405, 'user': {'account_name': 'Admin'}} 
+2019-06-05 00:54:13,644 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 00:54:13,644 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 00:54:13,645 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-05 00:54:13,645 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:24:02,309 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 23:24:11,261 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559759051.2471514, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:24:11,261 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 23:24:11,261 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 23:24:11,262 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:24:11,262 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:24:11,262 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55759) 
+2019-06-05 23:24:11,364 - INFO - server: read_messages - Клиент 708 ('127.0.0.1', 55759) отключился до окончания сообщения 
+2019-06-05 23:24:13,132 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559759053.1300728, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:24:13,132 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 23:24:13,132 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 23:24:13,132 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:24:13,132 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:24:13,132 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55760) 
+2019-06-05 23:24:13,234 - INFO - server: read_messages - Клиент 724 ('127.0.0.1', 55760) отключился до окончания сообщения 
+2019-06-05 23:24:14,660 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559759054.6591997, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:24:14,660 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 23:24:14,661 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 23:24:14,661 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:24:14,661 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:24:14,661 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55761) 
+2019-06-05 23:24:14,762 - INFO - server: read_messages - Клиент 708 ('127.0.0.1', 55761) отключился до окончания сообщения 
+2019-06-05 23:26:36,076 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 23:26:39,016 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559759199.0156398, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:26:39,016 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 23:26:39,016 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 23:26:39,017 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:26:39,017 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:26:39,017 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55777) 
+2019-06-05 23:26:39,118 - INFO - server: read_messages - Клиент 680 ('127.0.0.1', 55777) отключился до передачи сообщения по таймауту  
+2019-06-05 23:26:40,361 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559759200.3609974, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:26:40,361 - INFO - server: check_correct_presence_and_response - Запуск ф-ии проверки корректности запроса 
+2019-06-05 23:26:40,361 - INFO - server: check_correct_presence_and_response - Проверка успешна, ответ: response: 200 
+2019-06-05 23:26:40,362 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:26:40,362 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:26:40,362 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55778) 
+2019-06-05 23:26:40,464 - INFO - server: read_messages - Клиент 688 ('127.0.0.1', 55778) отключился до передачи сообщения по таймауту  
+2019-06-05 23:29:54,153 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 23:29:59,305 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559759399.30309, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:29:59,305 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:29:59,305 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:29:59,305 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55820) 
+2019-06-05 23:29:59,406 - INFO - server: read_messages - Клиент 208 ('127.0.0.1', 55820) отключился до передачи сообщения по таймауту  
+2019-06-05 23:30:00,512 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559759400.5105848, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:30:00,512 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:30:00,512 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:30:00,513 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55821) 
+2019-06-05 23:30:00,614 - INFO - server: read_messages - Клиент 680 ('127.0.0.1', 55821) отключился до передачи сообщения по таймауту  
+2019-06-05 23:30:50,844 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 23:31:11,687 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 23:32:21,769 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 23:33:45,137 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 23:33:50,504 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559759630.5039377, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:33:50,505 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:33:50,505 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:33:50,506 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55851) 
+2019-06-05 23:33:50,607 - INFO - server: read_messages - Клиент 676 ('127.0.0.1', 55851) отключился до передачи сообщения по таймауту  
+2019-06-05 23:35:02,485 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 23:35:05,273 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559759705.2726114, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:35:05,274 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:35:05,274 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:35:05,274 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55858) 
+2019-06-05 23:35:06,453 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559759706.4527516, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:35:06,454 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:35:06,454 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:35:06,454 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55859) 
+2019-06-05 23:35:54,004 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 23:35:56,642 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559759756.6412313, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:35:56,644 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:35:56,644 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:35:56,644 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55884) 
+2019-06-05 23:35:57,973 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559759757.9728155, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:35:57,974 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:35:57,974 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:35:57,974 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55885) 
+2019-06-05 23:41:49,794 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-05 23:41:53,720 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559760113.7194028, 'user': {'account_name': 'Guest'}} 
+2019-06-05 23:41:53,721 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-05 23:41:53,721 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-05 23:41:53,721 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55919) 
+2019-06-05 23:42:18,418 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'Stop server', 'time': 1559760138.416556, 'user': {'account_name': 'Admin'}} 
+2019-06-05 23:42:18,418 - WARNING - server: check_correct_presence_and_response - response: 400, error: "Не верный запрос" 
+2019-06-05 23:42:18,418 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-05 23:42:18,419 - INFO - server: start_server - Отправка ответа клиенту: {'response': 400, 'error': 'Не верный запрос'} 
+2019-06-05 23:42:18,419 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 55922) 
+2019-06-06 00:17:38,866 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:17:50,152 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559762270.1499798, 'user': {'account_name': 'Guest'}} 
+2019-06-06 00:17:50,153 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-06 00:17:50,153 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:17:50,154 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56093) 
+2019-06-06 00:20:28,950 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:20:28,985 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559762428.9814696, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:20:28,987 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:20:28,988 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:20:28,988 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56107) 
+2019-06-06 00:20:29,023 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559762429.0214558, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:20:29,025 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:20:29,025 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:20:29,026 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56108) 
+2019-06-06 00:20:29,051 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559762429.0494468, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:20:29,053 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:20:29,054 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:20:29,054 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56109) 
+2019-06-06 00:20:29,066 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559762429.0644422, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:20:29,068 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:20:29,068 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:20:29,069 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56110) 
+2019-06-06 00:20:29,078 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559762429.0764391, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:20:29,079 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:20:29,080 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:20:29,080 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56111) 
+2019-06-06 00:20:29,112 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559762429.0984306, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:20:29,115 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:20:29,115 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:20:29,115 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56112) 
+2019-06-06 00:29:59,987 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:30:00,080 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763000.0772421, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:30:00,087 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:30:00,087 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:30:00,088 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56144) 
+2019-06-06 00:30:00,196 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763000.1732113, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:30:00,235 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:30:00,238 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:30:00,247 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56145) 
+2019-06-06 00:30:00,261 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763000.257184, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:30:00,263 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:30:00,264 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:30:00,267 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56146) 
+2019-06-06 00:30:00,273 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763000.2641816, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:30:00,276 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:30:00,277 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:30:00,277 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56147) 
+2019-06-06 00:30:00,278 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763000.2681797, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:30:00,280 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:30:00,281 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:30:00,281 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56148) 
+2019-06-06 00:30:00,775 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763000.7732182, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:30:00,778 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:30:00,778 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:30:00,779 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56149) 
+2019-06-06 00:32:59,498 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:32:59,639 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763179.638059, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:32:59,645 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:32:59,645 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:32:59,646 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56183) 
+2019-06-06 00:32:59,658 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763179.656054, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:32:59,661 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:32:59,661 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:32:59,662 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56184) 
+2019-06-06 00:32:59,739 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763179.737027, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:32:59,742 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:32:59,742 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:32:59,743 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56185) 
+2019-06-06 00:32:59,788 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763179.7860098, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:32:59,791 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:32:59,791 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:32:59,792 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56186) 
+2019-06-06 00:32:59,796 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763179.795007, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:32:59,799 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:32:59,800 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:32:59,800 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56187) 
+2019-06-06 00:32:59,835 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763179.8349936, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:32:59,837 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:32:59,838 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:32:59,838 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56188) 
+2019-06-06 00:33:15,100 - INFO - server: read_messages - Принято сообщение от клиента: 
+2019-06-06 00:33:16,806 - INFO - server: read_messages - Принято сообщение от клиента: 
+2019-06-06 00:33:37,574 - INFO - server: read_messages - Принято сообщение от клиента: 
+2019-06-06 00:34:28,952 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:34:29,021 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763269.0192614, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:34:29,026 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:34:29,026 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:34:29,027 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56200) 
+2019-06-06 00:34:29,058 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763269.057249, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:34:29,060 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:34:29,061 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:34:29,061 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56201) 
+2019-06-06 00:34:29,096 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763269.0952358, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:34:29,099 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:34:29,099 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:34:29,100 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56202) 
+2019-06-06 00:34:29,118 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763269.117229, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:34:29,120 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:34:29,120 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:34:29,121 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56203) 
+2019-06-06 00:34:29,136 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763269.1312249, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:34:29,138 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:34:29,138 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:34:29,138 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56204) 
+2019-06-06 00:34:29,139 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763269.1362226, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:34:29,141 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:34:29,142 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:34:29,142 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56205) 
+2019-06-06 00:34:31,150 - INFO - server: read_messages - Принято сообщение от клиента: 
+2019-06-06 00:35:25,534 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:35:25,582 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763325.5811086, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:35:25,594 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:35:25,594 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:35:25,594 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56213) 
+2019-06-06 00:35:25,620 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763325.6190965, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:35:25,623 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:35:25,623 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:35:25,624 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56214) 
+2019-06-06 00:35:25,643 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763325.6410904, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:35:25,645 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:35:25,646 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:35:25,646 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56215) 
+2019-06-06 00:35:25,695 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763325.6940713, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:35:25,697 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:35:25,697 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:35:25,698 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56216) 
+2019-06-06 00:35:25,731 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763325.730059, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:35:25,733 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:35:25,733 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:35:25,733 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56217) 
+2019-06-06 00:35:25,740 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763325.738057, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:35:25,741 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:35:25,742 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:35:25,742 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56218) 
+2019-06-06 00:35:27,144 - INFO - server: read_messages - Принято сообщение от клиента: {'action': 'msg', 'time': 1559763327.1154113, 'to': '#all', 'from': 'Admin', 'message': 'dsfsdf'} 
+2019-06-06 00:36:00,848 - INFO - server: read_messages - Принято сообщение от клиента: {'action': 'Stop server', 'time': 1559763360.8011107, 'to': '#all', 'from': 'Admin', 'message': '!!! fuck server'} 
+2019-06-06 00:38:05,313 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:38:05,373 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763485.371307, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:38:05,376 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:38:05,376 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:38:05,376 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56244) 
+2019-06-06 00:38:05,424 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763485.4222908, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:38:05,427 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:38:05,427 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:38:05,428 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56245) 
+2019-06-06 00:38:05,455 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763485.4542794, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:38:05,457 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:38:05,458 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:38:05,458 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56246) 
+2019-06-06 00:38:05,460 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763485.4592783, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:38:05,461 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:38:05,462 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:38:05,462 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56247) 
+2019-06-06 00:38:05,481 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763485.480271, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:38:05,483 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:38:05,483 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:38:05,484 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56248) 
+2019-06-06 00:38:05,485 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763485.4832706, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:38:05,486 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:38:05,486 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:38:05,487 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56249) 
+2019-06-06 00:38:07,694 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:38:10,906 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:41:53,867 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:41:53,977 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763713.975819, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:41:53,982 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:41:53,982 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:41:53,982 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56266) 
+2019-06-06 00:41:54,002 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763714.0008109, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:41:54,004 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:41:54,004 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:41:54,005 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56267) 
+2019-06-06 00:41:54,020 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763714.0198045, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:41:54,022 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:41:54,023 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:41:54,024 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56268) 
+2019-06-06 00:41:54,061 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763714.0597928, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:41:54,063 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:41:54,063 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:41:54,064 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56269) 
+2019-06-06 00:41:54,066 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763714.0657895, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:41:54,068 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:41:54,068 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:41:54,069 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56270) 
+2019-06-06 00:41:54,069 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763714.0687888, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:41:54,070 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:41:54,071 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:41:54,072 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56271) 
+2019-06-06 00:41:55,782 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:41:57,085 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:42:34,217 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Skywalker'} 
+2019-06-06 00:42:35,120 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Skywalker'} 
+2019-06-06 00:45:24,644 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:45:24,730 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763924.7292578, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:45:24,733 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:45:24,733 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:45:24,734 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56292) 
+2019-06-06 00:45:24,777 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763924.776242, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:45:24,780 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:45:24,781 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:45:24,782 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56293) 
+2019-06-06 00:45:24,814 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763924.8132293, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:45:24,816 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:45:24,817 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:45:24,817 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56294) 
+2019-06-06 00:45:24,827 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763924.8252265, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:45:24,829 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:45:24,829 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:45:24,830 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56295) 
+2019-06-06 00:45:24,831 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763924.8302238, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:45:24,833 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:45:24,834 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:45:24,835 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56296) 
+2019-06-06 00:45:24,846 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763924.8452191, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:45:24,848 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:45:24,848 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:45:24,848 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56297) 
+2019-06-06 00:46:37,728 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:46:37,792 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763997.7901049, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:46:37,801 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:46:37,801 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:46:37,802 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56301) 
+2019-06-06 00:46:37,836 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763997.8350897, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:46:37,839 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:46:37,840 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:46:37,840 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56302) 
+2019-06-06 00:46:37,880 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763997.8790753, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:46:37,883 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:46:37,884 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:46:37,884 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56303) 
+2019-06-06 00:46:37,897 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763997.8960702, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:46:37,899 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:46:37,899 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:46:37,900 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56304) 
+2019-06-06 00:46:37,909 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763997.9080656, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:46:37,911 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:46:37,911 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:46:37,912 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56305) 
+2019-06-06 00:46:37,913 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559763997.9120646, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:46:37,915 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:46:37,915 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:46:37,915 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56306) 
+2019-06-06 00:47:22,073 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:47:22,119 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764042.1187217, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:47:22,122 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:47:22,122 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:47:22,123 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56313) 
+2019-06-06 00:47:22,145 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764042.1437137, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:47:22,148 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:47:22,148 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:47:22,149 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56314) 
+2019-06-06 00:47:22,187 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764042.1866992, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:47:22,189 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:47:22,190 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:47:22,190 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56315) 
+2019-06-06 00:47:22,207 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764042.2066927, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:47:22,210 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:47:22,210 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:47:22,210 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56316) 
+2019-06-06 00:47:22,215 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764042.21469, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:47:22,216 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:47:22,217 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:47:22,218 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56317) 
+2019-06-06 00:47:22,232 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764042.231685, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:47:22,234 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:47:22,234 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:47:22,234 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56318) 
+2019-06-06 00:47:23,139 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:47:23,943 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:47:24,645 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:47:59,262 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:47:59,347 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764079.346962, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:47:59,353 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:47:59,353 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:47:59,354 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56319) 
+2019-06-06 00:47:59,412 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764079.4109406, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:47:59,414 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:47:59,415 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:47:59,416 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56320) 
+2019-06-06 00:47:59,432 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764079.4319334, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:47:59,434 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:47:59,435 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:47:59,435 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56321) 
+2019-06-06 00:47:59,446 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764079.4449294, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:47:59,448 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:47:59,448 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:47:59,449 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56322) 
+2019-06-06 00:47:59,462 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764079.4619238, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:47:59,464 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:47:59,465 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:47:59,465 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56323) 
+2019-06-06 00:47:59,470 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764079.4699204, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:47:59,472 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:47:59,473 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:47:59,473 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56324) 
+2019-06-06 00:48:01,686 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:48:02,696 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:48:04,101 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:48:13,238 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Skywalker'} 
+2019-06-06 00:48:32,253 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:48:32,325 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764112.3242705, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:48:32,331 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:48:32,331 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:48:32,332 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56328) 
+2019-06-06 00:48:32,365 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764112.3632588, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:48:32,368 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:48:32,368 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:48:32,369 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56329) 
+2019-06-06 00:48:32,401 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764112.4002457, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:48:32,403 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:48:32,403 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:48:32,404 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56330) 
+2019-06-06 00:48:32,404 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764112.4002457, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:48:32,406 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:48:32,406 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:48:32,407 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56331) 
+2019-06-06 00:48:32,415 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764112.4142416, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:48:32,416 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:48:32,417 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:48:32,417 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56332) 
+2019-06-06 00:48:32,422 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764112.421239, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:48:32,423 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:48:32,423 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:48:32,424 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56333) 
+2019-06-06 00:49:00,882 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:49:00,949 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764140.9471788, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:49:00,952 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:49:00,952 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:00,952 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56337) 
+2019-06-06 00:49:00,993 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764140.9911637, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:49:00,995 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:49:00,995 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:00,996 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56338) 
+2019-06-06 00:49:01,013 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764141.012157, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:49:01,016 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:49:01,016 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:01,017 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56339) 
+2019-06-06 00:49:01,030 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764141.0281532, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:49:01,031 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:49:01,032 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:01,032 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56340) 
+2019-06-06 00:49:01,043 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764141.0421474, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:49:01,044 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:49:01,045 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:01,045 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56341) 
+2019-06-06 00:49:01,051 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764141.0501447, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:49:01,053 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:49:01,053 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:01,054 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56342) 
+2019-06-06 00:49:15,897 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:49:15,973 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764155.971083, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:49:15,978 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:49:15,978 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:15,979 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56343) 
+2019-06-06 00:49:16,035 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764156.0340624, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:49:16,037 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:49:16,038 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:16,039 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56344) 
+2019-06-06 00:49:16,044 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764156.0430608, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:49:16,047 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:49:16,048 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:16,049 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56345) 
+2019-06-06 00:49:16,084 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764156.083047, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:49:16,086 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:49:16,087 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:16,087 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56347) 
+2019-06-06 00:49:16,088 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764156.083047, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:49:16,090 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:49:16,090 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:16,091 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56346) 
+2019-06-06 00:49:16,589 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764156.5871909, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:49:16,592 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:49:16,593 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:16,593 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56348) 
+2019-06-06 00:49:46,486 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:49:46,550 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764186.54856, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:49:46,566 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:49:46,567 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:46,567 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56351) 
+2019-06-06 00:49:46,617 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764186.6155374, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:49:46,620 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:49:46,620 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:46,621 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56352) 
+2019-06-06 00:49:46,662 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764186.6615224, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:49:46,665 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:49:46,666 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:46,666 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56353) 
+2019-06-06 00:49:46,699 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764186.6985116, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:49:46,702 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:49:46,702 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:46,702 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56354) 
+2019-06-06 00:49:46,714 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764186.713506, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:49:46,715 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:49:46,716 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:46,716 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56356) 
+2019-06-06 00:49:46,717 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764186.713506, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:49:46,719 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:49:46,719 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:49:46,719 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56355) 
+2019-06-06 00:50:34,263 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:50:34,317 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764234.3156025, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:50:34,328 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:50:34,329 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:50:34,329 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56361) 
+2019-06-06 00:50:34,380 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764234.3785827, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:50:34,383 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:50:34,384 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:50:34,384 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56362) 
+2019-06-06 00:50:34,419 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764234.4185681, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:50:34,421 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:50:34,422 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:50:34,422 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56363) 
+2019-06-06 00:50:34,425 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764234.4245663, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:50:34,427 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:50:34,427 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:50:34,428 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56364) 
+2019-06-06 00:50:34,439 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764234.437563, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:50:34,440 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:50:34,441 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:50:34,441 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56365) 
+2019-06-06 00:50:34,449 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764234.4485586, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:50:34,451 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:50:34,451 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:50:34,451 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56366) 
+2019-06-06 00:50:35,554 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:50:37,060 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:50:41,979 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:50:42,683 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:50:43,285 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:50:43,987 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:50:44,690 - INFO - server: read_messages - Принято сообщение от клиента: {'account_name': 'Admin'} 
+2019-06-06 00:51:30,865 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:51:40,154 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:51:40,208 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764300.2076545, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:51:40,211 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:51:40,212 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:51:40,212 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56375) 
+2019-06-06 00:51:40,293 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764300.2926261, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:51:40,295 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:51:40,296 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:51:40,296 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56376) 
+2019-06-06 00:51:40,297 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764300.2936258, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:51:40,299 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:51:40,299 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:51:40,300 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56377) 
+2019-06-06 00:51:40,326 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764300.3256152, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:51:40,328 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:51:40,328 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:51:40,329 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56378) 
+2019-06-06 00:51:40,339 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764300.3386111, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:51:40,341 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:51:40,341 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:51:40,342 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56379) 
+2019-06-06 00:51:40,346 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764300.3456092, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:51:40,350 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:51:40,350 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:51:40,351 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56380) 
+2019-06-06 00:51:41,757 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 00:51:43,561 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 00:51:44,565 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 00:51:53,194 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:51:53,997 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:51:54,598 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:52:12,462 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 00:52:22,099 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:23,918 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:25,025 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:25,928 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:26,731 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:27,834 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:28,236 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:28,438 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:28,940 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:29,443 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:31,449 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:33,857 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:35,062 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:39,172 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:39,875 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:40,176 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:40,479 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:53:40,680 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:54:40,686 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:54:40,769 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764480.7684052, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:54:40,772 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:54:40,772 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:54:40,772 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56393) 
+2019-06-06 00:54:40,802 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764480.8013954, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:54:40,805 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:54:40,805 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:54:40,805 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56394) 
+2019-06-06 00:54:40,831 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764480.8293862, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:54:40,833 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:54:40,833 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:54:40,834 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56395) 
+2019-06-06 00:54:40,849 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764480.8483787, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:54:40,851 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:54:40,851 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:54:40,852 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56397) 
+2019-06-06 00:54:40,864 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764480.8633738, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:54:40,865 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:54:40,865 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:54:40,866 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56398) 
+2019-06-06 00:54:41,332 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764481.3305745, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:54:41,334 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:54:41,334 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:54:41,335 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56396) 
+2019-06-06 00:54:48,459 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:54:50,365 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 00:55:51,451 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:55:51,525 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764551.523175, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:55:51,527 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:55:51,527 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:55:51,527 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56410) 
+2019-06-06 00:55:51,555 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764551.554165, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:55:51,557 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:55:51,557 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:55:51,558 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56411) 
+2019-06-06 00:55:51,601 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764551.60015, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:55:51,604 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:55:51,604 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:55:51,605 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56412) 
+2019-06-06 00:55:51,605 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764551.6041486, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:55:51,607 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:55:51,607 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:55:51,608 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56413) 
+2019-06-06 00:55:51,622 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764551.6201432, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:55:51,623 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:55:51,624 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:55:51,625 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56414) 
+2019-06-06 00:55:51,625 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764551.6221428, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:55:51,626 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:55:51,627 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:55:51,627 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56415) 
+2019-06-06 00:56:07,993 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 00:56:09,396 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 00:56:18,532 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 00:56:54,301 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:56:56,446 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764616.4443724, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:56:56,449 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:56:56,450 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:56:56,452 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56422) 
+2019-06-06 00:56:56,516 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764616.5143502, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:56:56,522 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:56:56,523 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:56:56,524 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56423) 
+2019-06-06 00:56:56,599 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764616.5983212, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:56:56,602 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:56:56,602 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:56:56,603 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56424) 
+2019-06-06 00:56:56,605 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764616.6033196, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:56:56,607 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:56:56,607 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:56:56,608 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56425) 
+2019-06-06 00:56:56,649 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764616.648305, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:56:56,651 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:56:56,652 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:56:56,652 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56426) 
+2019-06-06 00:56:56,666 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764616.6652992, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:56:56,668 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:56:56,668 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:56:56,669 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56427) 
+2019-06-06 00:56:56,685 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764616.684293, 'user': {'account_name': 'LikeABOSS'}} 
+2019-06-06 00:56:56,687 - INFO - server: start_server - Приветствуем пользователя LikeABOSS! 
+2019-06-06 00:56:56,688 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:56:56,688 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56428) 
+2019-06-06 00:56:56,688 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764616.684293, 'user': {'account_name': 'Snegurka'}} 
+2019-06-06 00:56:56,690 - INFO - server: start_server - Приветствуем пользователя Snegurka! 
+2019-06-06 00:56:56,690 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:56:56,690 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56429) 
+2019-06-06 00:56:59,603 - INFO - server: read_messages - Принято сообщение от клиента: LikeABOSS 
+2019-06-06 00:57:02,319 - INFO - server: read_messages - Принято сообщение от клиента: Snegurka 
+2019-06-06 00:57:03,423 - INFO - server: read_messages - Принято сообщение от клиента: Snegurka 
+2019-06-06 00:57:04,126 - INFO - server: read_messages - Принято сообщение от клиента: Snegurka 
+2019-06-06 00:57:24,692 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 00:58:06,111 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 00:58:08,228 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764688.227062, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 00:58:08,236 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 00:58:08,238 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:58:08,238 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56433) 
+2019-06-06 00:58:08,309 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764688.3080366, 'user': {'account_name': 'Coder'}} 
+2019-06-06 00:58:08,317 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 00:58:08,321 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:58:08,324 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56434) 
+2019-06-06 00:58:08,394 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764688.39201, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 00:58:08,396 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 00:58:08,397 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:58:08,398 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56435) 
+2019-06-06 00:58:08,405 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764688.4020052, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 00:58:08,407 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 00:58:08,408 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:58:08,409 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56436) 
+2019-06-06 00:58:08,446 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764688.4449928, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 00:58:08,448 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 00:58:08,448 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:58:08,449 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56437) 
+2019-06-06 00:58:08,459 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764688.4589875, 'user': {'account_name': 'Admin'}} 
+2019-06-06 00:58:08,461 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 00:58:08,461 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:58:08,462 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56438) 
+2019-06-06 00:58:08,464 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764688.463985, 'user': {'account_name': 'Snegurka'}} 
+2019-06-06 00:58:08,466 - INFO - server: start_server - Приветствуем пользователя Snegurka! 
+2019-06-06 00:58:08,466 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:58:08,467 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56439) 
+2019-06-06 00:58:08,468 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764688.4679842, 'user': {'account_name': 'LikeABOSS'}} 
+2019-06-06 00:58:08,470 - INFO - server: start_server - Приветствуем пользователя LikeABOSS! 
+2019-06-06 00:58:08,470 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 00:58:08,471 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56440) 
+2019-06-06 00:58:12,982 - INFO - server: read_messages - Принято сообщение от клиента: LikeABOSS 
+2019-06-06 01:02:54,029 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 01:02:56,162 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764976.160394, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 01:02:56,166 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 01:02:56,167 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:02:56,167 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56470) 
+2019-06-06 01:02:56,230 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764976.2283714, 'user': {'account_name': 'Coder'}} 
+2019-06-06 01:02:56,234 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 01:02:56,243 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:02:56,249 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56471) 
+2019-06-06 01:02:56,277 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764976.275356, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 01:02:56,280 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 01:02:56,281 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:02:56,281 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56472) 
+2019-06-06 01:02:56,349 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764976.3473327, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 01:02:56,351 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 01:02:56,351 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:02:56,352 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56473) 
+2019-06-06 01:02:56,352 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764976.3493314, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 01:02:56,354 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 01:02:56,355 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:02:56,355 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56474) 
+2019-06-06 01:02:56,386 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764976.38532, 'user': {'account_name': 'LikeABOSS'}} 
+2019-06-06 01:02:56,388 - INFO - server: start_server - Приветствуем пользователя LikeABOSS! 
+2019-06-06 01:02:56,388 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:02:56,389 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56476) 
+2019-06-06 01:02:56,389 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764976.38532, 'user': {'account_name': 'Snegurka'}} 
+2019-06-06 01:02:56,391 - INFO - server: start_server - Приветствуем пользователя Snegurka! 
+2019-06-06 01:02:56,391 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:02:56,391 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56475) 
+2019-06-06 01:02:56,887 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559764976.8866613, 'user': {'account_name': 'Admin'}} 
+2019-06-06 01:02:56,890 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 01:02:56,890 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:02:56,891 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56477) 
+2019-06-06 01:03:41,528 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 01:03:43,664 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765023.6623735, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 01:03:43,667 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 01:03:43,667 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:03:43,668 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56482) 
+2019-06-06 01:03:43,758 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765023.757343, 'user': {'account_name': 'Coder'}} 
+2019-06-06 01:03:43,765 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 01:03:43,770 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:03:43,775 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56483) 
+2019-06-06 01:03:43,848 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765023.8463132, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 01:03:43,851 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 01:03:43,852 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:03:43,852 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56484) 
+2019-06-06 01:03:43,866 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765023.865307, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 01:03:43,868 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 01:03:43,869 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:03:43,869 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56485) 
+2019-06-06 01:03:43,889 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765023.8872998, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 01:03:43,891 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 01:03:43,892 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:03:43,892 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56486) 
+2019-06-06 01:03:43,911 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765023.9102924, 'user': {'account_name': 'Admin'}} 
+2019-06-06 01:03:43,913 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 01:03:43,913 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:03:43,914 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56487) 
+2019-06-06 01:03:43,915 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765023.9102924, 'user': {'account_name': 'Snegurka'}} 
+2019-06-06 01:03:43,917 - INFO - server: start_server - Приветствуем пользователя Snegurka! 
+2019-06-06 01:03:43,918 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:03:43,918 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56488) 
+2019-06-06 01:03:43,927 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765023.9262872, 'user': {'account_name': 'LikeABOSS'}} 
+2019-06-06 01:03:43,929 - INFO - server: start_server - Приветствуем пользователя LikeABOSS! 
+2019-06-06 01:03:43,929 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:03:43,930 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56489) 
+2019-06-06 01:03:44,936 - INFO - server: read_messages - Принято сообщение от клиента: LikeABOSS 
+2019-06-06 01:03:45,945 - INFO - server: read_messages - Принято сообщение от клиента: LikeABOSS 
+2019-06-06 01:04:16,450 - INFO - server: read_messages - Принято сообщение от клиента: Snegurka 
+2019-06-06 01:04:17,453 - INFO - server: read_messages - Принято сообщение от клиента: Snegurka 
+2019-06-06 01:04:18,259 - INFO - server: read_messages - Принято сообщение от клиента: Snegurka 
+2019-06-06 01:04:19,665 - INFO - server: read_messages - Принято сообщение от клиента: Snegurka 
+2019-06-06 01:04:22,876 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 01:04:24,784 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 01:04:25,789 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 01:04:27,005 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 01:05:24,024 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 01:05:29,094 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765129.0931096, 'user': {'account_name': 'Guest'}} 
+2019-06-06 01:05:29,095 - INFO - server: start_server - Приветствуем пользователя Guest! 
+2019-06-06 01:05:29,095 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:05:29,096 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56501) 
+2019-06-06 01:05:55,736 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 01:05:57,856 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765157.854228, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 01:05:57,860 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 01:05:57,860 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:05:57,861 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56504) 
+2019-06-06 01:05:58,009 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765158.0071783, 'user': {'account_name': 'Coder'}} 
+2019-06-06 01:05:58,011 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 01:05:58,012 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:05:58,012 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56505) 
+2019-06-06 01:05:58,013 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765158.0101771, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 01:05:58,015 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 01:05:58,015 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:05:58,016 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56506) 
+2019-06-06 01:05:58,043 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765158.042166, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 01:05:58,046 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 01:05:58,046 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:05:58,047 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56507) 
+2019-06-06 01:05:58,097 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765158.0961494, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 01:05:58,100 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 01:05:58,100 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:05:58,100 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56508) 
+2019-06-06 01:05:58,101 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765158.0971484, 'user': {'account_name': 'Admin'}} 
+2019-06-06 01:05:58,102 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 01:05:58,103 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:05:58,103 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56509) 
+2019-06-06 01:05:58,103 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765158.101147, 'user': {'account_name': 'Snegurka'}} 
+2019-06-06 01:05:58,105 - INFO - server: start_server - Приветствуем пользователя Snegurka! 
+2019-06-06 01:05:58,105 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:05:58,106 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56511) 
+2019-06-06 01:05:58,602 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765158.6015644, 'user': {'account_name': 'LikeABOSS'}} 
+2019-06-06 01:05:58,605 - INFO - server: start_server - Приветствуем пользователя LikeABOSS! 
+2019-06-06 01:05:58,606 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:05:58,606 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56510) 
+2019-06-06 01:06:03,731 - INFO - server: read_messages - Принято сообщение от клиента: LikeABOSS 
+2019-06-06 01:06:07,644 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 01:06:09,450 - INFO - server: read_messages - Принято сообщение от клиента: Snegurka 
+2019-06-06 01:06:27,200 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 01:08:04,815 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 01:08:06,957 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765286.95561, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 01:08:06,961 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 01:08:06,964 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:08:06,965 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56518) 
+2019-06-06 01:08:07,021 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765287.0205889, 'user': {'account_name': 'Coder'}} 
+2019-06-06 01:08:07,031 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 01:08:07,032 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:08:07,034 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56519) 
+2019-06-06 01:08:07,119 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765287.1185563, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 01:08:07,122 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 01:08:07,122 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:08:07,123 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56520) 
+2019-06-06 01:08:07,124 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765287.122555, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 01:08:07,126 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 01:08:07,126 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:08:07,127 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56521) 
+2019-06-06 01:08:07,158 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765287.157544, 'user': {'account_name': 'Admin'}} 
+2019-06-06 01:08:07,160 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 01:08:07,161 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:08:07,161 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56522) 
+2019-06-06 01:08:07,168 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765287.16754, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 01:08:07,170 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 01:08:07,171 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:08:07,171 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56523) 
+2019-06-06 01:08:07,176 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765287.1755373, 'user': {'account_name': 'Snegurka'}} 
+2019-06-06 01:08:07,179 - INFO - server: start_server - Приветствуем пользователя Snegurka! 
+2019-06-06 01:08:07,179 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:08:07,179 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56524) 
+2019-06-06 01:08:07,187 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765287.1855342, 'user': {'account_name': 'LikeABOSS'}} 
+2019-06-06 01:08:07,188 - INFO - server: start_server - Приветствуем пользователя LikeABOSS! 
+2019-06-06 01:08:07,188 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:08:07,189 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56525) 
+2019-06-06 01:08:08,795 - INFO - server: read_messages - Принято сообщение от клиента: LikeABOSS 
+2019-06-06 01:08:12,008 - INFO - server: read_messages - Принято сообщение от клиента: Snegurka 
+2019-06-06 01:08:14,717 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 01:08:16,828 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 01:10:11,309 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 01:10:22,750 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 01:10:22,752 - INFO - server: read_messages - Получена команда выключения сервера, ответ: response: 0 
+2019-06-06 01:14:16,000 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 01:14:18,139 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765658.1370912, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 01:14:18,145 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 01:14:18,146 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:14:18,147 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56546) 
+2019-06-06 01:14:18,203 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765658.202071, 'user': {'account_name': 'Coder'}} 
+2019-06-06 01:14:18,214 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 01:14:18,221 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:14:18,222 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56547) 
+2019-06-06 01:14:18,314 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765658.313034, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 01:14:18,317 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 01:14:18,318 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:14:18,319 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56548) 
+2019-06-06 01:14:18,342 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765658.3410249, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 01:14:18,344 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 01:14:18,344 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:14:18,345 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56549) 
+2019-06-06 01:14:18,361 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765658.360019, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 01:14:18,365 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 01:14:18,365 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:14:18,366 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56550) 
+2019-06-06 01:14:18,367 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765658.3650177, 'user': {'account_name': 'Admin'}} 
+2019-06-06 01:14:18,369 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 01:14:18,369 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:14:18,369 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56551) 
+2019-06-06 01:14:18,386 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765658.3770142, 'user': {'account_name': 'Snegurka'}} 
+2019-06-06 01:14:18,388 - INFO - server: start_server - Приветствуем пользователя Snegurka! 
+2019-06-06 01:14:18,388 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:14:18,389 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56552) 
+2019-06-06 01:14:18,391 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765658.3890085, 'user': {'account_name': 'LikeABOSS'}} 
+2019-06-06 01:14:18,392 - INFO - server: start_server - Приветствуем пользователя LikeABOSS! 
+2019-06-06 01:14:18,392 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:14:18,410 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56553) 
+2019-06-06 01:14:20,018 - INFO - server: read_messages - Принято сообщение от клиента: LikeABOSS 
+2019-06-06 01:14:23,733 - INFO - server: read_messages - Принято сообщение от клиента: Snegurka 
+2019-06-06 01:14:26,645 - INFO - server: read_messages - Принято сообщение от клиента: Skywalker 
+2019-06-06 01:14:29,652 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 01:14:39,880 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 01:14:39,881 - INFO - server: read_messages - Получена команда выключения сервера, ответ: response: 0 
+2019-06-06 01:16:27,713 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 01:16:29,863 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765789.861219, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 01:16:29,868 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 01:16:29,868 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:16:29,869 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56566) 
+2019-06-06 01:16:29,937 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765789.936195, 'user': {'account_name': 'Coder'}} 
+2019-06-06 01:16:29,942 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 01:16:29,948 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:16:29,952 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56567) 
+2019-06-06 01:16:30,033 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765790.031164, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 01:16:30,036 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 01:16:30,037 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:16:30,038 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56568) 
+2019-06-06 01:16:30,039 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765790.033163, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 01:16:30,042 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 01:16:30,043 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:16:30,044 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56569) 
+2019-06-06 01:16:30,079 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765790.0771484, 'user': {'account_name': 'Admin'}} 
+2019-06-06 01:16:30,083 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 01:16:30,084 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:16:30,085 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56570) 
+2019-06-06 01:16:30,086 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765790.0841463, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 01:16:30,103 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 01:16:30,104 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:16:30,104 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56571) 
+2019-06-06 01:16:30,105 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765790.0971422, 'user': {'account_name': 'Snegurka'}} 
+2019-06-06 01:16:30,109 - INFO - server: start_server - Приветствуем пользователя Snegurka! 
+2019-06-06 01:16:30,109 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:16:30,110 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56572) 
+2019-06-06 01:16:30,605 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765790.6026826, 'user': {'account_name': 'LikeABOSS'}} 
+2019-06-06 01:16:30,613 - INFO - server: start_server - Приветствуем пользователя LikeABOSS! 
+2019-06-06 01:16:30,615 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:16:30,616 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56573) 
+2019-06-06 01:16:31,621 - INFO - server: read_messages - Принято сообщение от клиента: LikeABOSS 
+2019-06-06 01:16:33,128 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 01:16:41,453 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 01:16:41,454 - INFO - server: read_messages - Получена команда выключения сервера, ответ: response: 0 
+2019-06-06 01:19:16,033 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 01:19:27,417 - INFO - server: start_server - Запуск сервера! Готов к приему клиентов! 
+ 
+2019-06-06 01:19:29,591 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765969.5897994, 'user': {'account_name': 'Vanila'}} 
+2019-06-06 01:19:29,598 - INFO - server: start_server - Приветствуем пользователя Vanila! 
+2019-06-06 01:19:29,600 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:19:29,600 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56585) 
+2019-06-06 01:19:29,680 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765969.6787696, 'user': {'account_name': 'Coder'}} 
+2019-06-06 01:19:29,682 - INFO - server: start_server - Приветствуем пользователя Coder! 
+2019-06-06 01:19:29,683 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:19:29,684 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56586) 
+2019-06-06 01:19:29,724 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765969.7237542, 'user': {'account_name': 'Freeman'}} 
+2019-06-06 01:19:29,727 - INFO - server: start_server - Приветствуем пользователя Freeman! 
+2019-06-06 01:19:29,727 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:19:29,728 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56587) 
+2019-06-06 01:19:29,760 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765969.7597435, 'user': {'account_name': 'xxNAGIBATORxx'}} 
+2019-06-06 01:19:29,763 - INFO - server: start_server - Приветствуем пользователя xxNAGIBATORxx! 
+2019-06-06 01:19:29,763 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:19:29,765 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56588) 
+2019-06-06 01:19:29,766 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765969.7627423, 'user': {'account_name': 'Skywalker'}} 
+2019-06-06 01:19:29,768 - INFO - server: start_server - Приветствуем пользователя Skywalker! 
+2019-06-06 01:19:29,768 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:19:29,769 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56589) 
+2019-06-06 01:19:29,790 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765969.7897332, 'user': {'account_name': 'Admin'}} 
+2019-06-06 01:19:29,792 - INFO - server: start_server - Приветствуем пользователя Admin! 
+2019-06-06 01:19:29,793 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:19:29,793 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56590) 
+2019-06-06 01:19:29,802 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765969.8017292, 'user': {'account_name': 'Snegurka'}} 
+2019-06-06 01:19:29,804 - INFO - server: start_server - Приветствуем пользователя Snegurka! 
+2019-06-06 01:19:29,804 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:19:29,805 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56591) 
+2019-06-06 01:19:29,808 - INFO - server: start_server - Принято сообщение от клиента: {'action': 'presence', 'time': 1559765969.8067276, 'user': {'account_name': 'LikeABOSS'}} 
+2019-06-06 01:19:29,810 - INFO - server: start_server - Приветствуем пользователя LikeABOSS! 
+2019-06-06 01:19:29,810 - INFO - server: start_server - Отправка ответа клиенту: {'response': 200} 
+2019-06-06 01:19:29,810 - INFO - server: start_server - Получен запрос на соединение от ('127.0.0.1', 56592) 
+2019-06-06 01:19:32,419 - INFO - server: read_messages - Принято сообщение от клиента: LikeABOSS 
+2019-06-06 01:19:34,728 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 01:19:43,955 - INFO - server: read_messages - Принято сообщение от клиента: Admin 
+2019-06-06 01:19:43,956 - INFO - server: read_messages - Получена команда выключения сервера, ответ: response: 0 
+2019-06-06 01:19:43,957 - INFO - server: start_server - Завершение работы сервера по команде от клиента 
