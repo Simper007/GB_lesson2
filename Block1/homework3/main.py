@@ -10,7 +10,11 @@ from task2 import random_element
 
 
 sample = [1, 2, 3, 4, 5, 6, 7]
-print('Случайным элементом из списка',sample,'будет:',random_element(sample))
+print(
+    'Случайным элементом из списка',
+    sample,
+    'будет:',
+    random_element(sample))
 
 task1.create_dirs()
 task1.del_dirs()

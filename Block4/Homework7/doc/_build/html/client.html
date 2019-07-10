@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Client module &#8212; документация Quick IM alpha 0.2</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Server module" href="server.html" />
+    <link rel="prev" title="Добро пожаловать в документацию к Quick IM!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="client-module">
+<h1>Client module<a class="headerlink" href="#client-module" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Клиентское приложение для обмена сообщениями. Поддерживает
+отправку сообщений пользователям которые находятся в сети.</p>
+<img alt="_images/Client.png" src="_images/Client.png" />
+<p>Поддерживает аргументы коммандной строки:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">client.py</span> <span class="pre">{имя</span> <span class="pre">сервера}</span> <span class="pre">{порт}</span> <span class="pre">{имя</span> <span class="pre">пользователя}</span> <span class="pre">{пароль}</span></code></p>
+<ol class="arabic simple">
+<li><p>{имя сервера} - адрес сервера сообщений.</p></li>
+<li><p>{порт} - порт по которому принимаются подключения</p></li>
+<li><p>{имя пользователя} - имя пользователя с которым произойдёт вход в систему.</p></li>
+<li><p>{пароль} - пароль пользователя.</p></li>
+</ol>
+<p>Все опции командной строки являются необязательными, но имя пользователя и пароль необходимо использовать в паре.</p>
+<p>Примеры использования:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">client.py</span></code></p></li>
+</ul>
+<p><em>Запуск приложения с параметрами по умолчанию.</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">client.py</span> <span class="pre">127.0.0.1</span> <span class="pre">7777</span></code></p></li>
+</ul>
+<p><em>Запуск приложения с указанием подключаться к серверу по адресу 127.0.0.1:7777</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">127.0.0.1</span> <span class="pre">7777</span> <span class="pre">Simper</span> <span class="pre">123</span></code></p></li>
+</ul>
+<p><em>Запуск приложения с пользователем Simper и паролем 123 и указанием подключаться к серверу по адресу 127.0.0.1:7777</em></p>
+<div class="section" id="client-py">
+<h2>client.py<a class="headerlink" href="#client-py" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Запускаемый модуль,содержит парсер аргументов командной строки и функционал клиентского приложения.</p>
+<dl class="class">
+<dt id="client.Client">
+<em class="property">class </em><code class="sig-prename descclassname">client.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param">serv_addr='0.0.0.0'</em>, <em class="sig-param">serv_port=7777</em>, <em class="sig-param">mode='f'</em>, <em class="sig-param">acc='Guest'</em>, <em class="sig-param">passw=''</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Основной класс клиента чата, функции приема/отправки сообщений, изменения списка контактов и т.п.</p>
+<dl class="method">
+<dt id="client.Client.add_msg_to_hist">
+<code class="sig-name descname">add_msg_to_hist</code><span class="sig-paren">(</span><em class="sig-param">msg_from</em>, <em class="sig-param">msg_to</em>, <em class="sig-param">msg</em>, <em class="sig-param">direction</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.add_msg_to_hist" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура добавления сообщения в историю пользователя в локальную БД</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.chk_msg_before_send">
+<code class="sig-name descname">chk_msg_before_send</code><span class="sig-paren">(</span><em class="sig-param">account</em>, <em class="sig-param">msg</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.chk_msg_before_send" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция предобработки сообщений перед отправкой на сервер.
+Вызывает внутренние команды, если сообщение содержит ключевые слова</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.client_exit">
+<code class="sig-name descname">client_exit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.client_exit" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура завершения приложения с отправкой команды о выходе на сервер</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.create_admin_message">
+<code class="sig-name descname">create_admin_message</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">account_name</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.create_admin_message" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция отправки спец сообщения для пользователя Admin</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.create_socket">
+<code class="sig-name descname">create_socket</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.create_socket" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Создание сокета для общения с сервером</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.get_contact_list">
+<code class="sig-name descname">get_contact_list</code><span class="sig-paren">(</span><em class="sig-param">show_progress='Y'</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.get_contact_list" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция запроса списка контактов с сервера</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.run" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура чтения сообщений с сервера</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.send_message">
+<code class="sig-name descname">send_message</code><span class="sig-paren">(</span><em class="sig-param">message_to</em>, <em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.send_message" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция отправки сообщения на сервер</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.server_auth">
+<code class="sig-name descname">server_auth</code><span class="sig-paren">(</span><em class="sig-param">secret_key</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.server_auth" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Аутентификация клиента на удаленном сервисе.
+secret_key - ключ шифрования, известный клиенту и серверу</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.set_contact_list">
+<code class="sig-name descname">set_contact_list</code><span class="sig-paren">(</span><em class="sig-param">command</em>, <em class="sig-param">user</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.set_contact_list" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция добавления/удаления элемента списка контактов с вызовом синхронизации списка с сервером</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.start_client">
+<code class="sig-name descname">start_client</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.start_client" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура запуска транспорта для сообщений</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.who_online">
+<code class="sig-name descname">who_online</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.who_online" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция отправки команды «Кто в сети?» на сервер</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="client.m_window">
+<em class="property">class </em><code class="sig-prename descclassname">client.</code><code class="sig-name descname">m_window</code><a class="headerlink" href="#client.m_window" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс главного окна приложения</p>
+<dl class="method">
+<dt id="client.m_window.add_ok">
+<code class="sig-name descname">add_ok</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.add_ok" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Обработка нажатия кнопки «Ок» при добавлении контакта
+Отправка запроса на сервер и обновление списка контактов</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.add_to_cl">
+<code class="sig-name descname">add_to_cl</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.add_to_cl" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Обработка нажатия кнопки «Добавить контакт» главного окна
+Вызывает окно для ввода имени контакта</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.connection_lost">
+<code class="sig-name descname">connection_lost</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.connection_lost" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Выдача сообщения о ошибке связи и завершение работы приложения</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.create_user_list">
+<code class="sig-name descname">create_user_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.create_user_list" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Формирование списка контактов из локальной БД</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.del_from_cl">
+<code class="sig-name descname">del_from_cl</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.del_from_cl" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Обработка нажатия кнопки «Удалить контакт» главного окна
+Вызывает окно для ввода имени контакта</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.del_ok">
+<code class="sig-name descname">del_ok</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.del_ok" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Обработка нажатия кнопки «Ок» при удалении контакта
+Отправка запроса на сервер и обновление списка контактов</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.event">
+<code class="sig-name descname">event</code><span class="sig-paren">(</span><em class="sig-param">e</em><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.event" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Обработка нажатий на Esc и Enter в основном окне</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.history_list_update">
+<code class="sig-name descname">history_list_update</code><span class="sig-paren">(</span><em class="sig-param">str=''</em><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.history_list_update" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура обновления главного окна с сообщениями.
+Разные цвета для входящих, исходящих и сообщений от сервера</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.initUI">
+<code class="sig-name descname">initUI</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.initUI" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Инициализация интерфейса главного окна</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.mess_to_userchat">
+<code class="sig-name descname">mess_to_userchat</code><span class="sig-paren">(</span><em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.mess_to_userchat" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Вывод произвольного сообщения пользователю в окно чата</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.on_send">
+<code class="sig-name descname">on_send</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.on_send" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Обработчик нажатия кнопки «Отправить»
+Забираем текст, очищаем поле ввода, делаем кнопку неактивной, отправляем сообщение на сервер</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.safe_exit">
+<code class="sig-name descname">safe_exit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.safe_exit" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Закрытие GUI с остановкой потока доставщика</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.select_active_user">
+<code class="sig-name descname">select_active_user</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.select_active_user" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция обработчик даблклика по контакту. Меняет канал отправки</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.set_active_chat">
+<code class="sig-name descname">set_active_chat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.set_active_chat" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Вывод произвольного сообщения пользователю в окно чата</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.set_active_send">
+<code class="sig-name descname">set_active_send</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.set_active_send" title="Ссылка на это определение">¶</a></dt>
+<dd><p>При изменении текста в окне ввода делаем кнопку «Отправить» активной</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.start_client">
+<code class="sig-name descname">start_client</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.start_client" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Запуск обработчика сообщений</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.m_window.to_all">
+<code class="sig-name descname">to_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.m_window.to_all" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Переключение отправки на общий канал</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="client.c_window">
+<em class="property">class </em><code class="sig-prename descclassname">client.</code><code class="sig-name descname">c_window</code><a class="headerlink" href="#client.c_window" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Окно подключения, логин/пароль. Вызывается из класса главного окна</p>
+<dl class="method">
+<dt id="client.c_window.connectPressed">
+<code class="sig-name descname">connectPressed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.c_window.connectPressed" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Обработка нажатия кнопки Подключить в окне подключения.
+Сохраняет последний введеный логин/пароль в БД, вызывает подключение
+и обновление списка пользователей главного окна из локального списка пользователей</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.c_window.event">
+<code class="sig-name descname">event</code><span class="sig-paren">(</span><em class="sig-param">e</em><span class="sig-paren">)</span><a class="headerlink" href="#client.c_window.event" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Обработка Enter и Esc в окне подключения</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.c_window.initUI">
+<code class="sig-name descname">initUI</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.c_window.initUI" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Инициализация интерфейса окна подключения</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="client-database-py">
+<h2>client_database.py<a class="headerlink" href="#client-database-py" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="class">
+<dt id="client_database.Chat_histories">
+<em class="property">class </em><code class="sig-prename descclassname">client_database.</code><code class="sig-name descname">Chat_histories</code><span class="sig-paren">(</span><em class="sig-param">user_login</em>, <em class="sig-param">msg_from</em>, <em class="sig-param">msg_to</em>, <em class="sig-param">msg</em>, <em class="sig-param">direction</em>, <em class="sig-param">date=datetime.datetime(2019</em>, <em class="sig-param">7</em>, <em class="sig-param">10</em>, <em class="sig-param">15</em>, <em class="sig-param">10</em>, <em class="sig-param">39</em>, <em class="sig-param">213545)</em><span class="sig-paren">)</span><a class="headerlink" href="#client_database.Chat_histories" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс описывающий таблицу истории чата. Содержит владельца истории, адресата, получателя, сообщение, направление и дату.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="client_database.User_contact_list">
+<em class="property">class </em><code class="sig-prename descclassname">client_database.</code><code class="sig-name descname">User_contact_list</code><span class="sig-paren">(</span><em class="sig-param">owner_login</em>, <em class="sig-param">in_list_login</em>, <em class="sig-param">group='General'</em><span class="sig-paren">)</span><a class="headerlink" href="#client_database.User_contact_list" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс описывающий таблицу списка контактов пользователя в клиенте. Содержит владельца списка, контакт и группу.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="client_database.Last_user">
+<em class="property">class </em><code class="sig-prename descclassname">client_database.</code><code class="sig-name descname">Last_user</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">pwd</em>, <em class="sig-param">save_pwd</em>, <em class="sig-param">server_addr</em>, <em class="sig-param">server_port</em><span class="sig-paren">)</span><a class="headerlink" href="#client_database.Last_user" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс описывающий таблицу последнего логинившегося пользователя. Содержит логин, пароль, реквизиты сервера, атрибут подставления пароля при подключении.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="main-window-py">
+<h2>main_window.py<a class="headerlink" href="#main-window-py" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="class">
+<dt id="main_window.Ui_MainWindow">
+<em class="property">class </em><code class="sig-prename descclassname">main_window.</code><code class="sig-name descname">Ui_MainWindow</code><a class="headerlink" href="#main_window.Ui_MainWindow" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс описывающий параметры GUI основного окна клиента</p>
+</dd></dl>
+
+</div>
+<div class="section" id="client-gui-settings-py">
+<h2>client_gui_settings.py<a class="headerlink" href="#client-gui-settings-py" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="class">
+<dt id="client_gui_settings.Ui_Form">
+<em class="property">class </em><code class="sig-prename descclassname">client_gui_settings.</code><code class="sig-name descname">Ui_Form</code><a class="headerlink" href="#client_gui_settings.Ui_Form" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс описывающий GUI окна подключения</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="client_gui_settings.AddContactDialog">
+<em class="property">class </em><code class="sig-prename descclassname">client_gui_settings.</code><code class="sig-name descname">AddContactDialog</code><a class="headerlink" href="#client_gui_settings.AddContactDialog" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс описывающий GUI окна добавления контакта</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="client_gui_settings.DelContactDialog">
+<em class="property">class </em><code class="sig-prename descclassname">client_gui_settings.</code><code class="sig-name descname">DelContactDialog</code><a class="headerlink" href="#client_gui_settings.DelContactDialog" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс описывающий GUI окна удаления контакта</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Quick IM</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Client module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#client-py">client.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-database-py">client_database.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main-window-py">main_window.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-gui-settings-py">client_gui_settings.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">Server module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common.html">Common files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logs.html">Log configs</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="предыдущая глава">Добро пожаловать в документацию к Quick IM!</a></li>
+      <li>Next: <a href="server.html" title="следующая глава">Server module</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Artem Naumov.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/client.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

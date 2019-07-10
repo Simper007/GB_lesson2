@@ -25,4 +25,3 @@ for k in range(len(my_list_1)):
 
 print('Список: ', my_list_1)
 print('Уникальные элементы: ', my_list_2)
-

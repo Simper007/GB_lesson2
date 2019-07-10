@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Common files &#8212; документация Quick IM alpha 0.2</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Log configs" href="logs.html" />
+    <link rel="prev" title="Welcome to Quick IM’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="common-files">
+<h1>Common files<a class="headerlink" href="#common-files" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Пакет общих утилит, использующихся в разных модулях проекта.</p>
+<div class="section" id="module-decorators">
+<span id="decorators-py"></span><h2>Скрипт decorators.py<a class="headerlink" href="#module-decorators" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="class">
+<dt id="decorators.Log">
+<em class="property">class </em><code class="sig-prename descclassname">decorators.</code><code class="sig-name descname">Log</code><span class="sig-paren">(</span><em class="sig-param">logger</em><span class="sig-paren">)</span><a class="headerlink" href="#decorators.Log" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Декоратор логирования</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="decorators.login_required">
+<code class="sig-prename descclassname">decorators.</code><code class="sig-name descname">login_required</code><span class="sig-paren">(</span><em class="sig-param">func</em><span class="sig-paren">)</span><a class="headerlink" href="#decorators.login_required" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция проверки, что клиент авторизован на сервере
+Проверяет, что передаваемый объект сокета находится в списке клиентов.
+Если его там нет закрывает сокет</p>
+</dd></dl>
+
+</div>
+<div class="section" id="descriptors-py">
+<h2>Скрипт descriptors.py<a class="headerlink" href="#descriptors-py" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="class">
+<dt id="descriptors.SockVerify">
+<em class="property">class </em><code class="sig-prename descclassname">descriptors.</code><code class="sig-name descname">SockVerify</code><a class="headerlink" href="#descriptors.SockVerify" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Дескриптор для класса серверного сокета</p>
+</dd></dl>
+
+</div>
+<div class="section" id="config-py">
+<h2>Скрипт config.py<a class="headerlink" href="#config-py" title="Ссылка на этот заголовок">¶</a></h2>
+<blockquote>
+<div><p>Содержит общие для сервера и клиента глобальные переменные</p>
+</div></blockquote>
+</div>
+<div class="section" id="meta-py">
+<h2>Скрипт meta.py<a class="headerlink" href="#meta-py" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="class">
+<dt id="meta.ServerVerifier">
+<em class="property">class </em><code class="sig-prename descclassname">meta.</code><code class="sig-name descname">ServerVerifier</code><span class="sig-paren">(</span><em class="sig-param">clsname</em>, <em class="sig-param">bases</em>, <em class="sig-param">clsdict</em><span class="sig-paren">)</span><a class="headerlink" href="#meta.ServerVerifier" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метакласс сервера, проверки использования методов только для сервера</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="meta.ClientVerifier">
+<em class="property">class </em><code class="sig-prename descclassname">meta.</code><code class="sig-name descname">ClientVerifier</code><span class="sig-paren">(</span><em class="sig-param">clsname</em>, <em class="sig-param">bases</em>, <em class="sig-param">clsdict</em><span class="sig-paren">)</span><a class="headerlink" href="#meta.ClientVerifier" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метакласс клиента, проверки использования методов только для клиента
+В GUI версии не используется</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Quick IM</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Common files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-decorators">Скрипт decorators.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#descriptors-py">Скрипт descriptors.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#config-py">Скрипт config.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#meta-py">Скрипт meta.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logs.html">Log configs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client.html">Client module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">Server module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="предыдущая глава">Welcome to Quick IM’s documentation!</a></li>
+      <li>Next: <a href="logs.html" title="следующая глава">Log configs</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Artem Naumov.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/common.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

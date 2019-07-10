@@ -7,10 +7,11 @@ from random import choice
 
 #testlist = [1,2,3,4]
 
+
 def random_element(mylist):
-    if len(mylist)>0:
+    if len(mylist) > 0:
         return choice(mylist)
     return None
 
-#print(len(testlist))
-#print(random_element(testlist))
+# print(len(testlist))
+# print(random_element(testlist))

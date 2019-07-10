@@ -8,7 +8,6 @@ import logs.config.client_config_log
 import decorators
 import re
 from sqlalchemy import or_
-import os
 from socket import *
 from config import *
 from meta import *
@@ -21,20 +20,21 @@ from client_gui_settings import Ui_Form, AddContactDialog, DelContactDialog
 # Инициализация логирования клиента
 log = logging.getLogger('Client_log')
 logger = decorators.Log(log)
+
+# Инициализация подключения к БД
 db_engine = create_engine('sqlite:///client_db.sqlite3')
 db_connection = db_engine.connect()
 Session_class = sessionmaker(bind=db_engine)
-alive_event = Event()
-send_ready = Event()
-socket_lock = Lock()
 
-# Основная функция клиента
+# Инициализация общих эвентов и блокировок
+alive_event = Event()
+socket_lock = Lock()
 
 
 class Client(Thread, QObject):
-    '''
-    Клиент чата, функции приема/отправки сообщений и т.п.
-    '''
+    """
+    Основной класс клиента чата, функции приема/отправки сообщений, изменения списка контактов и т.п.
+    """
     global log, logger, main_window, Session_class
     new_message = pyqtSignal(str)
     connection_lost = pyqtSignal()
@@ -55,17 +55,21 @@ class Client(Thread, QObject):
         self.account = acc
         self.passw = passw
         self.socket_is_ready = False
+
         # Последний пользователь, писавший в лс:
         self.last_private_user = ''
+
         self.alive = True
         self.sock = None
         self.contact_list = []
         self.session = Session_class()
         self.start_client()
 
-    # функция запроса списка контактов с сервера
     @logger
     def get_contact_list(self, show_progress='Y'):
+        """
+        Функция запроса списка контактов с сервера
+        """
 
         log.info('Обновление списка контактов с сервера..')
         if show_progress == 'Y':
@@ -79,7 +83,7 @@ class Client(Thread, QObject):
 
         try:
             with socket_lock:
-                #print('Отправка команды обновления списка')
+                # print('Отправка команды обновления списка')
                 self.sock.send(json.dumps(msg).encode('utf-8'))
                 answer = json.loads(self.sock.recv(1024).decode('utf-8'))
             if ALERT in answer:
@@ -93,20 +97,23 @@ class Client(Thread, QObject):
                         self.session.add(cl)
                         self.session.commit()
 
-                except BaseException:
+                except BaseException as e:
                     log.error(
-                        'Ошибка изменения списка контактов в БД клиента')
-                    print('Ошибка изменения списка контактов в БД клиента')
+                        'Ошибка изменения списка контактов в БД клиента', e)
+                    print('Ошибка изменения списка контактов в БД клиента', e)
                 log.info('Список контактов обновлен')
-        except BaseException:
-            log.error('Ошибка отправки команды на обновление списка контактов')
+        except BaseException as e:
+            log.error(
+                'Ошибка отправки команды на обновление списка контактов', e)
             if show_progress == 'Y':
-                print('Ошибка получения списка контактов')
-            return
+                print('Ошибка получения списка контактов', e)
+            return ERROR
 
-    # функция добавления/удаления элемента списка контактов
     @logger
     def set_contact_list(self, command, user):
+        """
+        Функция добавления/удаления элемента списка контактов с вызовом синхронизации списка с сервером
+        """
         msg = {
             ACTION: command,
             USER_ID: user,
@@ -133,11 +140,13 @@ class Client(Thread, QObject):
         except BaseException:
             log.error('Ошибка отправки команды на изменение списка контактов')
             print('Ошибка изменения списка контактов 1')
-            return
+            return ERROR
 
-    # функция создания сообщения в чате
     @logger
     def send_message(self, message_to, text):
+        """
+        Функция отправки сообщения на сервер
+        """
         if self.alive:
             msg = {
                 ACTION: MSG,
@@ -153,7 +162,7 @@ class Client(Thread, QObject):
             with socket_lock:
                 try:
                     self.sock.send(json.dumps(msg).encode('utf-8'))
-                    #answer = json.loads(self.sock.recv(1024).decode('utf-8'))
+                    # answer = json.loads(self.sock.recv(1024).decode('utf-8'))
                 except Exception as e:
                     log.error('Ошибка отправки сообщения:', e)
                     return -1
@@ -163,9 +172,11 @@ class Client(Thread, QObject):
             log.error('Попытка отправки сообщения при отключенном клиенте')
             return -2
 
-    # функция спец сообщения для пользователя Admin
     @logger
     def create_admin_message(self, text, account_name):
+        """
+        Функция отправки спец сообщения для пользователя Admin
+        """
         msg = {
             ACTION: 'Stop server',
             TIME: time.time(),
@@ -176,96 +187,16 @@ class Client(Thread, QObject):
         with socket_lock:
             try:
                 self.sock.send(json.dumps(msg).encode('utf-8'))
-                #answer = json.loads(sock.recv(1024).decode('utf-8'))
+                # answer = json.loads(sock.recv(1024).decode('utf-8'))
             except Exception as e:
                 log.error('Ошибка отправки Admin сообщения:', e)
                 return -1
         return 0
 
-    # процедура чтения сообщений с сервера #run
-    def run(self):
-        # в цикле оправшиваем сокет на предмет наличия новых сообщений
-        while self.alive:
-            time.sleep(1)
-            if self.socket_is_ready:
-                # print('run',self.sock)
-                try:
-                    with socket_lock:
-                        self.sock.settimeout(0.5)
-                        # ??? Рвет соединение по таймауту ???
-                        message = json.loads(
-                            self.sock.recv(1024).decode('utf-8'))
-                        # return
-                        # #чтобы запустить только в режиме отправки
-                        # закомментируйте строчку выше и раскомментируйте эту
-                except OSError as e:
-                    pass
-                    '''
-                    if self.alive:
-                        print(
-                            f'Cервер разорвал соединение или получен некорректный ответ! Приложение завершает работу. {e}')
-                        log.error(
-                            f'Reader: Сервер разорвал соединение или получен некорректный ответ! {e}')
-                        self.alive = False
-                        self.connection_lost.emit()
-                    # self.client_exit()
-                    # break
-                except (ConnectionError, ConnectionAbortedError, ConnectionResetError, json.JSONDecodeError, TypeError):
-                    print(
-                        'Cервер разорвал соединение или получен некорректный ответ! Приложение завершает работу')
-                    log.error(
-                        'Reader: Сервер разорвал соединение или получен некорректный ответ!')
-                    self.alive = False
-                    self.connection_lost.emit()
-                    '''
-                else:
-                    log.info(f'Получено сообщение с сервера: {message}')
-                    if FROM in message and message[FROM] == self.account:
-                        if not self.mode == 'gui':
-                            print(
-                                message[MESSAGE].replace(
-                                    f'{self.account}:> ', '(моё)', 1))
-                        try:
-                            self.add_msg_to_hist(
-                                message[FROM], message[TO], message[MESSAGE], 'in')
-                            # main_window.history_list_update()
-                        except BaseException as e:
-                            log.error('Ошибка записи истории чата в БД', e)
-                            print('Ошибка записи истории чата в БД', e)
-
-                    elif RESPONSE in message and not message[RESPONSE] in (ACCEPTED, CONFLICT, SERVER_ERROR, OK):
-                        log.error(
-                            f'Неизвестный код ответа сервера {message[RESPONSE]}')
-                        print(
-                            f'Неизвестный код ответа сервера {message[RESPONSE]}')
-
-                    elif FROM in message and message[FROM] != self.account and message[TO] == MAIN_CHANNEL:
-                        print(f'{message[MESSAGE]}')
-                        try:
-                            self.add_msg_to_hist(
-                                message[FROM], message[TO], message[MESSAGE], 'in')
-                            # main_window.history_list_update()
-                        except BaseException:
-                            log.error('Ошибка записи истории чата в БД')
-                            print('Ошибка записи истории чата в БД')
-
-                    if TO in message and message[TO] != MAIN_CHANNEL and re.findall(
-                            r'[^\(private\)]+', message[FROM]):
-                        self.last_private_user = message[FROM]
-                        if self.mode == 'gui':
-                            message[MESSAGE] = message[MESSAGE].replace(
-                                f'(private){message[FROM]}:> ', '')
-                        try:
-                            self.add_msg_to_hist(
-                                message[FROM], message[TO], message[MESSAGE], 'in')
-                            # main_window.history_list_update()
-                        except BaseException:
-                            log.error('Ошибка записи истории чата в БД')
-                            print('Ошибка записи истории чата в БД')
-                finally:
-                    self.sock.settimeout(5)
-
     def add_msg_to_hist(self, msg_from, msg_to, msg, direction):
+        """
+        Процедура добавления сообщения в историю пользователя в локальную БД
+        """
         msg_hist = Chat_histories(
             self.account,
             msg_from,
@@ -278,28 +209,40 @@ class Client(Thread, QObject):
         self.new_message.emit(msg_from)
 
     def client_exit(self):
-        self.alive = False
+        """
+        Процедура завершения приложения с отправкой команды о выходе на сервер
+        """
+
+        if not self.alive:
+            message = {
+                ACTION: EXIT,
+                TIME: time.time(),
+                USER_LOGIN: self.account
+            }
+            with socket_lock:
+                try:
+                    self.sock.send(json.dumps(message).encode('utf-8'))
+                except OSError:
+                    pass
+
         alive_event.clear()
-        message = {
-            ACTION: EXIT,
-            TIME: time.time(),
-            USER_LOGIN: self.account
-        }
-        with socket_lock:
-            try:
-                self.sock.send(json.dumps(message).encode('utf-8'))
-            except OSError:
-                pass
+        self.alive = False
         log.debug('Клиент завершает работу.')
         self.sock.close()
-        #log.debug('Клиент завершает работу.')
+        # log.debug('Клиент завершает работу.')
         time.sleep(0.5)
 
     def who_online(self):
+        """
+        Функция отправки команды "Кто в сети?" на сервер
+        """
         return self.send_message(SERVER, '!who')
 
-    # процедура перед отправкой сообщений на сервер
     def chk_msg_before_send(self, account, msg):
+        """
+        Функция предобработки сообщений перед отправкой на сервер.
+        Вызывает внутренние команды, если сообщение содержит ключевые слова
+        """
         send_to = msg[TO]
         console_prefix = f':> '
         user_message = msg[MESSAGE]
@@ -311,7 +254,8 @@ class Client(Thread, QObject):
                 break
 
         # Обработка служебных команд пользователя
-        if user_message.startswith('!to'):  # выбор получателя для отправки
+        if user_message.startswith('!to'):
+            # выбор получателя для отправки
             destination = user_message.split()
             print(destination)
             try:
@@ -427,8 +371,106 @@ class Client(Thread, QObject):
             msg[MESSAGE] = f'{msg[FROM]}:> {msg[MESSAGE]}'
         return msg
 
+    def run(self):
+        """
+        Процедура чтения сообщений с сервера
+        """
+        # в цикле оправшиваем сокет на предмет наличия новых сообщений
+        while self.alive:
+            time.sleep(1)
+            if self.socket_is_ready:
+                # print('run',self.sock)
+                try:
+                    with socket_lock:
+                        self.sock.settimeout(0.5)
+                        # ??? Рвет соединение по таймауту ???
+                        message = json.loads(
+                            self.sock.recv(1024).decode('utf-8'))
+                        # return
+                        # #чтобы запустить только в режиме отправки
+                        # закомментируйте строчку выше и раскомментируйте эту
+                except OSError as e:
+                    pass
+                    """
+                    if self.alive:
+                        print(
+                            f'Cервер разорвал соединение или получен некорректный ответ! Приложение завершает работу. {e}')
+                        log.error(
+                            f'Reader: Сервер разорвал соединение или получен некорректный ответ! {e}')
+                        self.alive = False
+                        self.connection_lost.emit()
+                    # self.client_exit()
+                    # break
+                except (ConnectionError, ConnectionAbortedError, ConnectionResetError, json.JSONDecodeError, TypeError):
+                    print(
+                        'Cервер разорвал соединение или получен некорректный ответ! Приложение завершает работу')
+                    log.error(
+                        'Reader: Сервер разорвал соединение или получен некорректный ответ!')
+                    self.alive = False
+                    self.connection_lost.emit()
+                    """
+                else:
+
+                    log.info(f'Получено сообщение с сервера: {message}')
+                    if FROM in message and message[FROM] == self.account:
+                        if not self.mode == 'gui':
+                            print(
+                                message[MESSAGE].replace(
+                                    f'{self.account}:> ', '(моё)', 1))
+                        try:
+                            self.add_msg_to_hist(
+                                message[FROM], message[TO], message[MESSAGE], 'in')
+                            # main_window.history_list_update()
+                        except BaseException as e:
+                            log.error('Ошибка записи истории чата в БД', e)
+                            print('Ошибка записи истории чата в БД', e)
+
+                    elif RESPONSE in message and SHUTDOWN in message[RESPONSE]:
+                        log.error(
+                            f'Сервер завершает работу: {message[RESPONSE]}')
+                        print(
+                            f'Сервер завершает работу: {message[RESPONSE]}')
+                        main_window.mess_to_userchat(
+                            f'Сервер завершает работу: {message[RESPONSE]}\n Приложение закрывается..')
+                        self.client_exit()
+                        time.sleep(5)
+                        QtWidgets.qApp.quit()
+
+                    elif RESPONSE in message and not message[RESPONSE] in (
+                            ACCEPTED, CONFLICT, SERVER_ERROR, OK):
+                        log.error(
+                            f'Неизвестный код ответа сервера {message[RESPONSE]}')
+                        print(
+                            f'Неизвестный код ответа сервера {message[RESPONSE]}')
+
+                    elif FROM in message and message[FROM] != self.account and message[TO] == MAIN_CHANNEL:
+                        print(f'{message[MESSAGE]}')
+                        try:
+                            self.add_msg_to_hist(
+                                message[FROM], message[TO], message[MESSAGE], 'in')
+                            # main_window.history_list_update()
+                        except BaseException:
+                            log.error('Ошибка записи истории чата в БД')
+                            print('Ошибка записи истории чата в БД')
+
+                    if TO in message and message[TO] != MAIN_CHANNEL and re.findall(
+                            r'[^\(private\)]+', message[FROM]):
+                        self.last_private_user = message[FROM]
+                        if self.mode == 'gui':
+                            message[MESSAGE] = message[MESSAGE].replace(
+                                f'(private){message[FROM]}:> ', '')
+                        try:
+                            self.add_msg_to_hist(
+                                message[FROM], message[TO], message[MESSAGE], 'in')
+                            # main_window.history_list_update()
+                        except BaseException:
+                            log.error('Ошибка записи истории чата в БД')
+                            print('Ошибка записи истории чата в БД')
+                finally:
+                    self.sock.settimeout(5)
+
     @logger
-    def create_presence_meassage(
+    def create_presence_message(
             self,
             account_name,
             account_password='',
@@ -453,13 +495,14 @@ class Client(Thread, QObject):
                 ACCOUNT_PASSWORD: account_password
             }
         }
+
         return message
 
     def server_auth(self, secret_key):
-        '''
+        """
         Аутентификация клиента на удаленном сервисе.
         secret_key - ключ шифрования, известный клиенту и серверу
-        '''
+        """
         main_window.conn_window.ui.StatusLabel.setText(f'Аутентификация..')
         main_window.conn_window.repaint()
         time.sleep(0.1)
@@ -483,7 +526,9 @@ class Client(Thread, QObject):
             return OK
 
     def create_socket(self):
-        # Создаем сокет для общения с сервером
+        """
+        Создание сокета для общения с сервером
+        """
         self.sock = socket(AF_INET, SOCK_STREAM)
         self.sock.settimeout(5)
         # установка связи с сервером
@@ -492,12 +537,12 @@ class Client(Thread, QObject):
         main_window.conn_window.ui.StatusLabel.setText(
             f'Попытка подключения к {self.serv_addr} {self.serv_port}')
         main_window.conn_window.repaint()
-        #print(f' Попытка подключения к {self.serv_addr} {self.serv_port}')
+        # print(f' Попытка подключения к {self.serv_addr} {self.serv_port}')
         connected = False
         for i in range(5):
             log.info(f'Попытка подключения №{i + 1}')
             try:
-                #print(f'Попытка подключения №{i + 1}')
+                # print(f'Попытка подключения №{i + 1}')
                 self.sock.connect((self.serv_addr, self.serv_port))
             except (OSError, ConnectionRefusedError) as e:
                 print(f'Ошибка подключения, попытка {i + 1}: {e}')
@@ -513,7 +558,6 @@ class Client(Thread, QObject):
                 f' Ошибка подключения, проверьте сеть')
             main_window.conn_window.repaint()
             return ERROR
-            #raise ('Не удалось подключиться к серверу')
 
         # аутентификация сервера
         secret_key = b'Quick IM the BEST!'
@@ -526,7 +570,7 @@ class Client(Thread, QObject):
         time.sleep(0.1)
 
         # создание приветственного сообщения для сервера
-        message = self.create_presence_meassage(
+        message = self.create_presence_message(
             self.account, self.passw, self.action)
 
         if isinstance(message, dict):
@@ -569,11 +613,15 @@ class Client(Thread, QObject):
             del main_window.conn_window
             return OK
         else:
-            print('Что-то пошло не так..')
-            log.error('Что-то пошло не так..')
+            print('Что-то пошло не так.. Ответ сервера нераспознан')
+            log.error('Ответ сервера нераспознан')
+            return ERROR
 
     @logger
     def start_client(self):
+        """
+        Процедура запуска транспорта для сообщений
+        """
         log.info('Запуск клиента')
         print('<<< Quick IM >>>')
         # Если имя аккаунта не передано, то спросим
@@ -608,6 +656,8 @@ class Client(Thread, QObject):
         if connected == ERROR:
             return self.client_exit()
 
+        alive_event.set()
+
         try:
             print('main', self.sock)
             self.get_contact_list('N')
@@ -634,17 +684,17 @@ class Client(Thread, QObject):
             self.client_exit()
             # self.sock.close()
             raise Exception('Не верный режим клиента')
-        '''
+        """
         # self.db_connection.close()
         s.close()
         exit(0)
-        '''
+        """
 
 
 class c_window(QtWidgets.QWidget):
-    '''
-    Окно подключения, логин/пароль
-    '''
+    """
+    Окно подключения, логин/пароль. Вызывается из класса главного окна
+    """
     global server_address, server_port, Session_class, mode, account, pwd
 
     def __init__(self):
@@ -655,6 +705,9 @@ class c_window(QtWidgets.QWidget):
         self.show()
 
     def initUI(self):
+        """
+        Инициализация интерфейса окна подключения
+        """
         self.ui.ExitButton.clicked.connect(QtWidgets.qApp.quit)
         self.ui.ConnectButton.clicked.connect(self.connectPressed)
         self.session = Session_class()
@@ -677,9 +730,10 @@ class c_window(QtWidgets.QWidget):
                 log.error(
                     f'Ошибка сохранения последнего логина/пароля в БД {e}')
 
-    # Обработка Enter и Esc в окне подключения
-
     def event(self, e):
+        """
+        Обработка Enter и Esc в окне подключения
+        """
         if e.type() == QEvent.KeyPress and e.key() == 16777221:
             self.connectPressed()
 
@@ -691,6 +745,11 @@ class c_window(QtWidgets.QWidget):
         return QtWidgets.QWidget.event(self, e)
 
     def connectPressed(self):
+        """
+        Обработка нажатия кнопки Подключить в окне подключения.
+        Сохраняет последний введеный логин/пароль в БД, вызывает подключение
+        и обновление списка пользователей главного окна из локального списка пользователей
+        """
         if not self.ui.PwdSaveCheckBox.isChecked():
             try:
                 self.session.query(Last_user.save_pwd).update({"save_pwd": 0})
@@ -723,6 +782,9 @@ class c_window(QtWidgets.QWidget):
 
 
 class m_window(QtWidgets.QMainWindow):
+    """
+    Класс главного окна приложения
+    """
     global server_address, server_port, Session_class, mode
 
     def __init__(self):
@@ -733,6 +795,9 @@ class m_window(QtWidgets.QMainWindow):
         self.show()
 
     def initUI(self):
+        """
+        Инициализация интерфейса главного окна
+        """
         self.ui.ExitButton.clicked.connect(self.safe_exit)
         self.ui.ChatMessList.setWordWrap(True)
         self.ui.SendButton.setDisabled(True)
@@ -743,41 +808,53 @@ class m_window(QtWidgets.QMainWindow):
         self.ui.Add_user_button.clicked.connect(self.add_to_cl)
         self.ui.Del_user_button.clicked.connect(self.del_from_cl)
         self.ui.UserList.doubleClicked.connect(self.select_active_user)
+        self.ui.MCButton.clicked.connect(self.to_all)
         self.history_model = None
         self.session = Session_class()
         self.ui.SendButton.setAutoDefault(True)
 
     def safe_exit(self):
+        """
+        Закрытие GUI с остановкой потока доставщика
+        """
         if alive_event.isSet():
             self.client.client_exit()
         QtWidgets.qApp.quit()
 
-    # Обработка Enter и Esc в основном окне
-
     def event(self, e):
-        # if e.type() == QEvent.KeyPress and e.key() == 16777221:
-        #    self.on_send()
+        """
+        Обработка нажатий на Esc и Enter в основном окне
+        """
+        if e.type() == QEvent.KeyPress and e.key() == 16777221:
+            self.on_send()
 
         if e.type() == QEvent.KeyPress and e.key() == 16777216:
             QtWidgets.qApp.quit()
 
         return QtWidgets.QMainWindow.event(self, e)
 
+    def to_all(self):
+        """
+        Переключение отправки на общий канал
+        """
+        self.current_chat = MAIN_CHANNEL
+        self.set_active_chat()
+
     def add_to_cl(self):
-        '''
+        """
         Обработка нажатия кнопки "Добавить контакт" главного окна
         Вызывает окно для ввода имени контакта
-        '''
+        """
         global add_dialog
         add_dialog = AddContactDialog()
         add_dialog.ui.buttonBox.accepted.connect(self.add_ok)
         add_dialog.show()
 
     def add_ok(self):
-        '''
+        """
         Обработка нажатия кнопки "Ок" при добавлении контакта
         Отправка запроса на сервер и обновление списка контактов
-        '''
+        """
         global add_dialog
         user = add_dialog.ui.plainTextEdit.toPlainText()
         if not user:
@@ -791,10 +868,10 @@ class m_window(QtWidgets.QMainWindow):
         self.create_user_list()
 
     def del_from_cl(self):
-        '''
+        """
         Обработка нажатия кнопки "Удалить контакт" главного окна
         Вызывает окно для ввода имени контакта
-        '''
+        """
         global del_dialog
         del_dialog = DelContactDialog()
         i = 0
@@ -807,10 +884,10 @@ class m_window(QtWidgets.QMainWindow):
         del_dialog.show()
 
     def del_ok(self):
-        '''
+        """
         Обработка нажатия кнопки "Ок" при удалении контакта
         Отправка запроса на сервер и обновление списка контактов
-        '''
+        """
         global del_dialog
         user = del_dialog.cl_comboBox.currentText()
         # print(user)
@@ -819,29 +896,27 @@ class m_window(QtWidgets.QMainWindow):
         self.create_user_list()
 
     def select_active_user(self):
-        '''
+        """
         Функция обработчик даблклика по контакту. Меняет канал отправки
-        '''
+        """
         self.current_chat = self.ui.UserList.currentIndex().data()
         self.set_active_chat()
 
     def set_active_send(self):
-        '''
+        """
         При изменении текста в окне ввода делаем кнопку "Отправить" активной
-        '''
+        """
         self.ui.SendButton.setEnabled(True)
 
     def on_send(self):
-        '''
+        """
         Обработчик нажатия кнопки "Отправить"
         Забираем текст, очищаем поле ввода, делаем кнопку неактивной, отправляем сообщение на сервер
-        '''
-        # send_ready.set()
-        # print(self.ui.SendButton.isChecked())
+        """
         message_text = self.ui.textBox.toPlainText()
         self.ui.textBox.clear()
         self.ui.SendButton.setDisabled(True)
-        if not message_text:
+        if not message_text or message_text == 'Начните печатать здесь..':
             return
         try:
             # print(self.current_chat)
@@ -869,9 +944,10 @@ class m_window(QtWidgets.QMainWindow):
 
     @pyqtSlot(str)
     def history_list_update(self, str=''):
-        '''
-        Обновление главного окна с сообщениями
-        '''
+        """
+        Процедура обновления главного окна с сообщениями.
+        Разные цвета для входящих, исходящих и сообщений от сервера
+        """
         if self.current_chat == MAIN_CHANNEL:
             hist_list = sorted(
                 self.session.query(
@@ -922,21 +998,28 @@ class m_window(QtWidgets.QMainWindow):
         for i in range(start_index, length):
             item = hist_list[i]
             # print(item)
-            if item[4] == 'in' and item[1] == MAIN_CHANNEL:
+            if item[4] == 'in' and item[1] == MAIN_CHANNEL and item[0] != self.account:
                 mess = QtGui.QStandardItem(
                     f'{item[3].replace(microsecond=0)} Входящее от {item[0]}:\n {item[2]}')
                 mess.setEditable(False)
                 mess.setBackground(QtGui.QBrush(QtGui.QColor(255, 213, 213)))
                 mess.setTextAlignment(Qt.AlignLeft)
                 self.history_model.appendRow(mess)
-            elif item[4] == 'in' and item[1] != MAIN_CHANNEL:
+            elif item[4] == 'in' and item[1] != MAIN_CHANNEL and item[0] == SERVER:
                 mess = QtGui.QStandardItem(
-                    f'{item[3].replace(microsecond=0)} Входящее ЛС от {item[0]}:\n {item[2]}')
+                    f'{item[3].replace(microsecond=0)} Системное сообщение:\n {item[2]}')
                 mess.setEditable(False)
                 mess.setBackground(QtGui.QBrush(QtGui.QColor(145, 213, 213)))
                 mess.setTextAlignment(Qt.AlignLeft)
                 self.history_model.appendRow(mess)
-            else:
+            elif item[4] == 'in' and item[1] != MAIN_CHANNEL and item[0] != SERVER:
+                mess = QtGui.QStandardItem(
+                    f'{item[3].replace(microsecond=0)} Входящее ЛС от {item[0]}:\n {item[2]}')
+                mess.setEditable(False)
+                mess.setBackground(QtGui.QBrush(QtGui.QColor(190, 203, 213)))
+                mess.setTextAlignment(Qt.AlignLeft)
+                self.history_model.appendRow(mess)
+            elif item[4] == 'out':
                 mess = QtGui.QStandardItem(
                     f'{item[3].replace(microsecond=0)} Исходящее в канал {item[1]}:\n {item[2]}')
                 mess.setEditable(False)
@@ -946,6 +1029,9 @@ class m_window(QtWidgets.QMainWindow):
         self.ui.ChatMessList.scrollToBottom()
 
     def mess_to_userchat(self, text):
+        """
+        Вывод произвольного сообщения пользователю в окно чата
+        """
         if not self.history_model:
             self.history_model = QtGui.QStandardItemModel()
             self.ui.ChatMessList.setModel(self.history_model)
@@ -957,10 +1043,16 @@ class m_window(QtWidgets.QMainWindow):
         self.ui.ChatMessList.scrollToBottom()
 
     def set_active_chat(self):
+        """
+        Вывод произвольного сообщения пользователю в окно чата
+        """
         self.ui.statusbar.showMessage(f'Отправка в канал: {self.current_chat}')
         self.repaint()
 
     def create_user_list(self):
+        """
+        Формирование списка контактов из локальной БД
+        """
         self.ui.UserList.setColumnCount(1)
         self.ui.UserList.setRowCount(30)
         self.UserList.setHorizontalHeaderLabels(['Список контактов:'])
@@ -986,6 +1078,9 @@ class m_window(QtWidgets.QMainWindow):
         self.repaint()
 
     def start_client(self):
+        """
+        Запуск обработчика сообщений
+        """
         self.account = self.conn_window.account
         self.client = Client(
             acc=self.conn_window.account,
@@ -996,7 +1091,6 @@ class m_window(QtWidgets.QMainWindow):
                 self.conn_window.ui.ServAddrPort.text()))
         self.client.setDaemon(True)
         self.client.start()
-        alive_event.set()
         self.client.new_message.connect(self.history_list_update)
         self.client.connection_lost.connect(self.connection_lost)
         self.ui.WhoButton.clicked.connect(self.client.who_online)
@@ -1004,9 +1098,11 @@ class m_window(QtWidgets.QMainWindow):
             lambda: self.client.send_message(
                 self.current_chat, '!help'))
 
-    # Выдаёт сообщение о ошибке и завершает работу приложения
     @pyqtSlot()
     def connection_lost(self):
+        """
+        Выдача сообщения о ошибке связи и завершение работы приложения
+        """
         self.messages.warning(
             self,
             'Сбой соединения',
@@ -1041,7 +1137,7 @@ if __name__ == "__main__":
     if len(sys.argv) < 3 or mode == 'gui':
         # TODO Вернуть обработку всех аргументов в гуи при запуске из консоли
         app = QtWidgets.QApplication(sys.argv)
-        #db = sqlalchemy(app)
+        # db = sqlalchemy(app)
         main_window = m_window()
         app.exec_()
     else:

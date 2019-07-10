@@ -5,7 +5,7 @@
 '''
 
 fruit_list1 = ['Яблоко', 'Банан', 'Апельсин', 'Ананас', 'Киви']
-fruit_list2 = ['Киви','Мандарин', 'Яблоко', 'Слива']
+fruit_list2 = ['Киви', 'Мандарин', 'Яблоко', 'Слива']
 
 common_list = [fruit for fruit in fruit_list1 if fruit in fruit_list2]
 

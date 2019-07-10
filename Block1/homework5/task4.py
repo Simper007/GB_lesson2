@@ -4,15 +4,17 @@
 Обработать возможность возникновения исключительной ситуации, которая поднимается внутри функции.
 '''
 
+
 def check_unlucky_number(numb):
     if numb == 13:
         raise ValueError('Не счастливое число 13!')
-    if numb not in range(1,101):
+    if numb not in range(1, 101):
         raise Exception('Число не из диапазона [1,100]')
     return numb**2
 
+
 print('Возведем в квадрат правильные числа')
-number = int (input('Введите число от 1 до 100: '))
+number = int(input('Введите число от 1 до 100: '))
 
 try:
     print(check_unlucky_number(number))

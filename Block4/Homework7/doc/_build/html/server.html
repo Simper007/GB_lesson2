@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Server module &#8212; документация Quick IM alpha 0.2</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Common files" href="common.html" />
+    <link rel="prev" title="Client module" href="client.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="server-module">
+<h1>Server module<a class="headerlink" href="#server-module" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Серверный модуль мессенджера. Обрабатывает словари - сообщения, хранит хешированные пароли клиентов и их список контактов.</p>
+<img alt="_images/Server.png" src="_images/Server.png" />
+<p><em>Использование</em></p>
+<p>Модуль подерживает аргементы командной стороки:</p>
+<ol class="arabic simple">
+<li><p>-p - Порт на котором принимаются соединения</p></li>
+<li><p>-a - Адрес с которого принимаются соединения.</p></li>
+</ol>
+<p>Примеры использования:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">server.py</span> <span class="pre">-p</span> <span class="pre">7777</span></code></p>
+<p><em>Запуск сервера на порту 7777</em></p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">server.py</span> <span class="pre">-a</span> <span class="pre">localhost</span></code></p>
+<p><em>Запуск сервера принимающего только соединения с localhost</em></p>
+<div class="section" id="server-py">
+<h2>server.py<a class="headerlink" href="#server-py" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Запускаемый модуль,содержит парсер аргументов командной строки и функционал серверного приложения.</p>
+<dl class="class">
+<dt id="server.Server">
+<em class="property">class </em><code class="sig-prename descclassname">server.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param">serv_addr='0.0.0.0'</em>, <em class="sig-param">serv_port=7777</em><span class="sig-paren">)</span><a class="headerlink" href="#server.Server" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Главный класс сервера, обработка подключений пользователей</p>
+<dl class="method">
+<dt id="server.Server.check_correct_presence_and_response">
+<code class="sig-name descname">check_correct_presence_and_response</code><span class="sig-paren">(</span><em class="sig-param">presence_message</em><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.check_correct_presence_and_response" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция проверки корректности приветственного сообщения
+(PRESENCE) и формирования ответа</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.Server.client_auth">
+<code class="sig-name descname">client_auth</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">secret_key</em><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.client_auth" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Аутентификация клиента.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.Server.read_messages">
+<code class="sig-name descname">read_messages</code><span class="sig-paren">(</span><em class="sig-param">from_clients</em>, <em class="sig-param">client_list</em><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.read_messages" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура чтения сообщений с сокетов клиентов</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.Server.start_server">
+<code class="sig-name descname">start_server</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.start_server" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура запуска сервера</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.Server.write_messages">
+<code class="sig-name descname">write_messages</code><span class="sig-paren">(</span><em class="sig-param">messages</em>, <em class="sig-param">to_clients</em>, <em class="sig-param">client_list</em><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.write_messages" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура записи сообщений в сокеты клиентов</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="server.ServerManager">
+<em class="property">class </em><code class="sig-prename descclassname">server.</code><code class="sig-name descname">ServerManager</code><a class="headerlink" href="#server.ServerManager" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс работы с GUI сервера</p>
+<dl class="method">
+<dt id="server.ServerManager.add_log">
+<code class="sig-name descname">add_log</code><span class="sig-paren">(</span><em class="sig-param">log_text</em><span class="sig-paren">)</span><a class="headerlink" href="#server.ServerManager.add_log" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура добавления информации в список логирования на главный экран</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.ServerManager.closeapp">
+<code class="sig-name descname">closeapp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.ServerManager.closeapp" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура выхода из приложения</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.ServerManager.gui_add_log_item">
+<code class="sig-name descname">gui_add_log_item</code><span class="sig-paren">(</span><em class="sig-param">log_text</em><span class="sig-paren">)</span><a class="headerlink" href="#server.ServerManager.gui_add_log_item" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура формирования элемента списка логирования</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.ServerManager.initUI">
+<code class="sig-name descname">initUI</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.ServerManager.initUI" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура инициализации GUI главного окна сервера</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.ServerManager.refresh_user_list">
+<code class="sig-name descname">refresh_user_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.ServerManager.refresh_user_list" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура обновления информации о списке пользователей в интерфейсе сервера</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.ServerManager.startserver">
+<code class="sig-name descname">startserver</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.ServerManager.startserver" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура запуска основного кода сервера из GUI</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.ServerManager.stopserver">
+<code class="sig-name descname">stopserver</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.ServerManager.stopserver" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Процедура остановки основного кода сервера из GUI</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="server.ServerSocket">
+<em class="property">class </em><code class="sig-prename descclassname">server.</code><code class="sig-name descname">ServerSocket</code><span class="sig-paren">(</span><em class="sig-param">p_addr='0.0.0.0'</em>, <em class="sig-param">p_port=7777</em><span class="sig-paren">)</span><a class="headerlink" href="#server.ServerSocket" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс для создания серверного сокета</p>
+</dd></dl>
+
+</div>
+<div class="section" id="server-database-py">
+<h2>server_database.py<a class="headerlink" href="#server-database-py" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="class">
+<dt id="server_database.User">
+<em class="property">class </em><code class="sig-prename descclassname">server_database.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">password</em>, <em class="sig-param">realname=''</em>, <em class="sig-param">about_self=''</em><span class="sig-paren">)</span><a class="headerlink" href="#server_database.User" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс описывающий таблицу пользователей. Содержит id пользователя, логин, хешированный пароль, настоящее имя, инфо о себе, даты действия записи и дату создания.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="server_database.User_sessions">
+<em class="property">class </em><code class="sig-prename descclassname">server_database.</code><code class="sig-name descname">User_sessions</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">ip</em><span class="sig-paren">)</span><a class="headerlink" href="#server_database.User_sessions" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс описывающий таблицу с историей входов пользователей. Содержит id сессии, логин, ip адрес и дату сессии.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="server_database.Users_online">
+<em class="property">class </em><code class="sig-prename descclassname">server_database.</code><code class="sig-name descname">Users_online</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">ip</em><span class="sig-paren">)</span><a class="headerlink" href="#server_database.Users_online" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс описывающий таблицу с информацией о подключенных в настоящий момент пользователях. Содержит логин, ip адрес и дату подключения.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="server_database.User_contact_list">
+<em class="property">class </em><code class="sig-prename descclassname">server_database.</code><code class="sig-name descname">User_contact_list</code><span class="sig-paren">(</span><em class="sig-param">owner_login</em>, <em class="sig-param">in_list_login</em>, <em class="sig-param">group='General'</em><span class="sig-paren">)</span><a class="headerlink" href="#server_database.User_contact_list" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс описывающий таблицу списка контактов пользователя на сервере. Содержит владельца списка, контакт и группу.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Quick IM</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="client.html">Client module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Server module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#server-py">server.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-database-py">server_database.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common.html">Common files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logs.html">Log configs</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="client.html" title="предыдущая глава">Client module</a></li>
+      <li>Next: <a href="common.html" title="следующая глава">Common files</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Artem Naumov.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/server.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

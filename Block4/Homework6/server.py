@@ -1,15 +1,14 @@
 import sys
 import os
 import json
-import time
 import logging
 import logs.config.server_config_log
-from decorators import Log, login_required
 import select
 import hmac
-from binascii import hexlify
+import time
 import hashlib
-from Cryptodome.Cipher import AES
+from binascii import hexlify
+from decorators import Log, login_required
 from config import *
 from socket import *
 from descriptors import *
@@ -19,19 +18,24 @@ from server_database import *
 from PyQt5 import QtWidgets, uic, QtGui
 from PyQt5.QtCore import QTimer
 
+# Инициализация логирования сервера
 log = logging.getLogger('Server_log')
 logger = Log(log)
+
+# Инициализация подключения к БД
 db_engine = create_engine('sqlite:///db.sqlite3')
 db_connection = db_engine.connect()
 Session = sessionmaker(bind=db_engine)
 session = Session()
 
+# Инициализация общего эвента
 alive_event = Event()
-
-# класс серверного сокета
 
 
 class ServerSocket(socket):
+    """
+    Класс для создания серверного сокета
+    """
     port = SockVerify()
     address = SockVerify()
 
@@ -40,14 +44,18 @@ class ServerSocket(socket):
         self.address = p_addr
         self.port = p_port
         self.bind((self.address, self.port))
-        self.listen(1)
-        self.settimeout(0.1)
+        self.listen()
+        self.settimeout(1)
 
 
 class Server(metaclass=ServerVerifier):
+    """
+    Главный класс сервера, обработка подключений пользователей
+    """
     global log, logger, Session, alive_event
-    # Список сокетов клиентов и словарь аккаунтов клиентов с информацией о
-    # сокете
+
+    # Список сокетов клиентов и словарь аккаунтов
+    # клиентов с информацией о сокете
     clients = []
     names = {}
 
@@ -59,8 +67,10 @@ class Server(metaclass=ServerVerifier):
         self.session.query(Users_online).delete()
         self.session.commit()
 
-    # Функция чтения сообщений с сокетов клиентов
     def read_messages(self, from_clients, client_list):
+        """
+        Процедура чтения сообщений с сокетов клиентов
+        """
         # список всех полученных сообщений
         message_list = []
         for connection in from_clients:
@@ -68,7 +78,7 @@ class Server(metaclass=ServerVerifier):
                 try:
                     client_message = json.loads(
                         connection.recv(1024).decode("utf-8"))
-                    #log.info(f'Принято сообщение от клиента: {client_message[FROM]}')
+                    # log.info(f'Принято сообщение от клиента: {client_message[FROM]}')
                     log.debug(f'{client_message}')
                     main_window.add_log(f'{client_message}')
                     # Если спец сообщение от Admin, то вырубаем сервер
@@ -80,10 +90,6 @@ class Server(metaclass=ServerVerifier):
                         main_window.add_log(
                             f'Получена команда выключения сервера, ответ: {RESPONSE}: {SHUTDOWN}')
                         self.alive.clear()
-                        # return {RESPONSE: SHUTDOWN}
-
-                    # if ACTION in client_message and client_message[ACTION] ==
-                    # MSG:
                     message_list.append((client_message, connection))
                 except BaseException:
                     log.debug(
@@ -94,11 +100,29 @@ class Server(metaclass=ServerVerifier):
                     client_list.remove(connection)
         return message_list
 
-    # Функция записи сообщений в сокеты клиентов
     @login_required
     def write_messages(self, messages, to_clients, client_list):
+        """
+        Процедура записи сообщений в сокеты клиентов
+        """
         for message, sender in messages:
+            # При остановке сервера рассылаем клиентам уведомление об этом
+            if SHUTDOWN in message:
+                log.info('Выключение сервера')
+                for connection in to_clients:
+                    # отправка сообщения о выключении сервера
+                    try:
+                        connection.send(
+                            json.dumps({RESPONSE: SHUTDOWN}).encode('utf-8'))
+                        connection.close()
+                        client_list.remove(connection)
+                    except BaseException:
+                        log.warning(
+                            f'Сокет клиента {connection.fileno()} {connection.getpeername()} недоступен для отправки. Вероятно он отключился')
+                    return
+
             if self.alive.isSet():
+                # обработка команд работы со списком контактов
                 if ACTION in message and message[ACTION] == GET_CONTACTS:
                     connection = self.names[message[USER_LOGIN]]
                     contact_list = []
@@ -189,7 +213,8 @@ class Server(metaclass=ServerVerifier):
                         log.error(
                             'Ошибка ответа на изменение списка контактов')
 
-                # При закрытии клиент посылает выход, обрабатываем его
+                # При закрытии приложения клиента он посылает выход,
+                # обрабатываем его
                 elif ACTION in message and message[ACTION] == EXIT:
                     log.info(f'Клиент {message[USER_LOGIN]} вышел из чата')
                     main_window.add_log(
@@ -208,32 +233,32 @@ class Server(metaclass=ServerVerifier):
 
                 # Если приватный канал, то отправка только одному получателю
                 if ACTION in message and message[ACTION] == MSG and message[
-                        TO] != MAIN_CHANNEL and message[TO] != message[FROM] and message[TO] != SERVER:
+                        TO] != MAIN_CHANNEL and message[TO] != message[FROM]:
                     # получаем пользователя, которому отправляем сообщение
                     to = message[TO]
                     # обработка сервером приватных сообщений
                     if message[MESSAGE] != '!who':
                         message[MESSAGE] = f'(private){message[FROM]}:> {message[MESSAGE]}'
+                    if message[TO] == SERVER and message[MESSAGE] == '!who':
+                        message[TO] = message[FROM]
+                        to = message[FROM]
+                        message[FROM] = SERVER
+                        client_names = [key for key in self.names.keys()]
+                        message[MESSAGE] = f'<:SERVER:> Список клиентов в онлайн: {client_names}'
+                        log.debug(
+                            f'Пользователем {message[FROM]} запрошен список пользователей онлайн:\n {message[MESSAGE]}')
+                        main_window.add_log(
+                            f'Пользователем {message[FROM]} запрошен список пользователей онлайн:\n {message}')
                     try:
                         connection = self.names[to]
                     except BaseException:
                         connection = self.names[message[FROM]]
-                        if message[TO] == SERVER and message[MESSAGE] == '!who':
-                            message[TO] = message[FROM]
-                            message[FROM] = SERVER
-                            client_names = [key for key in self.names.keys()]
-                            message[MESSAGE] = f'<:SERVER:> Список клиентов в онлайн: {client_names}'
-                            log.debug(
-                                f'Пользователем {message[FROM]} запрошен список пользователей онлайн:\n {message[MESSAGE]}')
-                            main_window.add_log(
-                                f'Пользователем {message[FROM]} запрошен список пользователей онлайн:\n {message}')
-                        else:
-                            message[TO] = message[FROM]
-                            message[FROM] = SERVER
-                            message[MESSAGE] = f'<:SERVER:> Клиент {to} не подключен. Отправка сообщения не возможна!'
-                            log.warning(message)
-                            main_window.add_log(
-                                f'{message[MESSAGE]}')
+                        message[TO] = message[FROM]
+                        message[FROM] = SERVER
+                        message[MESSAGE] = f'<:SERVER:> Клиент {to} не подключен. Отправка сообщения не возможна!'
+                        log.warning(message)
+                        main_window.add_log(
+                            f'{message[MESSAGE]}')
 
                     # отправка сообщения
                     try:
@@ -267,10 +292,12 @@ class Server(metaclass=ServerVerifier):
                             connection.close()
                             client_list.remove(connection)
 
-    # Функция проверки корректности приветственного сообщения и формирования
-    # ответа
     @logger
     def check_correct_presence_and_response(self, presence_message):
+        """
+        Функция проверки корректности приветственного сообщения
+        (PRESENCE) и формирования ответа
+        """
         log.debug('Запуск ф-ии проверки корректности запроса')
         if ACTION in presence_message and presence_message[ACTION] == 'Unknown':
             return {RESPONSE: UNKNOWN_ERROR}
@@ -338,9 +365,9 @@ class Server(metaclass=ServerVerifier):
             return {RESPONSE: WRONG_REQUEST, ERROR: 'Не верный запрос'}
 
     def client_auth(self, client, secret_key):
-        '''
+        """
         Аутентификация клиента.
-        '''
+        """
         log.info(
             f'Аутентификация входящего соединения {client}')
         main_window.add_log(
@@ -374,13 +401,13 @@ class Server(metaclass=ServerVerifier):
 
     @logger
     def start_server(self):
+        """
+        Процедура запуска сервера
+        """
 
         # создаем сокет для работы с клиентами
         s = ServerSocket(self.serv_addr, self.serv_port)
-        s.settimeout(0.5)
-        s.listen(20)
 
-        # print(self.serv_addr,self.serv_port)
         log.info('Запуск сервера! Готов к приему клиентов! \n')
         main_window.ui.statusbar.showMessage('Статус: Сервер запущен')
         main_window.add_log('Запуск сервера! Готов к приему клиентов!')
@@ -405,7 +432,7 @@ class Server(metaclass=ServerVerifier):
                     log.info('Аутентификация успешна')
                     main_window.add_log(f'Аутентификация успешна')
 
-                #print(client, address)
+                # print(client, address)
                 client_message = json.loads(client.recv(1024).decode("utf-8"))
                 log.info(f'Принято сообщение от клиента: {client_message}')
                 main_window.add_log(
@@ -450,6 +477,9 @@ class Server(metaclass=ServerVerifier):
             req = self.read_messages(r, self.clients)
             self.write_messages(req, w, self.clients)
 
+        req = []
+        req.append((SHUTDOWN, ''))
+        self.write_messages(req, w, self.clients)
         s.close()
         log.info('Сервер завершил работу')
         main_window.add_log('Сервер завершил работу')
@@ -466,6 +496,9 @@ class ServerManager(QtWidgets.QMainWindow):
         self.show()
 
     def initUI(self):
+        """
+        Процедура инициализации GUI главного окна сервера
+        """
         self.ui.ExitButton.clicked.connect(self.closeapp)
         self.ui.StartButton.clicked.connect(self.startserver)
         self.ui.StopButton.clicked.connect(self.stopserver)
@@ -480,11 +513,10 @@ class ServerManager(QtWidgets.QMainWindow):
         if len(sys.argv) > 1:
             self.startserver()
 
-        # self.ui.LogView.setModel(self.gui_add_log_item('test'))
-        # self.ui.LogView.columnResized(541,50,10)
-        # self.ui.LogView.horizontalHeader().stretchLastSection
-
     def refresh_user_list(self):
+        """
+        Процедура обновления информации о списке пользователей в интерфейсе сервера
+        """
         if not alive_event.isSet():
             session.query(Users_online).delete()
             session.commit()
@@ -494,16 +526,13 @@ class ServerManager(QtWidgets.QMainWindow):
         self.UserList.setHorizontalHeaderLabels(['Список пользователей:'])
         i = 0
         for contact in session.query(Users_online).all():
-            # print(contact.login)
+
             self.ui.UserList.setItem(
                 0, i, QtWidgets.QTableWidgetItem(
                     f'{contact.login} [{contact.ip}]'))
             i = i + 1
         self.ui.UserList.setRowCount(i)
-        self.ui.OnlineUserslabel.setText(f'Users online: {i}')
-        # self.ui.UserList.setW
-        # self.ui.UserList.resizeColumnsToContents()
-        # self.ui.UserList.resizeRowsToContents()
+        self.ui.OnlineUserslabel.setText(f'Польз. в сети: {i}')
         self.ui.UserList.horizontalHeader().setStretchLastSection(True)
         self.ui.UserList.setSelectionMode(
             QtWidgets.QAbstractItemView.NoSelection)
@@ -512,22 +541,36 @@ class ServerManager(QtWidgets.QMainWindow):
         self.repaint()
 
     def closeapp(self):
-        alive_event.clear()
+        """
+        Процедура выхода из приложения
+        """
+        if alive_event.isSet():
+            self.stopserver()
         self.close()
 
     def startserver(self):
+        """
+        Процедура запуска основного кода сервера из GUI
+        """
+        alive_event.set()
         self.my_server = Server(server_address, server_port)
         self.server_thread = Thread(target=self.my_server.start_server)
         self.server_thread.daemon = True
-        alive_event.set()
         self.server_thread.start()
 
     def stopserver(self):
+        """
+        Процедура остановки основного кода сервера из GUI
+        """
         alive_event.clear()
         session.query(Users_online).delete()
         session.commit()
+        time.sleep(1)
 
     def add_log(self, log_text):
+        """
+        Процедура добавления информации в список логирования на главный экран
+        """
         self.ui.LogView.setModel(main_window.gui_add_log_item(log_text))
         # self.ui.LogView.resizeColumnsToContents()
         self.ui.LogView.resizeRowsToContents()
@@ -538,6 +581,9 @@ class ServerManager(QtWidgets.QMainWindow):
         self.update()
 
     def gui_add_log_item(self, log_text):
+        """
+        Процедура формирования элемента списка логирования
+        """
         log_item = QtGui.QStandardItem(log_text)
         log_item.setEditable(False)
         self.log_list.appendRow([log_item])
@@ -560,10 +606,10 @@ if __name__ == "__main__":
         logs.config.server_config_log.log_format)
     log.addHandler(server_stream_handler)
 
-    serv_app = QtWidgets.QApplication(sys.argv)
+    server_app = QtWidgets.QApplication(sys.argv)
     main_window = ServerManager()
-    ec = serv_app.exec_()
-    #my_server = Server(server_address,server_port)
+    ec = server_app.exec_()
+    # my_server = Server(server_address,server_port)
     # my_server.start_server()
     db_connection.close()
     sys.exit(ec)

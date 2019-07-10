@@ -25,7 +25,7 @@ class ServerVerifier(type):
             elif key != '__module__' and key != '__qualname__':
                 #print('class method',key)
                 class_attributs.append(key)
-        if 'create_presence_meassage' in methods:
+        if 'create_presence_message' in methods:
             raise('Серверное приложение не должно создавать presence-сообщение!')
 
         #print(methods)

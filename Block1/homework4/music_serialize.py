@@ -8,27 +8,30 @@ my_favourite_group = {
 
 С помощью модулей json и pickle сериализовать данный словарь в json и в байты, вывести результаты в терминал. Записать результаты в файлы group.json, group.pickle соответственно. В файле group.json указать кодировку utf-8.
 '''
-import json,pickle
+import json
+import pickle
 
 my_favourite_group = {
-'name': 'Daft Punk (Дафт Панк)',
-'tracks': ['Television Rules the Nation', 'Aerodynamic','Instant Crush'],
-'Albums': [{'name': 'Human After All','year': 2005},{'name': 'Discovery','year': 2001},{'name': 'Random Access Memories','year': 2013}]
-}
+    'name': 'Daft Punk (Дафт Панк)', 'tracks': [
+        'Television Rules the Nation', 'Aerodynamic', 'Instant Crush'], 'Albums': [
+            {
+                'name': 'Human After All', 'year': 2005}, {
+                    'name': 'Discovery', 'year': 2001}, {
+                        'name': 'Random Access Memories', 'year': 2013}]}
 
-#pickle
+# pickle
 print(pickle.dumps(my_favourite_group))
 
 with open('group.pickle', 'wb') as f1:
-    pickle.dump(my_favourite_group,f1)
+    pickle.dump(my_favourite_group, f1)
 
 print('Запись в pickle формате успешна!')
 
-#json
+# json
 
 print(json.dumps(my_favourite_group))
 
-with open('group.json', 'w',encoding='utf-8') as f2:
+with open('group.json', 'w', encoding='utf-8') as f2:
     json.dump(my_favourite_group, f2)
 
 print('Запись в json формате успешна!')

@@ -82,7 +82,7 @@ class Last_user(Base):
 if __name__ == "__main__":
     print('Now is ', datetime.datetime.now())
     # print(datetime.datetime.)
-    #t = datetime.datetime(year=2999,month=12,day=31)
+    # t = datetime.datetime(year=2999,month=12,day=31)
     # print(t.date())
 
     db_engine = create_engine('sqlite:///client_db.sqlite3')
@@ -125,7 +125,7 @@ if __name__ == "__main__":
         print(res1)
 
     if bool(session.query(User_contact_list).count()):
-        #res2 = session.query(User_contact_list).filter_by(owner_login='Simper',in_list_login='Snegurka').delete()
+        # res2 = session.query(User_contact_list).filter_by(owner_login='Simper',in_list_login='Snegurka').delete()
         res3 = session.query(User_contact_list.in_list_login).all()
         # print(res2)
         print(res3)
@@ -152,12 +152,12 @@ if __name__ == "__main__":
     print(sorted(usd, key=lambda item: item[3])
           )
 
-    #u1 = User('Admin','qwerty123')
+    # u1 = User('Admin','qwerty123')
     # u1.__table__.drop(db_engine)
-    #us = User_sessions('Admin', '127.0.0.1')
+    # us = User_sessions('Admin', '127.0.0.1')
     # us.__table__.drop(db_engine)
 
-    #u2 = User_contact_list('Admin', 'Admin')
+    # u2 = User_contact_list('Admin', 'Admin')
     # u2.__table__.drop(db_engine)
     # session.commit()
 
