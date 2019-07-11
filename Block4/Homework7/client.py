@@ -581,41 +581,45 @@ class Client(Thread, QObject):
         main_window.conn_window.repaint()
         time.sleep(0.1)
         with socket_lock:
-            self.sock.send(message.encode('utf-8'))
-            log.debug('и жду ответа')
-            server_response = json.loads(self.sock.recv(1024).decode('utf-8'))
-        log.debug(f'Ответ: {server_response}')
-        # Если сервер ответил нестандартным кодом, то завершаем работу
-        if server_response.get(RESPONSE) not in StandartServerCodes:
-            log.error(
-                f'Неизвестный код ответа от сервера: {server_response.get(RESPONSE)}')
-            raise UnknownCode(server_response.get(RESPONSE))
-        # Если сервер ответил Неверный пароль, то завершаем работу
-        if server_response.get('response') == WRONG_PASSW:
-            print(f'Пароль неверен! Попробуйте переподключиться с другим паролем!')
-            log.warning(
-                f'Пароль неверен! Попробуйте переподключиться с другим паролем!')
+            try:
+                self.sock.send(message.encode('utf-8'))
+                log.debug('и жду ответа')
+                server_response = json.loads(self.sock.recv(1024).decode('utf-8'))
+            except Exception as e:
+                print('Ошибка при получении ответа от сервера', e)
+            else:
+                log.debug(f'Ответ: {server_response}')
+                # Если сервер ответил нестандартным кодом, то завершаем работу
+                if server_response.get(RESPONSE) not in StandartServerCodes:
+                    log.error(
+                        f'Неизвестный код ответа от сервера: {server_response.get(RESPONSE)}')
+                    raise UnknownCode(server_response.get(RESPONSE))
+                # Если сервер ответил Неверный пароль, то завершаем работу
+                if server_response.get('response') == WRONG_PASSW:
+                    print(f'Пароль неверен! Попробуйте переподключиться с другим паролем!')
+                    log.warning(
+                        f'Пароль неверен! Попробуйте переподключиться с другим паролем!')
 
-            main_window.conn_window.ui.StatusLabel.setText(
-                f'Пароль неверен!')
-            main_window.conn_window.repaint()
-            return ERROR
+                    main_window.conn_window.ui.StatusLabel.setText(
+                        f'Пароль неверен!')
+                    main_window.conn_window.repaint()
+                    return ERROR
 
-        # Если все хорошо, то переключаем режим клиента в переданный в
-        # параметре или оставляем по-умолчанию - полный
-        if server_response.get('response') == OK:
-            print('Соединение установлено!')
-            log.info('Авторизация успешна. Соединение установлено!')
-            main_window.conn_window.ui.StatusLabel.setText(
-                'Статус: Авторизация успешна. Подключено')
-            main_window.conn_window.repaint()
-            time.sleep(0.5)
-            del main_window.conn_window
-            return OK
-        else:
-            print('Что-то пошло не так.. Ответ сервера нераспознан')
-            log.error('Ответ сервера нераспознан')
-            return ERROR
+                # Если все хорошо, то переключаем режим клиента в переданный в
+                # параметре или оставляем по-умолчанию - полный
+                if server_response.get('response') == OK:
+                    print('Соединение установлено!')
+                    log.info('Авторизация успешна. Соединение установлено!')
+                    main_window.conn_window.ui.StatusLabel.setText(
+                        'Статус: Авторизация успешна. Подключено')
+                    main_window.conn_window.repaint()
+                    time.sleep(0.5)
+                    del main_window.conn_window
+                    return OK
+                else:
+                    print('Что-то пошло не так.. Ответ сервера нераспознан')
+                    log.error('Ответ сервера нераспознан')
+                    return ERROR
 
     @logger
     def start_client(self):
